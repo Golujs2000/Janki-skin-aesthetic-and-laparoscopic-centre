@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MapPin, Clock, Menu, X, Calendar, MessageCircle, ChevronRight } from 'lucide-react';
+import { MapPin, Clock, Phone, Menu, X, ArrowRight } from 'lucide-react';
 
 export default function Header({ onBookClick }) {
   const [scrolled, setScrolled] = useState(false);
@@ -14,101 +14,107 @@ export default function Header({ onBookClick }) {
   }, []);
 
   const navLinks = [
-    { name: 'About Centre', href: '#about' },
+    { name: 'Home', href: '#home' },
+    { name: 'About', href: '#about' },
     { name: 'Doctors', href: '#doctors' },
     { name: 'Treatments', href: '#services' },
-    { name: 'Keyhole vs Open', href: '#comparison' },
-    { name: 'Clinic Tour', href: '#gallery' },
-    { name: 'Reviews', href: '#reviews' },
+    { name: 'Why Laparoscopy', href: '#comparison' },
     { name: 'Contact', href: '#contact' },
   ];
 
   return (
     <>
-      {/* Top Utility Bar */}
-      <div className="bg-primary-dark text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center flex-wrap gap-4">
-            <span className="flex items-center gap-1.5 text-slate-200">
-              <MapPin className="w-3.5 h-3.5 text-teal-accent" />
-              Opp. Referral Hospital, Forbesganj, Araria (Bihar)
-            </span>
-            <span className="hidden sm:flex items-center gap-1.5 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-teal-accent" />
-              Daily Consultations & 24x7 Emergency Laparoscopy
-            </span>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href="tel:+917909067784" className="flex items-center gap-1 text-slate-200 hover:text-white transition">
-              <Phone className="w-3.5 h-3.5 text-teal-accent" />
-              <span className="font-semibold">+91 79090 67784</span>
-            </a>
-            <span className="text-slate-600">|</span>
-            <a 
-              href="https://wa.me/917909067784?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20inquire%20about%20a%20consultation." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition"
+      {/* Top Announcement Bar */}
+      <div className="bg-[#061527] text-white/85 text-xs py-2 px-4 border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
+          {/* Left: Location */}
+          <div className="flex items-center gap-2">
+            <a
+              href="https://www.google.com/maps/place/JANKI+SKIN+%26+LAPROSCOPIC/@26.303892,87.25331,17z/data=!4m6!3m5!1s0x39ef9fa908eb367f:0xea3a0f72158472c1!8m2!3d26.303892!4d87.25331"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-white/90 hover:text-white transition"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span className="font-semibold">WhatsApp Desk</span>
+              <MapPin className="w-3.5 h-3.5 text-teal-accent" />
+              <span>Referral Hospital Road, Forbesganj, Bihar 854318</span>
             </a>
+          </div>
+
+          {/* Right: Hours & Phone */}
+          <div className="flex items-center gap-5">
+            <div className="hidden sm:inline-flex items-center gap-1.5 text-white/80">
+              <Clock className="w-3.5 h-3.5 text-teal-accent" />
+              <span>Daily Consultation & Surgeries Available</span>
+            </div>
+            <div className="inline-flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-teal-accent" />
+              <a href="tel:+917909067784" className="font-semibold text-white hover:underline">
+                +91 79090 67784
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       {/* Main Sticky Header */}
-      <header className={`sticky top-0 z-40 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-white py-4 border-b border-slate-100'}`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          {/* Logo & Brand Identity */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-primary to-teal-accent p-2 shadow-sm flex items-center justify-center text-white font-heading font-extrabold text-xl group-hover:scale-105 transition-transform">
-              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full text-white">
-                <path d="M50 8 L88 28 L88 72 L50 92 L12 72 L12 28 Z" stroke="currentColor" strokeWidth="6" fill="none"/>
-                <path d="M50 24 L50 76 M24 50 L76 50" stroke="currentColor" strokeWidth="8" strokeLinecap="round"/>
+      <header className={`sticky top-0 z-40 transition-all duration-300 ${
+        scrolled ? 'bg-white/98 shadow-sm py-2' : 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-2.5'
+      }`}>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
+          {/* Brand Logo with authentic J-Star Emblem */}
+          <a href="#home" className="flex items-center gap-3 group flex-shrink-0">
+            <div className="w-[46px] h-[46px] rounded-xl bg-gradient-to-br from-[#0b2545] to-[#173e72] flex items-center justify-center shadow-md border-[1.5px] border-rose-500/30 group-hover:scale-105 transition-transform flex-shrink-0">
+              {/* Authentic Signboard J-Diamond Star Emblem SVG */}
+              <svg viewBox="0 0 100 100" width="30" height="30" fill="none" className="drop-shadow-sm">
+                <path d="M50 12 Q53 20 61 23 Q53 26 50 34 Q47 26 39 23 Q47 20 50 12 Z" fill="#fbbf24" />
+                <path d="M54 30 C64 31 73 37 70 44 C67 49 60 48 58 44 C56 40 61 36 65 37" stroke="#ffffff" strokeWidth="3.8" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M43 29 C34 31 27 37 30 44 C33 49 40 48 41 42 C42 37 37 34 34 36" stroke="#ffffff" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M51 33 C53 47 53 60 46 70 C39 80 26 82 18 75 C11 68 14 55 24 53 C32 51 37 59 32 65 C29 69 23 68 22 63" stroke="#ffffff" strokeWidth="4.6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </div>
             <div>
-              <div className="font-heading font-extrabold text-lg sm:text-xl text-primary tracking-tight leading-none group-hover:text-teal-accent transition-colors">
-                JANKI CLINIC
-              </div>
-              <div className="text-[11px] sm:text-xs font-semibold text-slate-500 tracking-wide mt-0.5">
-                Skin Aesthetic & Laparoscopic Centre
-              </div>
-              <div className="text-[10px] text-teal-accent font-medium hidden sm:block">
-                जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर, फारबिसगंज
-              </div>
+              <span className="font-heading font-extrabold text-[1.25rem] sm:text-[1.35rem] text-primary leading-[1.05] tracking-wide block">
+                JANKI Skin Aesthetic <br />
+                <span className="text-[1.1rem] sm:text-[1.2rem] font-bold text-slate-800">&amp; Laparoscopic Centre</span>
+              </span>
             </div>
           </a>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-600">
+          {/* Desktop Nav Links */}
+          <nav className="hidden lg:flex items-center gap-7 text-[0.92rem] font-bold text-slate-700">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-teal-accent transition-colors py-1"
+                className="hover:text-rose-600 transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-rose-600 hover:after:w-full after:transition-all"
               >
                 {link.name}
               </a>
             ))}
           </nav>
 
-          {/* Header Action CTA */}
+          {/* Right Action Button & Phone */}
           <div className="flex items-center gap-3">
+            <a
+              href="tel:+917909067784"
+              className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 text-primary border border-slate-200 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition"
+            >
+              <Phone className="w-3.5 h-3.5 text-rose-500" />
+              <span>+91 79090 67784</span>
+            </a>
+
             <button
               onClick={onBookClick}
-              className="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-teal-accent to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-medium text-sm px-4 py-2.5 rounded-full shadow-sm hover:shadow transition-all transform hover:-translate-y-0.5"
+              className="btn-rose px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-md inline-flex items-center justify-center gap-1.5 cursor-pointer"
             >
-              <Calendar className="w-4 h-4" />
               <span>Book Appointment</span>
             </button>
 
-            {/* Mobile Hamburger Toggle Button */}
+            {/* Mobile Hamburger Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition"
-              aria-label="Toggle Navigation Menu"
+              className="lg:hidden p-1.5 rounded-lg text-primary hover:bg-slate-100 transition"
+              aria-label="Toggle navigation menu"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -120,8 +126,8 @@ export default function Header({ onBookClick }) {
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           {/* Backdrop */}
-          <div 
-            className="fixed inset-0 bg-primary-dark/60 backdrop-blur-sm transition-opacity"
+          <div
+            className="fixed inset-0 bg-[#0b2545]/60 backdrop-blur-sm transition-opacity"
             onClick={() => setMobileMenuOpen(false)}
           />
 
@@ -129,48 +135,56 @@ export default function Header({ onBookClick }) {
           <div className="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-2xl p-6 flex flex-col justify-between z-10 animate-in slide-in-from-right duration-300">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                <span className="font-heading font-bold text-primary text-lg">Menu Navigation</span>
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#0b2545] flex items-center justify-center">
+                    <svg viewBox="0 0 100 100" width="20" height="20" fill="none">
+                      <path d="M50 12 Q53 20 61 23 Q53 26 50 34 Q47 26 39 23 Q47 20 50 12 Z" fill="#fbbf24" />
+                      <path d="M51 33 C53 47 53 60 46 70 C39 80 26 82 18 75 C11 68 14 55 24 53 C32 51 37 59 32 65 C29 69 23 68 22 63" stroke="#ffffff" strokeWidth="5" strokeLinecap="round" />
+                    </svg>
+                  </div>
+                  <span className="font-heading font-extrabold text-primary text-sm leading-tight">
+                    JANKI Clinic
+                  </span>
+                </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-1.5 rounded-lg text-slate-500 hover:bg-slate-100"
+                  className="p-1 rounded-lg text-slate-500 hover:bg-slate-100"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="mt-6 flex flex-col gap-2">
+              <div className="mt-5 flex flex-col gap-1">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center justify-between py-3 px-3 rounded-lg text-slate-700 font-medium hover:bg-teal-50 hover:text-teal-accent transition"
+                    className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
                   >
-                    <span>{link.name}</span>
-                    <ChevronRight className="w-4 h-4 text-slate-400" />
+                    {link.name}
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="pt-6 border-t border-slate-100 space-y-3">
+            <div className="pt-5 border-t border-slate-100 space-y-3">
               <button
                 onClick={() => {
                   setMobileMenuOpen(false);
                   onBookClick();
                 }}
-                className="w-full flex items-center justify-center gap-2 bg-teal-accent text-white py-3 rounded-xl font-medium text-sm shadow-md"
+                className="w-full btn-rose py-3 rounded-xl font-bold text-sm text-center block shadow-md"
               >
-                <Calendar className="w-4 h-4" />
-                <span>Book Appointment Online</span>
+                Book Appointment
               </button>
 
               <a
                 href="tel:+917909067784"
-                className="w-full flex items-center justify-center gap-2 bg-slate-100 text-slate-800 py-3 rounded-xl font-medium text-sm hover:bg-slate-200 transition"
+                className="w-full flex items-center justify-center gap-2 bg-slate-100 text-primary py-2.5 rounded-xl font-bold text-xs"
               >
-                <Phone className="w-4 h-4 text-rose-accent" />
-                <span>Call Clinic Directly</span>
+                <Phone className="w-4 h-4 text-rose-500" />
+                <span>Call +91 79090 67784</span>
               </a>
             </div>
           </div>

@@ -1,140 +1,229 @@
 import React from 'react';
-import { ShieldCheck, Award, Calendar, Phone, ArrowRight, Sparkles, Activity, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Phone, CheckCircle, Users, Award, Shield, Activity } from 'lucide-react';
 
 export default function Hero({ onBookClick }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-primary to-primary-dark text-white pt-12 pb-20 lg:pt-16 lg:pb-24">
-      {/* Subtle Background Glow Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-teal-500/15 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-10 w-96 h-96 bg-rose-500/15 rounded-full blur-3xl pointer-events-none" />
+    <>
+      <section className="relative bg-white py-14 lg:py-20 border-b border-slate-200 overflow-hidden" id="home">
+        {/* Subtle Radial Glows */}
+        <div className="hero-glow-1" />
+        <div className="hero-glow-2" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          {/* Left Text & Value Proposition */}
-          <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            {/* Top Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/30 text-teal-300 text-xs sm:text-sm font-semibold tracking-wide">
-              <Sparkles className="w-4 h-4 text-teal-400" />
-              <span>Forbesganj’s Premier Multi-Speciality Clinical Facility</span>
-            </div>
-
-            {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight font-heading leading-tight text-white">
-              Advanced <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-teal-400">Laparoscopic Surgery</span> & Medical <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-300 to-rose-400">Aesthetic Care</span>
-            </h1>
-
-            {/* Hindi Tagline */}
-            <p className="text-slate-300 text-base sm:text-lg font-medium leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर — दूरबीन द्वारा चीरा-रहित सर्जरी, आधुनिक हेयर रीग्रोथ (GFC थेरेपी), केमिकल पील व संपूर्ण त्वचा रोग निदान।
-            </p>
-
-            {/* Key Trust Highlights */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 max-w-xl mx-auto lg:mx-0 text-left">
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-teal-400 flex-shrink-0" />
-                <span>Board-Certified Assistant Professors</span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            {/* Left Column: Content */}
+            <div className="lg:col-span-7 space-y-6">
+              {/* Badge Tag */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-rose-50 to-teal-50 border border-rose-200/80 text-primary text-xs sm:text-sm font-bold shadow-sm">
+                <span className="text-amber-500">✨</span>
+                <span>Forbesganj's Premier Super-Speciality Healthcare Centre</span>
               </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-teal-400 flex-shrink-0" />
-                <span>Minimally Invasive Keyhole Incisions</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-rose-400 flex-shrink-0" />
-                <span>Next-Gen Autologous GFC Hair Therapy</span>
-              </div>
-              <div className="flex items-center gap-2.5 text-xs sm:text-sm text-slate-200">
-                <CheckCircle2 className="w-4 h-4 text-rose-400 flex-shrink-0" />
-                <span>No Need to Travel to Patna or Siliguri</span>
-              </div>
-            </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-              <button
-                onClick={onBookClick}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-teal-500 to-teal-600 hover:from-teal-600 hover:to-teal-700 text-white font-semibold text-base px-7 py-3.5 rounded-full shadow-lg shadow-teal-500/20 hover:shadow-teal-500/30 transition transform hover:-translate-y-0.5"
-              >
-                <Calendar className="w-5 h-5" />
-                <span>Book Doctor Consultation</span>
-              </button>
+              {/* Main Heading */}
+              <h1 className="font-heading font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] tracking-tight text-primary">
+                Advanced <span className="gradient-text-aesthetic">Skin Aesthetics</span> &amp; Minimally Invasive <span className="gradient-text-laparo">Laparoscopic Surgery</span>
+              </h1>
 
-              <a
-                href="#services"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white font-semibold text-base px-6 py-3.5 rounded-full border border-white/20 transition backdrop-blur-sm"
-              >
-                <span>Explore 21 Treatments</span>
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
+              {/* Description */}
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-xl">
+                Experience state-of-the-art dermatology, laser skin rejuvenation, hair restoration, and painless keyhole laparoscopic surgeries under certified specialists in Forbesganj, Araria (Bihar).
+              </p>
 
-            {/* Doctors Quick Recognition */}
-            <div className="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-3">
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300">
-                <div className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
-                <span><strong>Dr. S. Sagar:</strong> MS Gen Surgery, FIAGES</span>
-              </div>
-              <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/80 border border-slate-700/60 text-xs text-slate-300">
-                <div className="w-2 h-2 rounded-full bg-rose-400 animate-pulse" />
-                <span><strong>Dr. Rashmi Ray:</strong> MD, DNB, MNAMS (Skin)</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Visual / Doctor Hero Cards */}
-          <div className="lg:col-span-5 relative">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
-              {/* Doctor Visual Container */}
-              <div className="relative rounded-3xl overflow-hidden border border-white/15 shadow-2xl bg-gradient-to-b from-slate-800/80 to-primary-dark/90 p-4">
-                <img
-                  src="assets/dr-rashmi-sagar-hero-feathered.png"
-                  alt="Dr. S. Sagar and Dr. Rashmi Ray at Janki Skin Aesthetic & Laparoscopic Centre Forbesganj"
-                  className="w-full h-auto object-cover rounded-2xl"
-                  loading="eager"
-                />
-
-                {/* Overlaid Badges */}
-                <div className="mt-4 grid grid-cols-2 gap-2 text-center">
-                  <div className="bg-slate-900/80 backdrop-blur-md p-2.5 rounded-xl border border-teal-500/30">
-                    <div className="text-teal-400 font-bold text-xs uppercase tracking-wider">Laparoscopy Wing</div>
-                    <div className="text-white text-xs font-semibold mt-0.5">Dr. S. Sagar</div>
-                    <div className="text-[11px] text-slate-400">FIAGES Specialist</div>
+              {/* Doctors Mini Highlight Chips */}
+              <div className="flex flex-wrap items-center gap-3 pt-1">
+                {/* Dr. Rashmi Ray Chip */}
+                <div className="flex items-center gap-3 p-2 pr-4 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                  <img
+                    src="assets/dr-rashmi-ray.jpg"
+                    alt="Dr. Rashmi Ray"
+                    className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <span className="font-heading font-bold text-xs sm:text-sm text-primary block leading-none">
+                      Dr. Rashmi Ray
+                    </span>
+                    <span className="text-[11px] text-slate-500 font-medium">
+                      MBBS, MD • Skin &amp; Aesthetics
+                    </span>
                   </div>
-                  <div className="bg-slate-900/80 backdrop-blur-md p-2.5 rounded-xl border border-rose-500/30">
-                    <div className="text-rose-400 font-bold text-xs uppercase tracking-wider">Dermatology Wing</div>
-                    <div className="text-white text-xs font-semibold mt-0.5">Dr. Rashmi Ray</div>
-                    <div className="text-[11px] text-slate-400">MD, DNB, MNAMS</div>
+                </div>
+
+                {/* Dr. S. Sagar Chip */}
+                <div className="flex items-center gap-3 p-2 pr-4 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
+                  <img
+                    src="assets/dr-sagar.jpg"
+                    alt="Dr. S. Sagar"
+                    className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <span className="font-heading font-bold text-xs sm:text-sm text-primary block leading-none">
+                      Dr. S. Sagar
+                    </span>
+                    <span className="text-[11px] text-slate-500 font-medium">
+                      MBBS, MS • Laparoscopic Surgeon
+                    </span>
                   </div>
                 </div>
               </div>
 
-              {/* Floating Stat Badge Left */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-white text-slate-800 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-accent flex items-center justify-center font-bold">
-                  <Activity className="w-5 h-5" />
-                </div>
-                <div>
-                  <div className="font-heading font-extrabold text-base text-primary">24x7 Ready</div>
-                  <div className="text-xs text-slate-500 font-medium">Emergency Laparoscopy</div>
-                </div>
+              {/* CTAs */}
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <button
+                  onClick={onBookClick}
+                  className="btn-rose px-6 py-3 rounded-full text-xs sm:text-sm font-bold inline-flex items-center gap-2 cursor-pointer"
+                >
+                  <span>Book Consultation</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+
+                <a
+                  href="https://wa.me/917909067784?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp px-5 py-3 rounded-full text-xs sm:text-sm font-bold inline-flex items-center gap-2"
+                >
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.79 14.15c-.24.68-1.39 1.3-1.92 1.38-.49.08-1.12.11-3.23-.74-2.69-1.08-4.41-3.83-4.55-4.01-.13-.18-1.08-1.44-1.08-2.75 0-1.31.69-1.95.93-2.22.25-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.39-.06.61.47.23.54.78 1.9.85 2.04.07.15.11.32.02.5-.09.18-.14.29-.27.45-.14.16-.29.35-.41.47-.14.14-.29.29-.12.57.16.29.73 1.21 1.57 1.96 1.08.96 1.99 1.26 2.27 1.4.29.14.45.12.62-.07.16-.2.7-81.89-1.09.18-.28.37-.23.62-.14.25.09 1.59.75 1.86.89.27.14.45.2.52.32.07.11.07.66-.17 1.34z" />
+                  </svg>
+                  <span>WhatsApp Us</span>
+                </a>
+
+                <a
+                  href="tel:+917909067784"
+                  className="btn-outline-primary px-5 py-3 rounded-full text-xs sm:text-sm font-bold inline-flex items-center gap-2"
+                >
+                  <Phone className="w-4 h-4 text-primary" />
+                  <span>+91 79090 67784</span>
+                </a>
               </div>
 
-              {/* Floating Stat Badge Right */}
-              <div className="absolute -top-4 -right-4 sm:-right-6 bg-white text-slate-800 p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-accent flex items-center justify-center font-bold">
-                  <Award className="w-5 h-5" />
+              {/* Feature Checkmark Bullets */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 border-t border-slate-200">
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+                  <CheckCircle className="w-4 h-4 text-teal-accent flex-shrink-0" />
+                  <span>Minimal Cuts &amp; Faster Surgical Recovery</span>
                 </div>
-                <div>
-                  <div className="font-heading font-extrabold text-base text-primary">Triple Board</div>
-                  <div className="text-xs text-slate-500 font-medium">Certified Dermatologist</div>
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+                  <CheckCircle className="w-4 h-4 text-teal-accent flex-shrink-0" />
+                  <span>Authentic GFC &amp; Chemical Peel Regimens</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+                  <CheckCircle className="w-4 h-4 text-teal-accent flex-shrink-0" />
+                  <span>Fellowship-Trained Medical Professors</span>
+                </div>
+                <div className="flex items-center gap-2 text-xs sm:text-sm font-semibold text-slate-800">
+                  <CheckCircle className="w-4 h-4 text-teal-accent flex-shrink-0" />
+                  <span>Ultra-Modern Sterile Clinic Environment</span>
                 </div>
               </div>
-
             </div>
-          </div>
 
+            {/* Right Column: Doctor Showcase Portrait with Blurred Feathered Edges & Split Badge */}
+            <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
+              <div className="relative w-full max-w-[500px] flex flex-col items-center">
+                {/* Doctor Portrait with Feathered Mask */}
+                <div className="hero-doctor-feather-wrap">
+                  <img
+                    src="assets/dr-rashmi-sagar-hero-feathered.png"
+                    alt="Dr. Rashmi Ray and Dr. S. Sagar - Janki Skin Aesthetic & Laparoscopic Centre Forbesganj"
+                    className="w-full h-auto max-h-[500px] object-contain drop-shadow-xl hover:scale-[1.02] transition-transform duration-500"
+                    width="600"
+                    height="850"
+                  />
+                  <div className="hero-edge-blur-overlay" />
+                </div>
+
+                {/* Split Doctors Caption Box */}
+                <div className="w-full -mt-6 relative z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-xl flex items-center justify-around gap-3">
+                  {/* Dr. Rashmi Ray */}
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-accent border border-rose-200/60 mb-1">
+                      Skin &amp; Aesthetic
+                    </span>
+                    <div className="font-heading font-extrabold text-sm sm:text-base text-primary leading-tight">
+                      Dr. Rashmi Ray
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500 mt-0.5">
+                      MBBS, MD • Dermatologist
+                    </div>
+                  </div>
+
+                  {/* Vertical Divider */}
+                  <div className="w-px h-10 bg-slate-200 flex-shrink-0" />
+
+                  {/* Dr. S. Sagar */}
+                  <div className="flex flex-col items-center text-center flex-1">
+                    <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-accent border border-teal-200/60 mb-1">
+                      Laparoscopy Specialist
+                    </span>
+                    <div className="font-heading font-extrabold text-sm sm:text-base text-primary leading-tight">
+                      Dr. S. Sagar
+                    </div>
+                    <div className="text-[11px] font-medium text-slate-500 mt-0.5">
+                      MBBS, MS • Laparoscopic Surgeon
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Quick Stats Bar Section */}
+      <section className="bg-slate-50 border-b border-slate-200 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            
+            <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-accent flex items-center justify-center flex-shrink-0">
+                <Users className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">5,000+</div>
+                <div className="text-xs text-slate-500 font-medium mt-1">Patients Treated Safely</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-accent flex items-center justify-center flex-shrink-0">
+                <Award className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">15+ Years</div>
+                <div className="text-xs text-slate-500 font-medium mt-1">Combined Experience</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
+                <Activity className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">2 Disciplines</div>
+                <div className="text-xs text-slate-500 font-medium mt-1">Dermatology &amp; Laparo</div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center flex-shrink-0">
+                <Shield className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">100% Sterile</div>
+                <div className="text-xs text-slate-500 font-medium mt-1">Modern Treatment Setup</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
