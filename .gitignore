@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Production
+dist/
+dist-ssr/
+
+# Scratch & IDE
+scratch/
+.tempmediaStorage/
+.DS_Store
+Thumbs.db
+
+# Firebase & Logs
+.firebase/
+*-debug.log*
+firebase-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local Env
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
