@@ -1,6 +1,6 @@
 import React from 'react';
 import { doctorsData } from '../data/doctors';
-import { Award, Clock, Phone, Calendar, CheckCircle2, Stethoscope, Sparkles } from 'lucide-react';
+import { Clock, Phone, Calendar, CheckCircle2, Stethoscope, Award, Sparkles } from 'lucide-react';
 
 export default function Doctors({ onSelectDoctor }) {
   return (
@@ -9,93 +9,108 @@ export default function Doctors({ onSelectDoctor }) {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-accent text-xs font-bold tracking-wide uppercase">
-            <Stethoscope className="w-3.5 h-3.5" />
-            <span>Senior Medical Leadership</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-accent text-xs font-bold tracking-wide uppercase">
+            <Award className="w-3.5 h-3.5" />
+            <span>Our Distinguished Faculty</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-heading tracking-tight mt-3">
-            Meet Our <span className="text-teal-accent">Distinguished Specialists</span>
+            Meet Our Renowned <span className="gradient-text-aesthetic">Specialist Doctors</span>
           </h2>
           <p className="text-slate-600 text-base mt-3">
-            Academic professors and practicing consultants bringing tertiary-level surgical excellence and advanced dermatology directly to Forbesganj.
+            University professors and fellowship-trained medical experts committed to world-class diagnostics, clinical aesthetics, and gentle surgical recovery.
           </p>
         </div>
 
-        {/* Doctor Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+        {/* Doctor Cards Grid with Big Prominent Portraits */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
           {doctorsData.map((doc) => {
-            const isTeal = doc.theme === 'teal';
+            const isRose = doc.theme === 'rose';
 
             return (
               <div
                 key={doc.id}
-                className="bg-white rounded-3xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col justify-between"
+                className={`group bg-white rounded-3xl border border-slate-200/90 shadow-md hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden ${
+                  isRose ? 'border-t-4 border-t-rose-accent' : 'border-t-4 border-t-teal-accent'
+                }`}
               >
                 <div>
-                  {/* Doctor Card Top Banner & Avatar */}
-                  <div className={`p-6 sm:p-8 ${isTeal ? 'bg-gradient-to-br from-slate-900 to-primary text-white' : 'bg-gradient-to-br from-slate-900 to-[#1f0b1a] text-white'}`}>
-                    <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                      <div className="relative flex-shrink-0">
-                        <img
-                          src={doc.photo}
-                          alt={`${doc.name} - ${doc.role}`}
-                          className="w-28 h-28 sm:w-32 sm:h-32 rounded-2xl object-cover object-top border-2 border-white/20 shadow-lg bg-slate-800"
-                          loading="lazy"
-                        />
-                        <span className={`absolute -bottom-2 -right-2 px-2.5 py-1 rounded-full text-[11px] font-bold text-white shadow-md ${isTeal ? 'bg-teal-accent' : 'bg-rose-accent'}`}>
-                          {isTeal ? 'Surgical Head' : 'Skin & Hair Head'}
-                        </span>
-                      </div>
+                  {/* Big Picture Showcase Container */}
+                  <div className={`p-8 sm:p-10 flex flex-col items-center justify-center border-b border-slate-100 ${
+                    isRose
+                      ? 'bg-gradient-to-b from-rose-50/70 via-slate-50/60 to-white'
+                      : 'bg-gradient-to-b from-teal-50/70 via-slate-50/60 to-white'
+                  }`}>
+                    {/* Big Framed Portrait */}
+                    <div className="relative w-full max-w-[280px] sm:max-w-[310px] aspect-[3/4] rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-[0_20px_40px_-10px_rgba(11,37,69,0.18)] ring-4 ring-white">
+                      <img
+                        src={doc.photo}
+                        alt={`${doc.name} - ${doc.specialityBadge}`}
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500 ease-out"
+                        loading="lazy"
+                      />
+                    </div>
 
-                      <div className="text-center sm:text-left space-y-1.5 flex-1">
-                        <div className="text-xs font-semibold text-slate-300">{doc.nameHindi}</div>
-                        <h3 className="text-2xl font-bold font-heading text-white">{doc.name}</h3>
-                        <div className="text-xs sm:text-sm font-semibold text-amber-300">{doc.degree}</div>
-                        <p className="text-xs text-slate-300 leading-snug">{doc.role}</p>
-                        <div className="inline-block mt-1 px-2.5 py-0.5 rounded-md bg-white/10 text-[11px] text-slate-200">
-                          {doc.experience}
-                        </div>
-                      </div>
+                    {/* Prominent Speciality Badge Pill directly under the Big Portrait */}
+                    <div className="mt-5">
+                      <span className={`inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold text-white shadow-sm ${
+                        isRose ? 'bg-rose-accent' : 'bg-teal-accent'
+                      }`}>
+                        <Sparkles className="w-3.5 h-3.5" />
+                        <span>{doc.specialityBadge}</span>
+                      </span>
                     </div>
                   </div>
 
-                  {/* Body Content */}
+                  {/* Doctor Details Body */}
                   <div className="p-6 sm:p-8 space-y-6">
-                    {/* Credentials Highlights */}
-                    <div className="space-y-2">
-                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Key Credentials & Training</h4>
-                      <ul className="space-y-1.5">
-                        {doc.highlights.map((h, i) => (
-                          <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
-                            <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${isTeal ? 'text-teal-accent' : 'text-rose-accent'}`} />
-                            <span>{h}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Core Specialties Pills */}
-                    <div className="space-y-2">
-                      <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">Clinical Specialities</h4>
-                      <div className="flex flex-wrap gap-1.5">
-                        {doc.specialties.map((s, i) => (
-                          <span
-                            key={i}
-                            className={`text-xs px-2.5 py-1 rounded-lg font-medium ${isTeal ? 'bg-teal-50 text-teal-800 border border-teal-100' : 'bg-rose-50 text-rose-800 border border-rose-100'}`}
-                          >
-                            {s}
-                          </span>
-                        ))}
+                    {/* Header: Name, Hindi Title, Degrees */}
+                    <div>
+                      <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-primary leading-tight flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3">
+                        <span>{doc.name}</span>
+                        <span className="text-base sm:text-lg font-bold text-slate-500 font-body">
+                          {doc.nameHindi}
+                        </span>
+                      </h3>
+                      <div className={`text-sm font-bold mt-1.5 ${isRose ? 'text-rose-600' : 'text-teal-600'}`}>
+                        {doc.degree}
+                      </div>
+                      <div className="text-xs sm:text-sm text-slate-600 font-semibold mt-1">
+                        {doc.role}
                       </div>
                     </div>
 
-                    {/* Schedule Box */}
-                    <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex items-start gap-3">
-                      <Clock className="w-4 h-4 text-slate-500 mt-0.5 flex-shrink-0" />
-                      <div className="text-xs text-slate-600">
-                        <span className="font-bold text-slate-800 block">Consultation Schedule:</span>
-                        <span>{doc.timing}</span>
-                        <span className="block text-[11px] text-slate-500 mt-0.5">{doc.emergency}</span>
+                    {/* Clinical Specialties Bullet Items */}
+                    <div className="space-y-3 pt-1">
+                      {doc.specialties.map((spec, i) => {
+                        const colonIdx = spec.indexOf(':');
+                        const label = colonIdx !== -1 ? spec.slice(0, colonIdx + 1) : '';
+                        const desc = colonIdx !== -1 ? spec.slice(colonIdx + 1) : spec;
+
+                        return (
+                          <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 leading-relaxed">
+                            <CheckCircle2 className={`w-4 h-4 mt-0.5 flex-shrink-0 ${
+                              isRose ? 'text-rose-accent' : 'text-teal-accent'
+                            }`} />
+                            <div>
+                              {label && <strong className="text-slate-900">{label}</strong>}
+                              <span>{desc}</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+
+                    {/* Consultation Schedule Box */}
+                    <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/80">
+                      <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-1.5">
+                        <Clock className="w-4 h-4 text-amber-500" />
+                        <span>Consultation &amp; Surgical Schedule</span>
+                      </div>
+                      <div className="text-xs sm:text-sm font-semibold text-slate-800 leading-snug">
+                        {doc.timing}
+                      </div>
+                      <div className="text-[11px] text-slate-500 mt-1">
+                        {doc.emergency}
                       </div>
                     </div>
                   </div>
@@ -105,7 +120,11 @@ export default function Doctors({ onSelectDoctor }) {
                 <div className="px-6 pb-6 sm:px-8 sm:pb-8 pt-0 flex flex-col sm:flex-row gap-3">
                   <button
                     onClick={() => onSelectDoctor(doc.name)}
-                    className={`flex-1 inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-sm text-white shadow-md transition transform hover:-translate-y-0.5 ${isTeal ? 'bg-teal-accent hover:bg-teal-600 shadow-teal-500/20' : 'bg-rose-accent hover:bg-rose-600 shadow-rose-500/20'}`}
+                    className={`flex-1 inline-flex items-center justify-center gap-2 py-3 px-5 rounded-full font-bold text-sm text-white shadow-md transition transform hover:-translate-y-0.5 cursor-pointer ${
+                      isRose
+                        ? 'btn-rose'
+                        : 'bg-teal-accent hover:bg-teal-600 shadow-teal-500/20'
+                    }`}
                   >
                     <Calendar className="w-4 h-4" />
                     <span>Book {doc.name.split(' ')[1]}</span>
@@ -113,9 +132,9 @@ export default function Doctors({ onSelectDoctor }) {
 
                   <a
                     href={`tel:${doc.phone}`}
-                    className="inline-flex items-center justify-center gap-2 py-3 px-5 rounded-xl font-semibold text-sm bg-slate-100 text-slate-800 hover:bg-slate-200 transition"
+                    className="inline-flex items-center justify-center gap-2 py-3 px-6 rounded-full font-bold text-sm border-2 border-primary text-primary hover:bg-primary hover:text-white transition"
                   >
-                    <Phone className="w-4 h-4 text-slate-600" />
+                    <Phone className="w-4 h-4" />
                     <span>Call Direct</span>
                   </a>
                 </div>
