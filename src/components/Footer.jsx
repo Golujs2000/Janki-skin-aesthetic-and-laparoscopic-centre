@@ -44,12 +44,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs">
               <li><Link to="/" className="hover:text-teal-300 transition">Home</Link></li>
-              <li><Link to="/#about" className="hover:text-teal-300 transition">About the Centre</Link></li>
-              <li><Link to="/#doctors" className="hover:text-teal-300 transition">Specialist Doctors</Link></li>
+              <li><Link to="/about" className="hover:text-teal-300 transition">About the Centre</Link></li>
+              <li><Link to="/doctors" className="hover:text-teal-300 transition">Specialist Doctors</Link></li>
               <li><Link to="/treatments" className="hover:text-teal-300 font-bold text-teal-400 transition">Treatments Directory</Link></li>
-              <li><Link to="/#comparison" className="hover:text-teal-300 transition">Why Laparoscopy</Link></li>
-              <li><Link to="/#gallery" className="hover:text-teal-300 transition">Clinic Gallery</Link></li>
-              <li><Link to="/#book-appointment" className="hover:text-teal-300 transition">Book Consultation</Link></li>
+              <li><Link to="/gallery" className="hover:text-teal-300 transition">Clinic Gallery</Link></li>
+              <li><Link to="/contact" className="hover:text-teal-300 transition">Contact &amp; Location</Link></li>
+              <li><Link to="/book-appointment" className="hover:text-teal-300 text-rose-300 font-bold transition">Book Consultation</Link></li>
             </ul>
           </div>
 

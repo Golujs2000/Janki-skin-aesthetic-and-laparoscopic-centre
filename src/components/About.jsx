@@ -14,7 +14,7 @@ export default function About() {
               {/* Main Reception Hall Image */}
               <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 aspect-[4/3] bg-slate-100">
                 <img
-                  src="assets/clinic-reception-hall.jpg"
+                  src="/assets/clinic-reception-hall.jpg"
                   alt="Janki Skin Aesthetic & Laparoscopic Centre Reception Area Forbesganj"
                   className="w-full h-full object-cover"
                   loading="lazy"
@@ -24,7 +24,7 @@ export default function About() {
               {/* Sub Image Overlap */}
               <div className="absolute -bottom-6 -right-4 sm:-right-6 w-1/2 rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-100 aspect-square">
                 <img
-                  src="assets/clinic-examination-bed-certificates.jpg"
+                  src="/assets/clinic-examination-bed-certificates.jpg"
                   alt="Clinical Examination Bed and Board Certifications"
                   className="w-full h-full object-cover"
                   loading="lazy"

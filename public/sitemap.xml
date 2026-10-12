@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Complete Treatments Directory -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatments</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Laparoscopic Surgery Procedure Pages -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/laparoscopic-cholecystectomy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/laparoscopic-appendectomy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/laparoscopic-hernia</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/laparoscopic-cystectomy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/tubal-ligation</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/general-surgery</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Aesthetics & Hair Procedure Pages -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/gfc-therapy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/chemical-peeling</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/glutathione-therapy</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/laser-revision</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/anti-aging</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/hair-scalp-care</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Clinical Dermatology Procedure Pages -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/acne-treatment</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/vitiligo-care</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/eczema-psoriasis</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Specialist Doctors Page -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/doctors</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- About Us Page -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/about</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Contact & Location Page -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/contact</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- Clinic Gallery Page -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/gallery</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- Book Appointment Page -->
+  <url>
+    <loc>https://janki-skin-and-laparo-centre.firebaseapp.com/book-appointment</loc>
+    <lastmod>2026-10-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+</urlset>

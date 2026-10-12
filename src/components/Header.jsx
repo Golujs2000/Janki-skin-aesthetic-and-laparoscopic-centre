@@ -12,7 +12,8 @@ import {
   Sparkles, 
   HeartPulse, 
   Layers,
-  ChevronRight
+  Camera,
+  Calendar
 } from 'lucide-react';
 
 export default function Header({ onBookClick }) {
@@ -25,7 +26,7 @@ export default function Header({ onBookClick }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -72,20 +73,12 @@ export default function Header({ onBookClick }) {
     { title: 'Eczema, Psoriasis & Allergies', id: 'eczema-psoriasis', desc: 'Barrier Repair & Itch Relief' },
   ];
 
-  const handleNavAnchor = (hash) => {
-    setMobileMenuOpen(false);
-    if (location.pathname === '/') {
-      const el = document.querySelector(hash);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  };
+  const isActive = (path) => location.pathname === path;
 
   return (
     <>
-      {/* Top Announcement Bar */}
-      <div className="bg-[#061527] text-white/85 text-xs py-2 px-4 border-b border-white/10">
+      {/* Top Announcement Bar - Solid Dark Navy */}
+      <div className="bg-[#061527] text-white/90 text-xs py-2 px-4 border-b border-white/10 relative z-50">
         <div className="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
           {/* Left: Location */}
           <div className="flex items-center gap-2">
@@ -116,9 +109,9 @@ export default function Header({ onBookClick }) {
         </div>
       </div>
 
-      {/* Main Sticky Header */}
-      <header className={`sticky top-0 z-40 transition-all duration-300 ${
-        scrolled ? 'bg-white/98 shadow-md py-2' : 'bg-white/95 backdrop-blur-md border-b border-slate-200 py-2.5'
+      {/* Main Sticky Header - 100% Solid Opaque White Background (No transparency) */}
+      <header className={`sticky top-0 z-50 bg-white transition-all duration-200 border-b border-slate-200 ${
+        scrolled ? 'shadow-md py-2.5' : 'shadow-sm py-3'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
           {/* Brand Logo with authentic J-Star Emblem */}
@@ -144,8 +137,8 @@ export default function Header({ onBookClick }) {
           <nav className="hidden lg:flex items-center gap-6 text-[0.92rem] font-bold text-slate-700">
             <Link
               to="/"
-              className={`hover:text-rose-600 transition-colors py-1 relative ${
-                location.pathname === '/' ? 'text-rose-600 font-extrabold' : ''
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
               }`}
             >
               Home
@@ -173,9 +166,9 @@ export default function Header({ onBookClick }) {
               {/* Mega Dropdown Panel */}
               {treatmentsDropdownOpen && (
                 <div 
-                  className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[880px] z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                  className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-[880px] z-50 animate-in fade-in slide-in-from-top-2 duration-200"
                 >
-                  <div className="bg-white rounded-3xl shadow-2xl border border-slate-200/90 overflow-hidden">
+                  <div className="bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
                     {/* Dropdown Header */}
                     <div className="bg-slate-50 px-6 py-3.5 border-b border-slate-100 flex items-center justify-between">
                       <div className="flex items-center gap-2">
@@ -195,7 +188,7 @@ export default function Header({ onBookClick }) {
                     </div>
 
                     {/* Dropdown Columns */}
-                    <div className="p-6 grid grid-cols-3 gap-6">
+                    <div className="p-6 grid grid-cols-3 gap-6 bg-white">
                       
                       {/* Column 1: Laparoscopy */}
                       <div className="space-y-3">
@@ -327,25 +320,37 @@ export default function Header({ onBookClick }) {
             </div>
 
             <Link
-              to="/#about"
-              onClick={() => handleNavAnchor('#about')}
-              className="hover:text-rose-600 transition-colors py-1"
+              to="/about"
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/about') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              }`}
             >
               About
             </Link>
 
             <Link
-              to="/#doctors"
-              onClick={() => handleNavAnchor('#doctors')}
-              className="hover:text-rose-600 transition-colors py-1"
+              to="/doctors"
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/doctors') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              }`}
             >
               Doctors
             </Link>
 
             <Link
-              to="/#contact"
-              onClick={() => handleNavAnchor('#contact')}
-              className="hover:text-rose-600 transition-colors py-1"
+              to="/gallery"
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/gallery') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              }`}
+            >
+              Gallery
+            </Link>
+
+            <Link
+              to="/contact"
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/contact') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              }`}
             >
               Contact
             </Link>
@@ -361,12 +366,13 @@ export default function Header({ onBookClick }) {
               <span>+91 79090 67784</span>
             </a>
 
-            <button
-              onClick={onBookClick}
-              className="btn-rose px-4 py-2 sm:px-5 sm:py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-md inline-flex items-center justify-center gap-1.5 cursor-pointer"
+            <Link
+              to="/book-appointment"
+              className="hidden md:inline-flex btn-rose px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold shadow-md items-center justify-center gap-1.5 cursor-pointer"
             >
+              <Calendar className="w-3.5 h-3.5" />
               <span>Book Appointment</span>
-            </button>
+            </Link>
 
             {/* Mobile Hamburger Toggle */}
             <button
@@ -380,7 +386,7 @@ export default function Header({ onBookClick }) {
         </div>
       </header>
 
-      {/* Mobile Drawer Menu */}
+      {/* Mobile Drawer Menu - Solid White */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 z-50 lg:hidden">
           {/* Backdrop */}
@@ -416,7 +422,9 @@ export default function Header({ onBookClick }) {
                 <Link
                   to="/"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
                 >
                   Home
                 </Link>
@@ -436,13 +444,13 @@ export default function Header({ onBookClick }) {
                   </button>
 
                   {mobileTreatmentsOpen && (
-                    <div className="px-3 pb-3 space-y-3 pt-1 border-t border-slate-100 text-xs">
+                    <div className="px-3 pb-3 space-y-3 pt-1 border-t border-slate-100 text-xs bg-white">
                       <Link
                         to="/treatments"
                         onClick={() => setMobileMenuOpen(false)}
                         className="w-full flex items-center justify-between p-2 rounded-lg bg-teal-600 text-white font-bold"
                       >
-                        <span>View All 15 Treatments</span>
+                        <span>View All 15 Treatments Directory</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </Link>
 
@@ -498,41 +506,55 @@ export default function Header({ onBookClick }) {
                 </div>
 
                 <Link
-                  to="/#about"
-                  onClick={() => handleNavAnchor('#about')}
-                  className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
+                  to="/about"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/about') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
                 >
-                  About
+                  About Us
                 </Link>
 
                 <Link
-                  to="/#doctors"
-                  onClick={() => handleNavAnchor('#doctors')}
-                  className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
+                  to="/doctors"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/doctors') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
                 >
-                  Doctors
+                  Specialist Doctors
                 </Link>
 
                 <Link
-                  to="/#contact"
-                  onClick={() => handleNavAnchor('#contact')}
-                  className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
+                  to="/gallery"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/gallery') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
                 >
-                  Contact
+                  Clinic Gallery
+                </Link>
+
+                <Link
+                  to="/contact"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/contact') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  Contact &amp; Location
                 </Link>
               </div>
             </div>
 
             <div className="pt-5 border-t border-slate-100 space-y-3">
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onBookClick();
-                }}
+              <Link
+                to="/book-appointment"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full btn-rose py-3 rounded-xl font-bold text-sm text-center block shadow-md"
               >
                 Book Appointment
-              </button>
+              </Link>
 
               <a
                 href="tel:+917909067784"

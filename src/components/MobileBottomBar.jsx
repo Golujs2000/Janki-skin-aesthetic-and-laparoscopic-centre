@@ -5,7 +5,7 @@ export default function MobileBottomBar({ onBookClick }) {
   return (
     <nav 
       aria-label="Mobile Quick Actions" 
-      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white/95 backdrop-blur-md border-t border-slate-200/90 shadow-[0_-4px_20px_rgba(11,37,69,0.08)] py-2 px-3"
+      className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-white border-t border-slate-200 shadow-[0_-4px_20px_rgba(11,37,69,0.08)] py-2 px-3"
     >
       <div className="flex items-center justify-around max-w-md mx-auto">
         {/* Call Action */}

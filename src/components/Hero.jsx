@@ -35,7 +35,7 @@ export default function Hero({ onBookClick }) {
                 {/* Dr. Rashmi Ray Chip */}
                 <div className="flex items-center gap-3 p-2 pr-4 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
                   <img
-                    src="assets/dr-rashmi-ray.jpg"
+                    src="/assets/dr-rashmi-ray.jpg"
                     alt="Dr. Rashmi Ray"
                     className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
                     width="40"
@@ -54,7 +54,7 @@ export default function Hero({ onBookClick }) {
                 {/* Dr. S. Sagar Chip */}
                 <div className="flex items-center gap-3 p-2 pr-4 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
                   <img
-                    src="assets/dr-sagar.jpg"
+                    src="/assets/dr-sagar.jpg"
                     alt="Dr. S. Sagar"
                     className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
                     width="40"
@@ -129,7 +129,7 @@ export default function Hero({ onBookClick }) {
                 {/* Doctor Portrait with Feathered Mask */}
                 <div className="hero-doctor-feather-wrap">
                   <img
-                    src="assets/dr-rashmi-sagar-hero-feathered.png"
+                    src="/assets/dr-rashmi-sagar-hero-feathered.png"
                     alt="Dr. Rashmi Ray and Dr. S. Sagar - Janki Skin Aesthetic & Laparoscopic Centre Forbesganj"
                     className="w-full h-auto max-h-[500px] object-contain drop-shadow-xl hover:scale-[1.02] transition-transform duration-500"
                     width="600"

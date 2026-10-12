@@ -14,6 +14,8 @@ import {
   ShieldCheck
 } from 'lucide-react';
 
+import SEOHead from '../components/SEOHead';
+
 export default function TreatmentsPage({ onOpenLightbox, onBookTreatment }) {
   const [activeTab, setActiveTab] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
@@ -36,6 +38,11 @@ export default function TreatmentsPage({ onOpenLightbox, onBookTreatment }) {
 
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
+      <SEOHead
+        title="All Treatments & Clinical Directory | Janki Skin Aesthetic & Laparoscopic Centre"
+        description="Explore all 15 surgical and dermatological procedures at Janki Centre Forbesganj. Minimally invasive keyhole surgeries, GFC hair regrowth, chemical peeling, and vitiligo care."
+        keywords="Treatments directory Forbesganj, Laparoscopy surgeries Araria, Dermatology treatments Forbesganj, GFC hair therapy Bihar, Gallbladder removal Forbesganj"
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb */}

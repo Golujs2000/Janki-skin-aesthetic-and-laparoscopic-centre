@@ -1,0 +1,7 @@
+# Robots.txt for Janki Skin Aesthetic & Laparoscopic Centre Forbesganj
+User-agent: *
+Allow: /
+
+# Host & Sitemap location
+Host: https://janki-skin-and-laparo-centre.firebaseapp.com
+Sitemap: https://janki-skin-and-laparo-centre.firebaseapp.com/sitemap.xml

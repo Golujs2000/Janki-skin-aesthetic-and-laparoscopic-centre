@@ -20,6 +20,7 @@ import {
   Building,
   HeartPulse
 } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 export default function TreatmentDetail({ onOpenLightbox }) {
   const { id } = useParams();
@@ -35,12 +36,6 @@ export default function TreatmentDetail({ onOpenLightbox }) {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    if (treatment) {
-      document.title = `${treatment.title} in Forbesganj | Janki Skin Aesthetic & Laparoscopic Centre`;
-    }
-  }, [treatment]);
-
   if (!treatment) {
     return (
       <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-20 text-center">
@@ -54,11 +49,74 @@ export default function TreatmentDetail({ onOpenLightbox }) {
           className="btn-rose px-6 py-3 rounded-full text-sm font-bold inline-flex items-center gap-2"
         >
           <ArrowLeft className="w-4 h-4" />
-          <span>Browse All 21 Treatments</span>
+          <span>Browse All 15 Treatments</span>
         </Link>
       </div>
     );
   }
+
+  const treatmentSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "MedicalProcedure",
+        "name": treatment.title,
+        "alternateName": treatment.subtitle,
+        "description": treatment.desc,
+        "procedureType": treatment.department === 'laparoscopic' ? "SurgicalProcedure" : "NoninvasiveProcedure",
+        "bodyLocation": treatment.department === 'laparoscopic' ? "Abdomen" : (treatment.id.includes('hair') ? "Scalp" : "Skin"),
+        "performer": {
+          "@type": "Physician",
+          "name": treatment.doctor,
+          "medicalSpecialty": treatment.department === 'laparoscopic' ? "Surgical" : "Dermatology"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "INR",
+          "availability": "https://schema.org/InStock",
+          "seller": {
+            "@type": "MedicalClinic",
+            "name": "Janki Skin Aesthetic & Laparoscopic Centre",
+            "telephone": treatment.docPhone
+          }
+        }
+      },
+      ...(treatment.faqs && treatment.faqs.length > 0 ? [{
+        "@type": "FAQPage",
+        "mainEntity": treatment.faqs.map(faq => ({
+          "@type": "Question",
+          "name": faq.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": faq.a
+          }
+        }))
+      }] : []),
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://janki-skin-and-laparo-centre.firebaseapp.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Treatments",
+            "item": "https://janki-skin-and-laparo-centre.firebaseapp.com/treatments"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": treatment.title,
+            "item": `https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/${treatment.id}`
+          }
+        ]
+      }
+    ]
+  };
 
   const isTeal = treatment.badgeTheme === 'teal';
 
@@ -92,6 +150,13 @@ export default function TreatmentDetail({ onOpenLightbox }) {
 
   return (
     <div className="bg-slate-50 min-h-screen py-6 sm:py-10">
+      <SEOHead
+        title={`${treatment.title} in Forbesganj | Janki Skin Aesthetic & Laparoscopic Centre`}
+        description={`${treatment.title} (${treatment.subtitle}) by ${treatment.doctor} at Janki Centre Forbesganj. ${treatment.desc.slice(0, 140)}...`}
+        keywords={`${treatment.title}, ${treatment.title} Forbesganj, ${treatment.doctor}, Laparoscopic surgery Bihar, Janki Centre`}
+        image={treatment.thumb}
+        schema={treatmentSchema}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb Navigation */}

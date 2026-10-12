@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Doctors from '../components/Doctors';
@@ -20,6 +21,11 @@ export default function Home({
 }) {
   return (
     <main className="flex-1">
+      <SEOHead
+        title="Janki Skin Aesthetic & Laparoscopic Centre Forbesganj | Dr. S. Sagar & Dr. Rashmi Ray"
+        description="Forbesganj’s premier healthcare centre for minimally invasive laparoscopic gallbladder, appendix & hernia surgery by Dr. S. Sagar (MS, FIAGES) & advanced aesthetic dermatology, GFC hair regrowth & chemical peels by Dr. Rashmi Ray (MD, DNB). Call +91 79090 67784."
+        keywords="Laparoscopic surgery Forbesganj, Best dermatologist Forbesganj, Gallbladder stone surgery Bihar, Appendix operation Forbesganj, GFC hair regrowth Araria, Chemical peeling Forbesganj, Dr S Sagar, Dr Rashmi Ray"
+      />
       <Hero onBookClick={onBookClick} />
       <About />
       <Doctors onSelectDoctor={onSelectDoctor} />
