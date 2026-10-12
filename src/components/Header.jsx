@@ -343,14 +343,6 @@ export default function Header({ onBookClick }) {
             </Link>
 
             <Link
-              to="/#comparison"
-              onClick={() => handleNavAnchor('#comparison')}
-              className="hover:text-rose-600 transition-colors py-1"
-            >
-              Why Laparoscopy
-            </Link>
-
-            <Link
               to="/#contact"
               onClick={() => handleNavAnchor('#contact')}
               className="hover:text-rose-600 transition-colors py-1"
@@ -519,14 +511,6 @@ export default function Header({ onBookClick }) {
                   className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
                 >
                   Doctors
-                </Link>
-
-                <Link
-                  to="/#comparison"
-                  onClick={() => handleNavAnchor('#comparison')}
-                  className="py-2.5 px-3 rounded-lg text-slate-700 font-bold text-sm hover:bg-rose-50 hover:text-rose-600 transition"
-                >
-                  Why Laparoscopy
                 </Link>
 
                 <Link
