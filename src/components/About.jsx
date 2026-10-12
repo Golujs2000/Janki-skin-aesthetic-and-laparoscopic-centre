@@ -14,7 +14,7 @@ export default function About() {
               {/* Main Reception Hall Image */}
               <div className="rounded-3xl overflow-hidden shadow-xl border border-slate-100 aspect-[4/3] bg-slate-100">
                 <img
-                  src="/assets/clinic-reception-hall.jpg"
+                  src="/assets/clinic-reception-counter-emblem.jpg"
                   alt="Janki Skin Aesthetic & Laparoscopic Centre Reception Area Forbesganj"
                   className="w-full h-full object-cover"
                   loading="lazy"
