@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, useLocation, Navigate } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Doctors from './components/Doctors';
-import Services from './components/Services';
-import Comparison from './components/Comparison';
-import Gallery from './components/Gallery';
-import Reviews from './components/Reviews';
-import Appointment from './components/Appointment';
-import FAQ from './components/FAQ';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import TreatmentsPage from './pages/TreatmentsPage';
+import TreatmentDetail from './pages/TreatmentDetail';
 import LightboxModal from './components/LightboxModal';
 import MobileBottomBar from './components/MobileBottomBar';
 import FloatingWidgets from './components/FloatingWidgets';
 
-export default function App() {
+function AppContent() {
   const [lightbox, setLightbox] = useState({
     isOpen: false,
     src: '',
@@ -25,6 +20,9 @@ export default function App() {
 
   const [selectedDoctor, setSelectedDoctor] = useState('');
   const [selectedTreatment, setSelectedTreatment] = useState(null);
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleOpenLightbox = (src, alt, caption) => {
     setLightbox({
@@ -40,9 +38,13 @@ export default function App() {
   };
 
   const scrollToAppointment = () => {
-    const el = document.getElementById('book-appointment');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/#book-appointment');
+    } else {
+      const el = document.getElementById('book-appointment');
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -59,28 +61,47 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col font-body text-slate-800 antialiased selection:bg-teal-500 selection:text-white">
+      <ScrollToTop />
+
       {/* Top Header */}
       <Header onBookClick={scrollToAppointment} />
 
-      {/* Main Page Sections */}
-      <main className="flex-1">
-        <Hero onBookClick={scrollToAppointment} />
-        <About />
-        <Doctors onSelectDoctor={handleSelectDoctor} />
-        <Services 
-          onOpenLightbox={handleOpenLightbox} 
-          onBookTreatment={handleBookTreatment} 
-        />
-        <Comparison />
-        <Gallery onOpenLightbox={handleOpenLightbox} />
-        <Reviews />
-        <Appointment 
-          initialDoctor={selectedDoctor} 
-          initialTreatment={selectedTreatment} 
-        />
-        <FAQ />
-        <Contact />
-      </main>
+      {/* Routed Pages */}
+      <div className="flex-1">
+        <Routes>
+          <Route 
+            path="/" 
+            element={
+              <Home 
+                onBookClick={scrollToAppointment}
+                onOpenLightbox={handleOpenLightbox}
+                selectedDoctor={selectedDoctor}
+                onSelectDoctor={handleSelectDoctor}
+                selectedTreatment={selectedTreatment}
+                onBookTreatment={handleBookTreatment}
+              />
+            } 
+          />
+          <Route 
+            path="/treatments" 
+            element={
+              <TreatmentsPage 
+                onOpenLightbox={handleOpenLightbox} 
+                onBookTreatment={handleBookTreatment} 
+              />
+            } 
+          />
+          <Route 
+            path="/treatment/:id" 
+            element={
+              <TreatmentDetail 
+                onOpenLightbox={handleOpenLightbox} 
+              />
+            } 
+          />
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
 
       {/* Footer */}
       <Footer />
@@ -97,5 +118,13 @@ export default function App() {
       <MobileBottomBar onBookClick={scrollToAppointment} />
       <FloatingWidgets />
     </div>
+  );
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <AppContent />
+    </BrowserRouter>
   );
 }

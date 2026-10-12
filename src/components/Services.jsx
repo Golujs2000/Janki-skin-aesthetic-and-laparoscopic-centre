@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { treatmentsData } from '../data/treatments';
 import { 
   Sparkles, 
@@ -45,7 +46,7 @@ export default function Services({ onOpenLightbox, onBookTreatment }) {
   const [searchQuery, setSearchQuery] = useState('');
 
   const tabs = [
-    { id: 'all', label: 'All Treatments (21)', icon: Layers },
+    { id: 'all', label: 'All Treatments (15)', icon: Layers },
     { id: 'laparoscopic', label: 'Laparoscopic Surgery (6)', icon: Activity },
     { id: 'aesthetic', label: 'Aesthetics & Hair (6)', icon: Sparkles },
     { id: 'dermatology', label: 'Clinical Dermatology (3)', icon: HeartPulse },
@@ -173,10 +174,12 @@ export default function Services({ onOpenLightbox, onBookTreatment }) {
                       }`}>
                         <IconComponent className="w-5 h-5" />
                       </div>
-                      <div>
-                        <h3 className="font-heading font-bold text-lg text-primary leading-tight group-hover:text-teal-accent transition-colors">
-                          {treatment.title}
-                        </h3>
+                      <div className="flex-1">
+                        <Link to={`/treatment/${treatment.id}`} className="group/link block">
+                          <h3 className="font-heading font-bold text-lg text-primary leading-tight group-hover/link:text-teal-accent transition-colors">
+                            {treatment.title}
+                          </h3>
+                        </Link>
                         <div className="text-xs font-medium text-slate-500 mt-0.5">
                           {treatment.subtitle}
                         </div>
@@ -184,29 +187,32 @@ export default function Services({ onOpenLightbox, onBookTreatment }) {
                     </div>
 
                     {/* Description */}
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed line-clamp-3">
                       {treatment.desc}
                     </p>
 
                     {/* Key Clinical Benefits */}
                     <div className="space-y-1.5 pt-1">
-                      {treatment.benefits.map((b, i) => (
+                      {treatment.benefits.slice(0, 3).map((b, i) => (
                         <div key={i} className="flex items-start gap-2 text-xs text-slate-700">
                           <CheckCircle2 className={`w-3.5 h-3.5 mt-0.5 flex-shrink-0 ${
                             isTeal ? 'text-teal-accent' : 'text-rose-accent'
                           }`} />
-                          <span>{b}</span>
+                          <span className="truncate">{b}</span>
                         </div>
                       ))}
                     </div>
                   </div>
 
-                  {/* Card Bottom: Doctor attribution & CTA */}
+                  {/* Card Bottom: Link to full page & Book CTA */}
                   <div className="pt-4 border-t border-slate-100 flex items-center justify-between gap-2">
-                    <div className="text-[11px] text-slate-500">
-                      <span>Under: </span>
-                      <strong className="text-slate-800">{treatment.doctor}</strong>
-                    </div>
+                    <Link
+                      to={`/treatment/${treatment.id}`}
+                      className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-teal-accent transition group/btn"
+                    >
+                      <span>Full Details</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                    </Link>
 
                     <button
                       type="button"
