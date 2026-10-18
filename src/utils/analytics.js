@@ -1,120 +1,54 @@
 // Janki Clinic - Traffic Analytics & Local Bookings Engine
 
-const ANALYTICS_KEY = 'janki_clinic_traffic_analytics_v1';
-const BOOKINGS_KEY = 'janki_clinic_local_bookings_v1';
+const ANALYTICS_KEY = 'janki_clinic_traffic_analytics_v2';
+const BOOKINGS_KEY = 'janki_clinic_local_bookings_v2';
 
-// Seed initial realistic clinic analytics if first time
+// Clean legacy v1 dummy data if present
+try {
+  if (typeof window !== 'undefined') {
+    localStorage.removeItem('janki_clinic_traffic_analytics_v1');
+    localStorage.removeItem('janki_clinic_local_bookings_v1');
+  }
+} catch (_) {}
+
+// Helper to get today's date in local YYYY-MM-DD
+function getLocalDateKey() {
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+// Initial clean analytics structure (no dummy data)
 function getInitialAnalytics() {
   return {
-    totalViews: 3840,
-    uniqueVisitors: 1920,
-    todayViews: 142,
-    todayInquiries: 18,
+    totalViews: 0,
+    uniqueVisitors: 0,
+    todayDate: getLocalDateKey(),
+    todayViews: 0,
+    todayInquiries: 0,
     sources: {
-      'Google Search': 1650,
-      'WhatsApp Direct': 980,
-      'Clinic Signboard QR': 490,
-      'Direct Visit': 460,
-      'Social Media (FB/Insta)': 260
+      'Google Search': 0,
+      'WhatsApp Direct': 0,
+      'Clinic Signboard QR': 0,
+      'Direct Visit': 0,
+      'Social Media (FB/Insta)': 0
     },
     devices: {
-      Mobile: 2760,
-      Desktop: 920,
-      Tablet: 160
+      Mobile: 0,
+      Desktop: 0,
+      Tablet: 0
     },
-    topTreatments: {
-      'Laparoscopic Gallbladder Cholecystectomy': 740,
-      'GFC Hair Regrowth & Anti-Hairfall': 680,
-      'Emergency Laparoscopic Appendectomy': 510,
-      'Chemical Peeling & Skin Glow': 490,
-      'Laparoscopic Hernia 3D Mesh Repair': 430,
-      'Vitiligo & White Patches Repigmentation': 380,
-      'Acne Scar Laser Revision': 310,
-      'Tubal Ligation (दूरबीन नसबंदी)': 300
-    },
-    dailyTrends: [
-      { date: 'Oct 05', visits: 180, bookings: 8 },
-      { date: 'Oct 06', visits: 210, bookings: 11 },
-      { date: 'Oct 07', visits: 195, bookings: 9 },
-      { date: 'Oct 08', visits: 240, bookings: 14 },
-      { date: 'Oct 09', visits: 275, bookings: 16 },
-      { date: 'Oct 10', visits: 310, bookings: 19 },
-      { date: 'Oct 11', visits: 290, bookings: 15 },
-      { date: 'Oct 12', visits: 320, bookings: 17 },
-      { date: 'Oct 13', visits: 260, bookings: 12 },
-      { date: 'Oct 14', visits: 340, bookings: 21 },
-      { date: 'Oct 15', visits: 380, bookings: 24 },
-      { date: 'Oct 16', visits: 410, bookings: 26 },
-      { date: 'Oct 17', visits: 430, bookings: 28 },
-      { date: 'Oct 18', visits: 450, bookings: 31 }
-    ]
+    topTreatments: {},
+    dailyVisits: {},       // { "YYYY-MM-DD": visitCount }
+    dailyInquiries: {}    // { "YYYY-MM-DD": inquiryCount }
   };
 }
 
-// Seed initial recent clinic bookings
+// Initial clean bookings (no dummy data)
 function getInitialBookings() {
-  return [
-    {
-      id: 'JK-2026-104',
-      createdAt: new Date(Date.now() - 35 * 60 * 1000).toISOString(),
-      patientName: 'Rameshwar Yadav',
-      phone: '9801234567',
-      doctor: 'Dr. S. Sagar',
-      treatment: 'Gallbladder Stones (पित्त की पथरी)',
-      date: 'Tomorrow (Morning Slot)',
-      slot: 'Morning OPD (10:00 AM – 01:00 PM)',
-      symptoms: 'Ultrasound report confirmed 12mm multiple gallbladder stones. Severe upper abdominal discomfort.',
-      status: 'Confirmed'
-    },
-    {
-      id: 'JK-2026-103',
-      createdAt: new Date(Date.now() - 95 * 60 * 1000).toISOString(),
-      patientName: 'Priya Sharma',
-      phone: '7091512345',
-      doctor: 'Dr. Rashmi Roy',
-      treatment: 'GFC Hair Regrowth & Hair Fall',
-      date: 'Saturday (10:00 AM – 07:00 PM)',
-      slot: 'Afternoon OPD (01:00 PM – 04:00 PM)',
-      symptoms: 'Severe hair shedding on crown and temples since 4 months.',
-      status: 'Confirmed'
-    },
-    {
-      id: 'JK-2026-102',
-      createdAt: new Date(Date.now() - 240 * 60 * 1000).toISOString(),
-      patientName: 'Mohammad Tariq',
-      phone: '9431876543',
-      doctor: 'Dr. S. Sagar',
-      treatment: 'Laparoscopic Hernia (हर्निया)',
-      date: 'Sunday (Morning Slot)',
-      slot: 'Morning OPD (10:00 AM – 01:00 PM)',
-      symptoms: 'Right groin bulge visible while standing and coughing. Need keyhole 3D mesh repair consultation.',
-      status: 'Pending'
-    },
-    {
-      id: 'JK-2026-101',
-      createdAt: new Date(Date.now() - 480 * 60 * 1000).toISOString(),
-      patientName: 'Suman Sinha',
-      phone: '9934567890',
-      doctor: 'Dr. Rashmi Roy',
-      treatment: 'Severe Acne & Pimple Scars',
-      date: 'Wednesday (01:00 PM – 07:00 PM)',
-      slot: 'Evening OPD (04:00 PM – 07:00 PM)',
-      symptoms: 'Painful cystic acne on cheeks. Seeking medical peel and non-steroid treatment.',
-      status: 'Completed'
-    },
-    {
-      id: 'JK-2026-100',
-      createdAt: new Date(Date.now() - 86400 * 1000).toISOString(),
-      patientName: 'Anita Devi',
-      phone: '7870123987',
-      doctor: 'Dr. Rashmi Roy',
-      treatment: 'Vitiligo / White Patches (सफेद दाग)',
-      date: 'Saturday (Morning Slot)',
-      slot: 'Morning OPD (10:00 AM – 01:00 PM)',
-      symptoms: 'White depigmented patch on dorsal right wrist spreading slowly.',
-      status: 'Completed'
-    }
-  ];
+  return [];
 }
 
 // Read Analytics Data
@@ -126,7 +60,13 @@ export function getAnalyticsData() {
       localStorage.setItem(ANALYTICS_KEY, JSON.stringify(initial));
       return initial;
     }
-    return JSON.parse(raw);
+    const data = JSON.parse(raw);
+    if (!data.dailyVisits) data.dailyVisits = {};
+    if (!data.dailyInquiries) data.dailyInquiries = {};
+    if (!data.sources) data.sources = {};
+    if (!data.devices) data.devices = {};
+    if (!data.topTreatments) data.topTreatments = {};
+    return data;
   } catch (e) {
     return getInitialAnalytics();
   }
@@ -134,14 +74,41 @@ export function getAnalyticsData() {
 
 // Record Page View
 export function recordPageView(path = '/') {
+  // Do not record admin dashboard views as patient traffic
+  if (path.startsWith('/admin')) {
+    return getAnalyticsData();
+  }
+
   try {
     const data = getAnalyticsData();
+    const today = getLocalDateKey();
+
+    // Check if new day
+    if (data.todayDate !== today) {
+      data.todayDate = today;
+      data.todayViews = 0;
+      data.todayInquiries = 0;
+    }
+
     data.totalViews = (data.totalViews || 0) + 1;
     data.todayViews = (data.todayViews || 0) + 1;
 
+    // Track daily visits by calendar date
+    if (!data.dailyVisits) data.dailyVisits = {};
+    data.dailyVisits[today] = (data.dailyVisits[today] || 0) + 1;
+
+    // Unique visitor session detection
+    try {
+      const hasVisited = sessionStorage.getItem('janki_has_visited');
+      if (!hasVisited) {
+        sessionStorage.setItem('janki_has_visited', 'true');
+        data.uniqueVisitors = (data.uniqueVisitors || 0) + 1;
+      }
+    } catch (_) {}
+
     // Detect Traffic Source
-    const referrer = document.referrer.toLowerCase();
-    const urlParams = new URLSearchParams(window.location.search);
+    const referrer = (typeof document !== 'undefined' ? document.referrer : '').toLowerCase();
+    const urlParams = new URLSearchParams(typeof window !== 'undefined' ? window.location.search : '');
     const utmSource = urlParams.get('utm_source') || urlParams.get('ref') || '';
 
     let source = 'Direct Visit';
@@ -153,27 +120,27 @@ export function recordPageView(path = '/') {
       source = 'Clinic Signboard QR';
     } else if (referrer.includes('facebook') || referrer.includes('instagram') || utmSource.includes('social')) {
       source = 'Social Media (FB/Insta)';
-    } else if (referrer && !referrer.includes(window.location.hostname)) {
+    } else if (referrer && typeof window !== 'undefined' && !referrer.includes(window.location.hostname)) {
       source = 'Other Referral';
     }
 
-    if (!data.sources) data.sources = {};
     data.sources[source] = (data.sources[source] || 0) + 1;
 
     // Detect Device
-    const width = window.innerWidth;
-    let device = 'Mobile';
-    if (width > 1024) device = 'Desktop';
-    else if (width >= 768) device = 'Tablet';
-
-    if (!data.devices) data.devices = {};
-    data.devices[device] = (data.devices[device] || 0) + 1;
+    if (typeof window !== 'undefined') {
+      const width = window.innerWidth;
+      let device = 'Mobile';
+      if (width > 1024) device = 'Desktop';
+      else if (width >= 768) device = 'Tablet';
+      data.devices[device] = (data.devices[device] || 0) + 1;
+    }
 
     // Track Treatment/Page if relevant
     if (path.includes('/treatment/')) {
-      const treatKey = path.split('/treatment/')[1];
-      if (!data.topTreatments) data.topTreatments = {};
-      data.topTreatments[treatKey] = (data.topTreatments[treatKey] || 0) + 1;
+      const treatKey = decodeURIComponent(path.split('/treatment/')[1]?.split('?')[0] || '');
+      if (treatKey) {
+        data.topTreatments[treatKey] = (data.topTreatments[treatKey] || 0) + 1;
+      }
     }
 
     localStorage.setItem(ANALYTICS_KEY, JSON.stringify(data));
@@ -223,7 +190,10 @@ export function saveLocalBooking(booking) {
     // Also increment analytics inquiry counter
     try {
       const analytics = getAnalyticsData();
+      const today = getLocalDateKey();
       analytics.todayInquiries = (analytics.todayInquiries || 0) + 1;
+      if (!analytics.dailyInquiries) analytics.dailyInquiries = {};
+      analytics.dailyInquiries[today] = (analytics.dailyInquiries[today] || 0) + 1;
       localStorage.setItem(ANALYTICS_KEY, JSON.stringify(analytics));
     } catch (_) {}
 
@@ -258,6 +228,100 @@ export function deleteLocalBooking(id) {
     console.error('Failed to delete booking:', e);
     return getLocalBookings();
   }
+}
+
+// Helper: Weekly Trend (Last 7 Days)
+export function getWeeklyTrend(dailyVisits = {}, dailyInquiries = {}) {
+  const days = [];
+  const now = new Date();
+  for (let i = 6; i >= 0; i--) {
+    const d = new Date(now);
+    d.setDate(now.getDate() - i);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const key = `${year}-${month}-${day}`;
+    
+    const dayName = d.toLocaleDateString('en-US', { weekday: 'short' });
+    const fullDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+    days.push({
+      key,
+      label: dayName,
+      fullDate,
+      visits: dailyVisits[key] || 0,
+      inquiries: dailyInquiries[key] || 0,
+      isToday: i === 0
+    });
+  }
+  return days;
+}
+
+// Helper: Monthly Trend (Last 30 Days)
+export function getMonthlyTrend(dailyVisits = {}, dailyInquiries = {}) {
+  const days = [];
+  const now = new Date();
+  for (let i = 29; i >= 0; i--) {
+    const d = new Date(now);
+    d.setDate(now.getDate() - i);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const day = String(d.getDate()).padStart(2, '0');
+    const key = `${year}-${month}-${day}`;
+    
+    const dayNum = String(d.getDate());
+    const fullDate = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+
+    days.push({
+      key,
+      label: dayNum,
+      fullDate,
+      visits: dailyVisits[key] || 0,
+      inquiries: dailyInquiries[key] || 0,
+      isToday: i === 0
+    });
+  }
+  return days;
+}
+
+// Helper: Yearly Trend (Last 12 Months)
+export function getYearlyTrend(dailyVisits = {}, dailyInquiries = {}) {
+  const months = [];
+  const now = new Date();
+  for (let i = 11; i >= 0; i--) {
+    const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const year = d.getFullYear();
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const monthPrefix = `${year}-${month}`;
+    
+    const monthName = d.toLocaleDateString('en-US', { month: 'short' });
+    const fullDate = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+
+    let monthVisits = 0;
+    let monthInquiries = 0;
+
+    Object.entries(dailyVisits).forEach(([dateStr, count]) => {
+      if (dateStr.startsWith(monthPrefix)) {
+        monthVisits += count;
+      }
+    });
+
+    Object.entries(dailyInquiries).forEach(([dateStr, count]) => {
+      if (dateStr.startsWith(monthPrefix)) {
+        monthInquiries += count;
+      }
+    });
+
+    months.push({
+      key: monthPrefix,
+      label: monthName,
+      fullDate,
+      visits: monthVisits,
+      inquiries: monthInquiries,
+      isCurrentMonth: i === 0
+    });
+  }
+  return months;
 }
 
 // Export All Bookings to CSV File Download
@@ -331,6 +395,13 @@ export function downloadTrafficReportCSV() {
       rows.push([dev, count]);
     });
   }
+  rows.push([]);
+  rows.push(['DAILY VISITS LOG (DATE, VISITS)']);
+  if (analytics.dailyVisits) {
+    Object.entries(analytics.dailyVisits).sort().forEach(([date, count]) => {
+      rows.push([date, count]);
+    });
+  }
 
   const csvContent = rows.map(r => r.map(c => `"${c}"`).join(',')).join('\r\n');
   const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
@@ -342,4 +413,21 @@ export function downloadTrafficReportCSV() {
   a.click();
   document.body.removeChild(a);
   URL.revokeObjectURL(url);
+}
+
+// Clear all stored data (Reset to zero)
+export function clearAllLocalData() {
+  try {
+    localStorage.removeItem(ANALYTICS_KEY);
+    localStorage.removeItem(BOOKINGS_KEY);
+    localStorage.removeItem('janki_clinic_traffic_analytics_v1');
+    localStorage.removeItem('janki_clinic_local_bookings_v1');
+    sessionStorage.removeItem('janki_has_visited');
+    // Re-initialize clean structure
+    const initialAnalytics = getInitialAnalytics();
+    localStorage.setItem(ANALYTICS_KEY, JSON.stringify(initialAnalytics));
+    localStorage.setItem(BOOKINGS_KEY, JSON.stringify([]));
+  } catch (e) {
+    console.error('Failed to clear data:', e);
+  }
 }

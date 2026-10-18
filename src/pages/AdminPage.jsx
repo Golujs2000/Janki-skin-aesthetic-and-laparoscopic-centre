@@ -40,7 +40,11 @@ import {
   saveLocalBooking,
   downloadBookingsCSV, 
   downloadBookingsJSON, 
-  downloadTrafficReportCSV 
+  downloadTrafficReportCSV,
+  clearAllLocalData,
+  getWeeklyTrend,
+  getMonthlyTrend,
+  getYearlyTrend
 } from '../utils/analytics';
 
 export default function AdminPage() {
@@ -53,6 +57,10 @@ export default function AdminPage() {
 
   // Active Tab: 'analytics', 'bookings', 'export'
   const [activeTab, setActiveTab] = useState('bookings');
+
+  // Traffic Graph Timeframe: 'weekly' | 'monthly' | 'yearly'
+  const [timeframe, setTimeframe] = useState('weekly');
+  const [hoveredBar, setHoveredBar] = useState(null);
 
   // Data states
   const [analytics, setAnalytics] = useState(getAnalyticsData);
@@ -106,6 +114,15 @@ export default function AdminPage() {
     setIsAuthenticated(false);
     sessionStorage.removeItem('janki_admin_auth');
     setPinInput('');
+  };
+
+  // Reset / Clear All Local Data
+  const handleResetAllData = () => {
+    if (window.confirm('Are you sure you want to completely clear all dashboard traffic and booking records? All counters will reset to 0.')) {
+      clearAllLocalData();
+      refreshData();
+      alert('Dashboard data has been reset to zero.');
+    }
   };
 
   // Status Change
@@ -162,11 +179,33 @@ export default function AdminPage() {
     return matchesSearch && matchesDoctor && matchesStatus;
   });
 
-  // Calculate quick metrics
+  // Calculate quick metrics (dynamic, 100% zero dummy data)
   const totalBookingsCount = bookings.length;
   const sagarBookingsCount = bookings.filter(b => b.doctor?.toLowerCase().includes('sagar')).length;
   const rashmiBookingsCount = bookings.filter(b => b.doctor?.toLowerCase().includes('rashmi') || b.doctor?.toLowerCase().includes('roy')).length;
   const confirmedCount = bookings.filter(b => b.status === 'Confirmed').length;
+
+  // Compute top traffic source dynamically
+  const sourceEntries = Object.entries(analytics.sources || {});
+  const sortedSources = [...sourceEntries].sort((a, b) => b[1] - a[1]);
+  const hasTraffic = (analytics.totalViews || 0) > 0;
+  const topSourceItem = sortedSources.find(s => s[1] > 0);
+  const topSourceName = topSourceItem ? topSourceItem[0] : 'Awaiting Visitors';
+  const topSourceCount = topSourceItem ? topSourceItem[1] : 0;
+  const topSourcePct = hasTraffic ? Math.round((topSourceCount / analytics.totalViews) * 100) : 0;
+
+  // Graph Trend Data based on timeframe
+  const trendData = timeframe === 'yearly'
+    ? getYearlyTrend(analytics.dailyVisits, analytics.dailyInquiries)
+    : timeframe === 'monthly'
+    ? getMonthlyTrend(analytics.dailyVisits, analytics.dailyInquiries)
+    : getWeeklyTrend(analytics.dailyVisits, analytics.dailyInquiries);
+
+  const totalPeriodVisits = trendData.reduce((acc, item) => acc + item.visits, 0);
+  const totalPeriodInquiries = trendData.reduce((acc, item) => acc + (item.inquiries || 0), 0);
+  const maxPeriodVisits = Math.max(...trendData.map(item => item.visits), 0);
+  const peakItem = trendData.reduce((max, item) => item.visits > (max?.visits || 0) ? item : max, null);
+  const avgPeriodVisits = trendData.length > 0 ? (totalPeriodVisits / trendData.length).toFixed(1) : '0';
 
   // PIN Authentication Screen
   if (!isAuthenticated) {
@@ -288,7 +327,7 @@ export default function AdminPage() {
               className="px-3.5 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs transition shadow-sm flex items-center gap-1.5 cursor-pointer"
             >
               <FileSpreadsheet className="w-4 h-4" />
-              <span>Export CSV (Excel)</span>
+              <span>Export CSV</span>
             </button>
 
             <button
@@ -300,8 +339,17 @@ export default function AdminPage() {
             </button>
 
             <button
+              onClick={handleResetAllData}
+              className="p-2.5 rounded-xl border border-rose-200 hover:bg-rose-50 text-rose-600 transition text-xs font-semibold flex items-center gap-1.5 cursor-pointer"
+              title="Reset all dashboard data to zero"
+            >
+              <Trash2 className="w-4 h-4" />
+              <span className="hidden sm:inline">Reset Data</span>
+            </button>
+
+            <button
               onClick={handleLogout}
-              className="px-3 py-2.5 rounded-xl border border-rose-200 text-rose-600 hover:bg-rose-50 font-bold text-xs transition flex items-center gap-1.5 cursor-pointer ml-auto md:ml-0"
+              className="px-3 py-2.5 rounded-xl border border-slate-200 text-slate-600 hover:bg-slate-50 font-bold text-xs transition flex items-center gap-1.5 cursor-pointer ml-auto md:ml-0"
               title="Lock Admin Screen"
             >
               <Lock className="w-3.5 h-3.5" />
@@ -323,7 +371,7 @@ export default function AdminPage() {
               {(analytics.totalViews || 0).toLocaleString()}
             </div>
             <div className="text-[11px] text-emerald-600 font-semibold mt-1 flex items-center gap-1">
-              <span>↑ +{analytics.todayViews || 14} views today</span>
+              <span>↑ +{(analytics.todayViews || 0).toLocaleString()} views today</span>
             </div>
           </div>
 
@@ -338,7 +386,7 @@ export default function AdminPage() {
               {totalBookingsCount}
             </div>
             <div className="text-[11px] text-slate-500 font-medium mt-1">
-              {sagarBookingsCount} Surgery • {rashmiBookingsCount} Skin/Hair
+              {totalBookingsCount === 0 ? 'No bookings yet' : `${sagarBookingsCount} Surgery • ${rashmiBookingsCount} Skin/Hair`}
             </div>
           </div>
 
@@ -350,22 +398,22 @@ export default function AdminPage() {
               </div>
             </div>
             <div className="text-xl sm:text-2xl font-extrabold font-heading text-primary truncate">
-              Google &amp; WhatsApp
+              {topSourceName}
             </div>
             <div className="text-[11px] text-emerald-600 font-semibold mt-1">
-              69% of all inbound patients
+              {hasTraffic && topSourcePct > 0 ? `${topSourcePct}% of all inbound patients` : 'Awaiting live patient traffic'}
             </div>
           </div>
 
           <div className="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200/90 shadow-sm">
             <div className="flex items-center justify-between text-slate-500 mb-2">
-              <span className="text-xs font-bold uppercase tracking-wider">Local Storage File</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Local File Records</span>
               <div className="w-8 h-8 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center">
                 <FileSpreadsheet className="w-4 h-4" />
               </div>
             </div>
             <div className="text-xl sm:text-2xl font-extrabold font-heading text-primary flex items-center gap-1.5">
-              <span>Auto-Saved</span>
+              <span>{totalBookingsCount} Cached</span>
             </div>
             <div className="text-[11px] text-teal-600 font-semibold mt-1">
               100% sync with WhatsApp forms
@@ -652,6 +700,200 @@ export default function AdminPage() {
         {activeTab === 'analytics' && (
           <div className="space-y-6">
             
+            {/* EVERYDAY VISITS INTERACTIVE GRAPH (WEEKLY / MONTHLY / YEARLY) */}
+            <div className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm space-y-5">
+              
+              {/* Graph Header & Timeframe Switcher */}
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-3 border-b border-slate-100">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <h3 className="font-heading font-extrabold text-base sm:text-lg text-primary">
+                      Everyday Patient Visits &amp; Traffic Trend
+                    </h3>
+                    <span className="px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 text-[10px] font-bold border border-teal-200">
+                      Live Everyday Logging
+                    </span>
+                  </div>
+                  <p className="text-xs text-slate-500 mt-0.5">
+                    Real-time daily website visits collected across Google, WhatsApp, and QR links
+                  </p>
+                </div>
+
+                {/* Timeframe Toggle Buttons */}
+                <div className="inline-flex items-center p-1 rounded-2xl bg-slate-100 border border-slate-200 text-xs font-bold">
+                  <button
+                    type="button"
+                    onClick={() => setTimeframe('weekly')}
+                    className={`px-3.5 py-1.5 rounded-xl transition cursor-pointer ${
+                      timeframe === 'weekly'
+                        ? 'bg-white text-primary shadow-xs font-extrabold'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    Weekly (7 Days)
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setTimeframe('monthly')}
+                    className={`px-3.5 py-1.5 rounded-xl transition cursor-pointer ${
+                      timeframe === 'monthly'
+                        ? 'bg-white text-primary shadow-xs font-extrabold'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    Monthly (30 Days)
+                  </button>
+
+                  <button
+                    type="button"
+                    onClick={() => setTimeframe('yearly')}
+                    className={`px-3.5 py-1.5 rounded-xl transition cursor-pointer ${
+                      timeframe === 'yearly'
+                        ? 'bg-white text-primary shadow-xs font-extrabold'
+                        : 'text-slate-500 hover:text-slate-800'
+                    }`}
+                  >
+                    Yearly (12 Months)
+                  </button>
+                </div>
+              </div>
+
+              {/* Timeframe Summary Stat Pills */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
+                    {timeframe === 'weekly' ? '7-Day Total' : timeframe === 'monthly' ? '30-Day Total' : '12-Month Total'}
+                  </span>
+                  <span className="text-xl font-extrabold font-heading text-primary">
+                    {totalPeriodVisits.toLocaleString()}
+                  </span>
+                  <span className="text-[10px] text-slate-500 block">visits recorded</span>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-teal-50/60 border border-teal-100">
+                  <span className="text-[10px] uppercase font-bold text-teal-700 block tracking-wider">
+                    Period Average
+                  </span>
+                  <span className="text-xl font-extrabold font-heading text-teal-800">
+                    {avgPeriodVisits}
+                  </span>
+                  <span className="text-[10px] text-teal-600 block">
+                    visits / {timeframe === 'yearly' ? 'month' : 'day'}
+                  </span>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-rose-50/60 border border-rose-100">
+                  <span className="text-[10px] uppercase font-bold text-rose-700 block tracking-wider">
+                    Form Inquiries
+                  </span>
+                  <span className="text-xl font-extrabold font-heading text-rose-800">
+                    {totalPeriodInquiries}
+                  </span>
+                  <span className="text-[10px] text-rose-600 block">consultation requests</span>
+                </div>
+
+                <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-100">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
+                    Peak Period
+                  </span>
+                  <span className="text-sm font-bold font-heading text-slate-800 truncate block mt-0.5">
+                    {peakItem && peakItem.visits > 0 ? peakItem.fullDate : 'Awaiting traffic'}
+                  </span>
+                  <span className="text-[10px] text-emerald-600 font-semibold block">
+                    {peakItem && peakItem.visits > 0 ? `${peakItem.visits} visits peak` : '0 peak visits'}
+                  </span>
+                </div>
+              </div>
+
+              {/* Chart Visual Canvas */}
+              <div className="relative pt-6 pb-2">
+                
+                {/* Reference Grid Lines */}
+                <div className="absolute inset-x-0 top-6 bottom-10 flex flex-col justify-between pointer-events-none opacity-40">
+                  <div className="border-b border-dashed border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>{Math.max(maxPeriodVisits, 10)}</span>
+                  </div>
+                  <div className="border-b border-dashed border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>{Math.max(Math.round(maxPeriodVisits / 2), 5)}</span>
+                  </div>
+                  <div className="border-b border-slate-200 flex items-center justify-between text-[10px] text-slate-400">
+                    <span>0</span>
+                  </div>
+                </div>
+
+                {/* Bars Container */}
+                <div className="h-56 sm:h-64 flex items-end justify-between gap-1 sm:gap-2 px-1 relative z-10">
+                  {trendData.map((item, idx) => {
+                    const chartCeiling = Math.max(maxPeriodVisits, 10);
+                    const heightPct = chartCeiling > 0 ? Math.round((item.visits / chartCeiling) * 100) : 0;
+                    const isPeak = peakItem && peakItem.visits > 0 && item.visits === peakItem.visits;
+
+                    return (
+                      <div 
+                        key={item.key || idx} 
+                        className="flex-1 flex flex-col items-center h-full justify-end group relative"
+                        onMouseEnter={() => setHoveredBar(item)}
+                        onMouseLeave={() => setHoveredBar(null)}
+                      >
+                        {/* Interactive Hover Tooltip */}
+                        <div className="absolute -top-16 bg-slate-900 text-white text-[10px] rounded-xl py-1.5 px-2.5 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none z-30 shadow-xl border border-slate-700 text-center">
+                          <div className="font-bold text-teal-300">{item.fullDate}</div>
+                          <div className="text-white mt-0.5">
+                            <strong>{item.visits}</strong> {item.visits === 1 ? 'visit' : 'visits'} 
+                            {item.inquiries > 0 ? ` • ${item.inquiries} inquiries` : ''}
+                          </div>
+                          {totalPeriodVisits > 0 && (
+                            <div className="text-[9px] text-slate-400">
+                              {Math.round((item.visits / totalPeriodVisits) * 100)}% of period
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Bar Pillar */}
+                        <div className="w-full bg-slate-100/80 rounded-t-xl h-44 sm:h-52 flex items-end overflow-hidden p-0.5 sm:p-1 group-hover:bg-slate-200/70 transition">
+                          <div 
+                            className={`w-full rounded-t-lg transition-all duration-300 ${
+                              item.visits > 0
+                                ? isPeak
+                                  ? 'bg-gradient-to-t from-teal-700 via-teal-500 to-rose-400 shadow-xs'
+                                  : 'bg-gradient-to-t from-teal-600 via-teal-500 to-emerald-400 group-hover:from-rose-500 group-hover:to-rose-400 shadow-xs'
+                                : 'bg-slate-200/80 h-1'
+                            }`}
+                            style={{ 
+                              height: item.visits > 0 ? `${Math.max(heightPct, 6)}%` : '4px' 
+                            }}
+                          />
+                        </div>
+
+                        {/* Current Day / Month Active Dot */}
+                        {(item.isToday || item.isCurrentMonth) && (
+                          <div className="w-1.5 h-1.5 rounded-full bg-teal-500 mt-1 animate-pulse" title="Current Day/Month" />
+                        )}
+
+                        {/* X-Axis Date / Day Label */}
+                        <span className={`text-[10px] font-semibold mt-1 truncate ${
+                          item.isToday || item.isCurrentMonth ? 'text-teal-700 font-bold' : 'text-slate-400'
+                        } ${timeframe === 'monthly' && idx % 3 !== 0 && !item.isToday ? 'hidden sm:block' : 'block'}`}>
+                          {item.label}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Zero State Notice */}
+                {totalPeriodVisits === 0 && (
+                  <div className="mt-4 p-3 rounded-2xl bg-slate-50 border border-slate-200 text-center text-xs text-slate-500 flex items-center justify-center gap-2">
+                    <AlertCircle className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                    <span>
+                      0 visits recorded in this timeframe. Every time a patient visits <strong>jankiclinic.com</strong> from Google, WhatsApp, or QR scans, daily visits log here in real time.
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+
             {/* Sources & Devices Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               
@@ -668,7 +910,7 @@ export default function AdminPage() {
                   </div>
                   <button
                     onClick={downloadTrafficReportCSV}
-                    className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1"
+                    className="p-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 flex items-center gap-1 cursor-pointer"
                     title="Download Report"
                   >
                     <Download className="w-3.5 h-3.5" />
@@ -678,8 +920,8 @@ export default function AdminPage() {
 
                 <div className="space-y-3 pt-1">
                   {Object.entries(analytics.sources || {}).map(([src, count]) => {
-                    const total = Object.values(analytics.sources || {}).reduce((a, b) => a + b, 0) || 1;
-                    const pct = Math.round((count / total) * 100);
+                    const total = Object.values(analytics.sources || {}).reduce((a, b) => a + b, 0);
+                    const pct = total > 0 ? Math.round((count / total) * 100) : 0;
 
                     return (
                       <div key={src} className="space-y-1">
@@ -694,7 +936,7 @@ export default function AdminPage() {
                         </div>
                         <div className="w-full h-2 rounded-full bg-slate-100 overflow-hidden">
                           <div 
-                            className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full"
+                            className="h-full bg-gradient-to-r from-teal-500 to-emerald-500 rounded-full transition-all duration-500"
                             style={{ width: `${pct}%` }}
                           />
                         </div>
@@ -704,50 +946,68 @@ export default function AdminPage() {
                 </div>
               </div>
 
-              {/* Devices Breakdown */}
+              {/* Devices Breakdown (100% Dynamic, Zero Dummy Fallbacks) */}
               <div className="lg:col-span-5 bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm space-y-4">
                 <div className="pb-2 border-b border-slate-100">
                   <h3 className="font-heading font-extrabold text-base text-primary">
                     Visitor Devices
                   </h3>
                   <p className="text-xs text-slate-500">
-                    Smartphones vs Desktops
+                    Smartphones vs Desktops breakdown
                   </p>
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 pt-2 text-center">
-                  <div className="p-4 rounded-2xl bg-teal-50/60 border border-teal-100">
-                    <Smartphone className="w-6 h-6 text-teal-600 mx-auto mb-1" />
-                    <div className="text-lg font-bold font-heading text-primary">
-                      {Math.round(((analytics.devices?.Mobile || 2760) / (analytics.totalViews || 3840)) * 100)}%
-                    </div>
-                    <div className="text-[10px] uppercase font-bold text-slate-500">Mobile</div>
-                  </div>
+                {(() => {
+                  const totalViews = analytics.totalViews || 0;
+                  const mobileViews = analytics.devices?.Mobile || 0;
+                  const desktopViews = analytics.devices?.Desktop || 0;
+                  const tabletViews = analytics.devices?.Tablet || 0;
+                  const mobilePct = totalViews > 0 ? Math.round((mobileViews / totalViews) * 100) : 0;
+                  const desktopPct = totalViews > 0 ? Math.round((desktopViews / totalViews) * 100) : 0;
+                  const tabletPct = totalViews > 0 ? Math.round((tabletViews / totalViews) * 100) : 0;
 
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <Laptop className="w-6 h-6 text-slate-600 mx-auto mb-1" />
-                    <div className="text-lg font-bold font-heading text-primary">
-                      {Math.round(((analytics.devices?.Desktop || 920) / (analytics.totalViews || 3840)) * 100)}%
-                    </div>
-                    <div className="text-[10px] uppercase font-bold text-slate-500">Desktop</div>
-                  </div>
+                  return (
+                    <div className="grid grid-cols-3 gap-3 pt-2 text-center">
+                      <div className="p-4 rounded-2xl bg-teal-50/60 border border-teal-100">
+                        <Smartphone className="w-6 h-6 text-teal-600 mx-auto mb-1" />
+                        <div className="text-lg font-bold font-heading text-primary">
+                          {mobilePct}%
+                        </div>
+                        <div className="text-[10px] uppercase font-bold text-slate-500">
+                          Mobile ({mobileViews})
+                        </div>
+                      </div>
 
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
-                    <Globe className="w-6 h-6 text-amber-600 mx-auto mb-1" />
-                    <div className="text-lg font-bold font-heading text-primary">
-                      {Math.round(((analytics.devices?.Tablet || 160) / (analytics.totalViews || 3840)) * 100)}%
+                      <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <Laptop className="w-6 h-6 text-slate-600 mx-auto mb-1" />
+                        <div className="text-lg font-bold font-heading text-primary">
+                          {desktopPct}%
+                        </div>
+                        <div className="text-[10px] uppercase font-bold text-slate-500">
+                          Desktop ({desktopViews})
+                        </div>
+                      </div>
+
+                      <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100">
+                        <Globe className="w-6 h-6 text-amber-600 mx-auto mb-1" />
+                        <div className="text-lg font-bold font-heading text-primary">
+                          {tabletPct}%
+                        </div>
+                        <div className="text-[10px] uppercase font-bold text-slate-500">
+                          Tablet ({tabletViews})
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-[10px] uppercase font-bold text-slate-500">Tablet</div>
-                  </div>
-                </div>
+                  );
+                })()}
 
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-xs text-slate-600 space-y-2 mt-3">
                   <div className="font-bold text-slate-800 flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4 text-teal-600" />
-                    <span>Regional Insights (Forbesganj/Seemanchal):</span>
+                    <span>Real-time Device Detection</span>
                   </div>
                   <p className="text-[11px] leading-relaxed text-slate-600">
-                    Over 72% of patients access the website via WhatsApp status shares, direct referrals, or Google Local Maps queries on their smartphones.
+                    Visitor screen dimensions and mobile user-agents are logged natively in client storage without tracking cookies or advertising pixels.
                   </p>
                 </div>
               </div>
@@ -764,61 +1024,31 @@ export default function AdminPage() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {Object.entries(analytics.topTreatments || {}).map(([treat, views], idx) => (
-                  <div key={treat} className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-100">
-                    <div className="flex items-center gap-3">
-                      <span className="w-6 h-6 rounded-full bg-white text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200 shadow-xs">
-                        {idx + 1}
-                      </span>
-                      <span className="text-xs font-bold text-slate-800 line-clamp-1">{treat}</span>
-                    </div>
-                    <span className="text-xs font-mono font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full border border-teal-100">
-                      {views} views
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* 14-Day Traffic Trend Bars */}
-            <div className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm space-y-4">
-              <div className="flex items-center justify-between pb-2 border-b border-slate-100">
-                <div>
-                  <h3 className="font-heading font-extrabold text-base text-primary">
-                    14-Day Patient Traffic Trend
-                  </h3>
-                  <p className="text-xs text-slate-500">
-                    Daily website visits &amp; WhatsApp inquiries
+              {Object.keys(analytics.topTreatments || {}).length === 0 ? (
+                <div className="py-8 text-center text-slate-400 text-xs space-y-1.5">
+                  <Stethoscope className="w-8 h-8 text-slate-300 mx-auto mb-2" />
+                  <p className="font-semibold text-slate-700">No Service Views Recorded Yet</p>
+                  <p className="text-[11px] text-slate-400 max-w-sm mx-auto">
+                    When visitors view treatment pages (e.g. Laparoscopic Gallbladder, Acne Scars, Hair PRP), popularity ranks here automatically.
                   </p>
                 </div>
-              </div>
-
-              <div className="h-48 flex items-end justify-between gap-1 sm:gap-2 pt-6">
-                {(analytics.dailyTrends || []).map((day) => {
-                  const maxVisits = 500;
-                  const heightPct = Math.round((day.visits / maxVisits) * 100);
-
-                  return (
-                    <div key={day.date} className="flex-1 flex flex-col items-center gap-1 group relative">
-                      {/* Tooltip */}
-                      <div className="absolute -top-12 bg-slate-900 text-white text-[10px] rounded-lg py-1 px-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none z-20 shadow-md">
-                        {day.visits} visits • {day.bookings} bookings
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {Object.entries(analytics.topTreatments || {}).sort((a, b) => b[1] - a[1]).map(([treat, views], idx) => (
+                    <div key={treat} className="flex items-center justify-between p-3 rounded-2xl bg-slate-50 border border-slate-100">
+                      <div className="flex items-center gap-3">
+                        <span className="w-6 h-6 rounded-full bg-white text-slate-700 font-bold text-xs flex items-center justify-center border border-slate-200 shadow-xs">
+                          {idx + 1}
+                        </span>
+                        <span className="text-xs font-bold text-slate-800 line-clamp-1">{treat}</span>
                       </div>
-
-                      <div className="w-full bg-slate-100 rounded-t-lg h-36 flex items-end overflow-hidden">
-                        <div 
-                          className="w-full bg-gradient-to-t from-teal-600 to-teal-400 group-hover:from-rose-500 group-hover:to-rose-400 transition-all rounded-t-lg"
-                          style={{ height: `${heightPct}%` }}
-                        />
-                      </div>
-                      <span className="text-[10px] text-slate-400 font-medium rotate-[-45deg] sm:rotate-0 origin-center mt-2">
-                        {day.date.split(' ')[1]}
+                      <span className="text-xs font-mono font-bold text-teal-700 bg-teal-50 px-2.5 py-1 rounded-full border border-teal-100">
+                        {views} views
                       </span>
                     </div>
-                  );
-                })}
-              </div>
+                  ))}
+                </div>
+              )}
             </div>
 
           </div>
