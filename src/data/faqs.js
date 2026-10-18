@@ -32,7 +32,7 @@ export const faqsData = [
   {
     id: 6,
     question: "What should I do in case of an acute surgical emergency (e.g., severe abdominal pain)?",
-    answer: "Janki Centre provides emergency surgical admissions and laparoscopy assistance. In case of acute abdominal pain, suspected appendicitis, or strangulated hernia, call our direct 24x7 helpline immediately at +91 79090 67784 or arrive directly at our Referral Hospital Road facility.",
+    answer: "JANKI Skin Aesthetic & Laparoscopic Centre provides emergency surgical admissions and laparoscopy assistance. In case of acute abdominal pain, suspected appendicitis, or strangulated hernia, call our direct 24x7 helpline immediately at +91 79090 67784 or arrive directly at our Referral Hospital Road facility.",
     category: "general"
   }
 ];

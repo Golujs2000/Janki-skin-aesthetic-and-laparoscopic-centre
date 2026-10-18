@@ -6,11 +6,11 @@ export default function Gallery({ onOpenLightbox }) {
   const [filter, setFilter] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Photos' },
-    { id: 'clinic', label: 'Reception & Facility' },
-    { id: 'surgical', label: 'Laparoscopy Suite' },
-    { id: 'aesthetic', label: 'Aesthetic Wing' },
-    { id: 'dermatology', label: 'Dermatology OPD' },
+    { id: 'all', label: 'All Facility Photos' },
+    { id: 'reception', label: 'Reception & Entrance' },
+    { id: 'waiting', label: 'Patient Waiting Lounge' },
+    { id: 'chambers', label: 'Doctor Chambers' },
+    { id: 'clinical', label: 'Clinical Examination' },
   ];
 
   const filteredItems = galleryData.filter(
@@ -28,10 +28,10 @@ export default function Gallery({ onOpenLightbox }) {
             <span>Facility Tour & Visual Showcase</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-primary font-heading tracking-tight mt-3">
-            Inside Janki Centre <span className="text-teal-accent">Forbesganj</span>
+            Inside JANKI Skin Aesthetic &amp; Laparoscopic Centre
           </h2>
           <p className="text-slate-600 text-base mt-3">
-            Take a visual tour of our sanitized consultation chambers, sterilized procedure suites, and patient lounge.
+            Take an authentic visual walkthrough of our sanitized reception, patient waiting lounge, consultation chambers, and examination suites.
           </p>
         </div>
 

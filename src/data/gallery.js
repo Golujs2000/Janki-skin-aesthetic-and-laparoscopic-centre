@@ -1,86 +1,128 @@
 export const galleryData = [
   {
     id: 1,
-    category: "clinic",
-    title: "Executive Reception Desk & Janki Emblem",
-    subtitle: "Illuminated Brand Counter & Welcome Lounge",
-    src: "/assets/clinic-reception-counter-emblem.jpg"
+    category: "reception",
+    title: "Grand Reception & Welcome Lounge",
+    subtitle: "Illuminated Janki Emblem & Polished Granite Lobby",
+    src: "/assets/clinic-reception-wide-hall.jpg"
   },
   {
     id: 2,
-    category: "clinic",
-    title: "Illuminated Clinic Exterior & Night Signboard",
+    category: "reception",
+    title: "Executive Reception Counter",
+    subtitle: "Illuminated Brand Counter & Patient Registration",
+    src: "/assets/clinic-reception-counter-emblem.jpg"
+  },
+  {
+    id: 3,
+    category: "reception",
+    title: "Patient Admission & Desk",
+    subtitle: "Helpdesk & Surgical Inquiry Point",
+    src: "/assets/clinic-reception-counter-side.jpg"
+  },
+  {
+    id: 4,
+    category: "reception",
+    title: "Geometric Illuminated Corridor",
+    subtitle: "Sanitized Passage Leading to Specialist Chambers",
+    src: "/assets/clinic-corridor-hallway-chambers.jpg"
+  },
+  {
+    id: 5,
+    category: "waiting",
+    title: "Spacious Patient Waiting Hall",
+    subtitle: "Modern Seating Rows & Linear Lighting",
+    src: "/assets/clinic-patient-waiting-rows.jpg"
+  },
+  {
+    id: 6,
+    category: "waiting",
+    title: "Air-Conditioned Waiting Lounge",
+    subtitle: "Comfortable Seating for Patients & Relatives",
+    src: "/assets/clinic-waiting-lounge-wide.jpg"
+  },
+  {
+    id: 7,
+    category: "waiting",
+    title: "Executive VIP Consultation Lounge",
+    subtitle: "Wall Fluting & Art Deco Seating Area",
+    src: "/assets/clinic-vip-sofa-lounge.jpg"
+  },
+  {
+    id: 8,
+    category: "waiting",
+    title: "Waiting Area Entrance",
+    subtitle: "Clean, Sanitized & Welcoming Ambience",
+    src: "/assets/clinic-waiting-area-entrance.jpg"
+  },
+  {
+    id: 9,
+    category: "chambers",
+    title: "Specialist Consultation Chamber",
+    subtitle: "Executive Wooden Paneling & Board Certifications",
+    src: "/assets/clinic-doctor-chamber-wide.jpg"
+  },
+  {
+    id: 10,
+    category: "chambers",
+    title: "Doctor Examination Suite",
+    subtitle: "Private Diagnostic & Consultation Space",
+    src: "/assets/clinic-doctor-chamber.jpg"
+  },
+  {
+    id: 11,
+    category: "chambers",
+    title: "Dr. Rashmi Ray Consultation Chamber",
+    subtitle: "Dermatologist & Cosmetologist Executive Desk",
+    src: "/assets/dr-rashmi-executive-desk.jpg"
+  },
+  {
+    id: 12,
+    category: "chambers",
+    title: "Clinical Discussion Desk",
+    subtitle: "Dr. S. Sagar & Dr. Rashmi Ray at Centre",
+    src: "/assets/doctors-consultation-desk.jpg"
+  },
+  {
+    id: 13,
+    category: "clinical",
+    title: "Clinical Examination Bed",
+    subtitle: "Sterilized Diagnostic & Minor OT Evaluation Suite",
+    src: "/assets/clinic-examination-bed-certificates.jpg"
+  },
+  {
+    id: 14,
+    category: "clinical",
+    title: "Clinical Counseling Area",
+    subtitle: "Sanitized Patient Evaluation & Seating",
+    src: "/assets/clinic-patient-seating-posters.jpg"
+  },
+  {
+    id: 15,
+    category: "reception",
+    title: "Sacred Clinic Mandir",
+    subtitle: "Divine Blessings Sanctuary for Healing",
+    src: "/assets/clinic-interior-mandir.jpg"
+  },
+  {
+    id: 16,
+    category: "reception",
+    title: "Night Signboard & Exterior Gate",
     subtitle: "Referral Hospital Road, Forbesganj Landmark",
     src: "/assets/clinic-exterior-gate-signboard-night.jpg"
   },
   {
-    id: 3,
-    category: "clinic",
-    title: "Sanitized Consultation Hallway & Chambers",
-    subtitle: "Diamond Ceiling Light Corridor to Doctor Chambers",
-    src: "/assets/clinic-corridor-hallway-chambers.jpg"
+    id: 17,
+    category: "reception",
+    title: "Illuminated Night Façade",
+    subtitle: "Janki Centre 24x7 Visible Signage",
+    src: "/assets/clinic-night-signboard.jpg"
   },
   {
-    id: 4,
-    category: "clinic",
-    title: "Modern Patient Waiting Lounge",
-    subtitle: "Air-Conditioned Waiting & Seating Area",
-    src: "/assets/clinic-waiting-lounge-wide.jpg"
-  },
-  {
-    id: 5,
-    category: "clinic",
-    title: "Patient Education Zone & Posters",
-    subtitle: "Clinical Displays & Digital Guidance",
-    src: "/assets/clinic-patient-seating-posters.jpg"
-  },
-  {
-    id: 6,
-    category: "surgical",
-    title: "Clinical Examination Suite & Board Credentials",
-    subtitle: "Sanitized Consultation Suite",
-    src: "/assets/clinic-examination-bed-certificates.jpg"
-  },
-  {
-    id: 7,
-    category: "surgical",
-    title: "Laparoscopic Gallbladder Surgery Visual",
-    subtitle: "Keyhole Cholecystectomy Technology",
-    src: "/assets/poster-laparoscopy-cholecystectomy.jpg"
-  },
-  {
-    id: 8,
-    category: "surgical",
-    title: "Laparoscopic Appendix Surgery Visual",
-    subtitle: "Minimally Invasive Appendectomy Suite",
-    src: "/assets/poster-laparoscopic-appendectomy.jpg"
-  },
-  {
-    id: 9,
-    category: "aesthetic",
-    title: "Advanced GFC Hair & Skin Therapy Suite",
-    subtitle: "Platelet Growth Factor Concentrate Protocol",
-    src: "/assets/poster-gfc-treatment.jpg"
-  },
-  {
-    id: 10,
-    category: "aesthetic",
-    title: "Medical Chemical Peeling Clinical Guide",
-    subtitle: "Dermatological Radiance & Melasma Protocol",
-    src: "/assets/poster-chemical-peel-benefits.jpg"
-  },
-  {
-    id: 11,
-    category: "aesthetic",
-    title: "Glutathione Radiance Infusion Protocol",
-    subtitle: "Master Antioxidant Skin Brightening",
-    src: "/assets/poster-glutathione-therapy.jpg"
-  },
-  {
-    id: 12,
-    category: "dermatology",
-    title: "Dermatology Consultation OPD Suite",
-    subtitle: "Dr. Rashmi Ray Clinical Examination",
-    src: "/assets/poster-dr-rashmi-opd.jpg"
+    id: 18,
+    category: "chambers",
+    title: "Senior Medical Leadership",
+    subtitle: "Faculty Doctors Committed to Compassionate Care",
+    src: "/assets/doctors-together.jpg"
   }
 ];

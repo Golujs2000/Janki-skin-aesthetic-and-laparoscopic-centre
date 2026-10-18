@@ -151,9 +151,9 @@ export default function TreatmentDetail({ onOpenLightbox }) {
   return (
     <div className="bg-slate-50 min-h-screen py-6 sm:py-10">
       <SEOHead
-        title={`${treatment.title} in Forbesganj | Janki Skin Aesthetic & Laparoscopic Centre`}
-        description={`${treatment.title} (${treatment.subtitle}) by ${treatment.doctor} at Janki Centre Forbesganj. ${treatment.desc.slice(0, 140)}...`}
-        keywords={`${treatment.title}, ${treatment.title} Forbesganj, ${treatment.doctor}, Laparoscopic surgery Bihar, Janki Centre`}
+        title={`${treatment.title} in Forbesganj | JANKI Skin Aesthetic & Laparoscopic Centre`}
+        description={`${treatment.title} (${treatment.subtitle}) by ${treatment.doctor} at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj. ${treatment.desc.slice(0, 140)}...`}
+        keywords={`${treatment.title}, ${treatment.title} Forbesganj, ${treatment.doctor}, Laparoscopic surgery Bihar, JANKI Skin Aesthetic & Laparoscopic Centre`}
         image={treatment.thumb}
         schema={treatmentSchema}
       />
@@ -261,7 +261,7 @@ export default function TreatmentDetail({ onOpenLightbox }) {
               >
                 <img
                   src={treatment.thumb}
-                  alt={`${treatment.title} at Janki Centre Forbesganj`}
+                  alt={`${treatment.title} at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 />
                 

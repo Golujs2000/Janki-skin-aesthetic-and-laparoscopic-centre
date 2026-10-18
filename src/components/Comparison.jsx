@@ -71,7 +71,7 @@ export default function Comparison() {
                   <th className="py-5 px-6 font-heading font-bold text-white text-sm bg-primary w-5/12">
                     <div className="flex items-center gap-2">
                       <Sparkles className="w-4 h-4 text-teal-300" />
-                      <span>Laparoscopic (Keyhole) at Janki Centre</span>
+                      <span>Laparoscopic (Keyhole) at JANKI Skin Aesthetic &amp; Laparoscopic Centre</span>
                     </div>
                   </th>
                   <th className="py-5 px-6 font-heading font-bold text-slate-600 text-sm bg-slate-100/70 w-4/12">

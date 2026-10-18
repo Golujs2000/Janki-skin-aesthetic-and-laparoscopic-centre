@@ -3,6 +3,7 @@ import SEOHead from '../components/SEOHead';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Doctors from '../components/Doctors';
+import Tribute from '../components/Tribute';
 import Services from '../components/Services';
 import Comparison from '../components/Comparison';
 import Gallery from '../components/Gallery';
@@ -27,6 +28,7 @@ export default function Home({
         keywords="Laparoscopic surgery Forbesganj, Best dermatologist Forbesganj, Gallbladder stone surgery Bihar, Appendix operation Forbesganj, GFC hair regrowth Araria, Chemical peeling Forbesganj, Dr S Sagar, Dr Rashmi Ray"
       />
       <Hero onBookClick={onBookClick} />
+      <Tribute />
       <About />
       <Doctors onSelectDoctor={onSelectDoctor} />
       <Services 

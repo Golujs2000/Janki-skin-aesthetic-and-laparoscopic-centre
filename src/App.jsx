@@ -11,6 +11,7 @@ import TreatmentDetail from './pages/TreatmentDetail';
 import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import AppointmentPage from './pages/AppointmentPage';
+import TributePage from './pages/TributePage';
 import LightboxModal from './components/LightboxModal';
 import MobileBottomBar from './components/MobileBottomBar';
 import FloatingWidgets from './components/FloatingWidgets';
@@ -135,6 +136,14 @@ function AppContent() {
                 initialTreatment={selectedTreatment}
               />
             } 
+          />
+          <Route 
+            path="/tribute" 
+            element={<TributePage />} 
+          />
+          <Route 
+            path="/in-memory-of-dr-vijay-kumar" 
+            element={<TributePage />} 
           />
           {/* Aliases & Fallbacks */}
           <Route path="/appointment" element={<Navigate to="/book-appointment" replace />} />

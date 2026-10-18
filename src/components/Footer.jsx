@@ -23,7 +23,7 @@ export default function Footer() {
                   JANKI CLINIC
                 </span>
                 <span className="text-xs text-slate-400 font-semibold block mt-0.5">
-                  Skin Aesthetic &amp; Laparoscopic Centre
+                  Skin Aesthetic &amp; Laparoscopic Centre • Estb. 1990 (28+ Years Legacy)
                 </span>
               </div>
             </Link>
@@ -34,6 +34,13 @@ export default function Footer() {
 
             <div className="text-[11px] text-teal-400 font-medium">
               जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर, फारबिसगंज (अररिया, बिहार)
+            </div>
+
+            <div className="pt-1 text-[11px] text-amber-300/90 font-medium flex items-center gap-1.5">
+              <span>★</span>
+              <Link to="/tribute" className="hover:underline">
+                In Sacred Memory of Late Dr. Vijay Kumar (1955–2019)
+              </Link>
             </div>
           </div>
 
@@ -46,6 +53,7 @@ export default function Footer() {
               <li><Link to="/" className="hover:text-teal-300 transition">Home</Link></li>
               <li><Link to="/about" className="hover:text-teal-300 transition">About the Centre</Link></li>
               <li><Link to="/doctors" className="hover:text-teal-300 transition">Specialist Doctors</Link></li>
+              <li><Link to="/tribute" className="hover:text-amber-300 text-amber-400 font-bold transition">In Memoriam (Dr. Vijay Kumar)</Link></li>
               <li><Link to="/treatments" className="hover:text-teal-300 font-bold text-teal-400 transition">Treatments Directory</Link></li>
               <li><Link to="/gallery" className="hover:text-teal-300 transition">Clinic Gallery</Link></li>
               <li><Link to="/contact" className="hover:text-teal-300 transition">Contact &amp; Location</Link></li>

@@ -39,8 +39,8 @@ export default function TreatmentsPage({ onOpenLightbox, onBookTreatment }) {
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
-        title="All Treatments & Clinical Directory | Janki Skin Aesthetic & Laparoscopic Centre"
-        description="Explore all 15 surgical and dermatological procedures at Janki Centre Forbesganj. Minimally invasive keyhole surgeries, GFC hair regrowth, chemical peeling, and vitiligo care."
+        title="All Treatments & Clinical Directory | JANKI Skin Aesthetic & Laparoscopic Centre"
+        description="Explore all 15 surgical and dermatological procedures at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj. Minimally invasive keyhole surgeries, GFC hair regrowth, chemical peeling, and vitiligo care."
         keywords="Treatments directory Forbesganj, Laparoscopy surgeries Araria, Dermatology treatments Forbesganj, GFC hair therapy Bihar, Gallbladder removal Forbesganj"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -120,7 +120,7 @@ export default function TreatmentsPage({ onOpenLightbox, onBookTreatment }) {
                 >
                   <img
                     src={treatment.thumb}
-                    alt={`${treatment.title} at Janki Centre Forbesganj`}
+                    alt={`${treatment.title} at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
                   />

@@ -65,8 +65,8 @@ export default function GalleryPage({ onOpenLightbox }) {
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
-        title="Clinic Gallery & Medical Posters | Janki Skin Aesthetic & Laparoscopic Centre Forbesganj"
-        description="View photos of our sanitized consultation chambers, laparoscopic procedure suites, and official educational medical posters at Janki Centre Forbesganj."
+        title="Clinic Gallery | JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj"
+        description="View authentic photos of our sanitized consultation chambers, patient waiting lounge, and executive chambers at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj."
         keywords="Janki clinic photos Forbesganj, Laparoscopy hospital gallery Bihar, Skin clinic Forbesganj interior, OT facility Forbesganj"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,16 +81,16 @@ export default function GalleryPage({ onOpenLightbox }) {
         </nav>
 
         {/* Page Banner */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
+        <div className="text-center max-w-3xl mx-auto mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-accent text-xs font-bold tracking-wide uppercase">
             <Camera className="w-3.5 h-3.5" />
             <span>Facility Tour &amp; Visual Showcase</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight mt-3">
-            Inside Janki Centre <span className="text-teal-accent">Forbesganj</span>
+            Inside JANKI Skin Aesthetic &amp; Laparoscopic Centre
           </h1>
           <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
-            Take a high-definition visual walkthrough of our reception hall, examination rooms, surgical suites, and official educational posters.
+            Take an authentic visual walkthrough of our reception hall, spacious patient waiting lounge, specialist consultation chambers, and sanitized clinical suites.
           </p>
         </div>
 
@@ -98,17 +98,6 @@ export default function GalleryPage({ onOpenLightbox }) {
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-14">
           <Gallery onOpenLightbox={onOpenLightbox} />
         </div>
-
-        {/* Official Clinic Posters Grid Section */}
-        <div className="mb-14">
-          <div className="text-center max-w-2xl mx-auto mb-8">
-            <h2 className="font-heading font-extrabold text-2xl sm:text-3xl text-primary">
-              Official Clinic Posters &amp; <span className="text-rose-accent">Medical Guides</span>
-            </h2>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
-              Click any poster below to expand into full-screen high-definition magnification.
-            </p>
-          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {clinicPosters.map((poster, idx) => (

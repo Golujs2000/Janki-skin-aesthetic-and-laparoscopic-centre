@@ -16,6 +16,7 @@ import {
   Users
 } from 'lucide-react';
 import About from '../components/About';
+import Tribute from '../components/Tribute';
 import SEOHead from '../components/SEOHead';
 
 export default function AboutPage({ onBookClick }) {
@@ -23,7 +24,7 @@ export default function AboutPage({ onBookClick }) {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
         title="About Janki Skin Aesthetic & Laparoscopic Centre Forbesganj | Our Mission & Faculty"
-        description="Learn about Forbesganj's premier multi-speciality centre led by Assistant Professors Dr. S. Sagar (MS Gen Surgery) & Dr. Rashmi Ray (MD Dermatology). 12+ years of surgical and aesthetic excellence in Seemanchal, Bihar."
+        description="Learn about Forbesganj's premier multi-speciality centre led by Assistant Professors Dr. S. Sagar (MS Gen Surgery) & Dr. Rashmi Ray (MD Dermatology). 28+ years of medical legacy (Estb. 1990) and surgical excellence in Seemanchal, Bihar."
         keywords="About Janki Clinic Forbesganj, Laparoscopic hospital Araria, Dr S Sagar Forbesganj, Dr Rashmi Ray clinic, Best hospital Forbesganj Bihar"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,6 +55,11 @@ export default function AboutPage({ onBookClick }) {
         {/* Embedded Core About Section */}
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden mb-12">
           <About />
+        </div>
+
+        {/* Our Guiding Light & Memorial Heritage */}
+        <div className="rounded-3xl overflow-hidden mb-12 shadow-xl border border-amber-400/20">
+          <Tribute showFullLink={true} />
         </div>
 
         {/* Clinical Mission, Vision & Values */}

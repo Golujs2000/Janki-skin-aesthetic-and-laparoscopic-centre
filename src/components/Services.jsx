@@ -134,7 +134,7 @@ export default function Services({ onOpenLightbox, onBookTreatment }) {
                 >
                   <img
                     src={treatment.thumb}
-                    alt={`${treatment.title} at Janki Centre Forbesganj`}
+                    alt={`${treatment.title} at JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                     loading="lazy"
                   />

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Phone, CheckCircle, Users, Award, Shield, Activity } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Phone, CheckCircle, Users, Award, Shield, Activity, Sparkles } from 'lucide-react';
 
 export default function Hero({ onBookClick }) {
   return (
@@ -69,6 +70,29 @@ export default function Hero({ onBookClick }) {
                     </span>
                   </div>
                 </div>
+
+                {/* Late Dr. Vijay Kumar Memorial Chip */}
+                <Link
+                  to="/tribute"
+                  className="flex items-center gap-3 p-2 pr-4 rounded-full bg-gradient-to-r from-amber-50 to-amber-100/80 border border-amber-300/90 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all group"
+                  title="In Memory of Late Dr. Vijay Kumar (1955-2019)"
+                >
+                  <img
+                    src="/assets/dr-vijay-kumar.jpeg"
+                    alt="Late Dr. Vijay Kumar"
+                    className="w-10 h-10 rounded-full object-cover border-2 border-amber-400 shadow-sm flex-shrink-0"
+                    width="40"
+                    height="40"
+                  />
+                  <div>
+                    <span className="font-heading font-bold text-xs sm:text-sm text-amber-950 block leading-none group-hover:text-amber-800">
+                      Late Dr. Vijay Kumar
+                    </span>
+                    <span className="text-[11px] text-amber-800 font-medium">
+                      General Physician &amp; Surgeon • MBBS (ANMMCH Gaya)
+                    </span>
+                  </div>
+                </Link>
               </div>
 
               {/* CTAs */}
@@ -192,12 +216,12 @@ export default function Hero({ onBookClick }) {
             </div>
 
             <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
-              <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-accent flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0">
                 <Award className="w-5 h-5" />
               </div>
               <div>
-                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">15+ Years</div>
-                <div className="text-xs text-slate-500 font-medium mt-1">Combined Experience</div>
+                <div className="font-heading font-extrabold text-base sm:text-lg text-primary leading-none">28+ Years</div>
+                <div className="text-xs text-slate-500 font-medium mt-1">Legacy • Estb. 1990</div>
               </div>
             </div>
 

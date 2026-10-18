@@ -190,6 +190,50 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
 
         </div>
 
+        {/* Founding Guiding Light & Mentor Tribute */}
+        <div className="bg-gradient-to-br from-[#061527] via-[#0b2545] to-[#122b4d] rounded-3xl p-6 sm:p-10 border border-amber-400/30 text-white mb-12 shadow-xl relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+            {/* Framed Portrait */}
+            <div className="w-28 h-36 sm:w-32 sm:h-40 rounded-2xl overflow-hidden bg-slate-900 border-2 border-amber-400/40 shadow-xl flex-shrink-0">
+              <img
+                src="/assets/dr-vijay-kumar.jpeg"
+                alt="Late Dr. Vijay Kumar"
+                className="w-full h-full object-cover object-top"
+              />
+            </div>
+
+            {/* Tribute Text */}
+            <div className="space-y-2 text-center md:text-left flex-1">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 text-xs font-bold uppercase tracking-wider">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Our Founding Inspiration &amp; Mentor</span>
+              </div>
+              <h3 className="font-heading font-extrabold text-2xl sm:text-3xl text-white">
+                In Sacred Memory of Late Dr. Vijay Kumar
+              </h3>
+              <div className="text-xs sm:text-sm font-semibold text-amber-300">
+                General Physician &amp; Surgeon • MBBS (ANMMCH, Gaya) • 28+ Years at Forbesganj Govt Hospital (1991–2019)
+              </div>
+              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed italic pt-1">
+                “His white coat taught me the value of responsibility, his wisdom taught me the power of knowledge, and his life taught me that being a doctor is not just a profession—it is a noble service.”
+              </p>
+            </div>
+
+            {/* Read Tribute Link */}
+            <div className="flex-shrink-0">
+              <Link
+                to="/tribute"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-slate-950 font-bold text-xs sm:text-sm shadow-md transition"
+              >
+                <span>Read Full Tribute</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Bar */}
         <div className="text-center py-8 bg-white rounded-3xl border border-slate-200 shadow-sm">
           <h3 className="font-heading font-extrabold text-xl text-primary mb-2">

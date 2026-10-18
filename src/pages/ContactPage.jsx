@@ -29,7 +29,7 @@ export default function ContactPage() {
     e.preventDefault();
     if (!formData.name || !formData.phone) return;
 
-    const text = `*New Contact Inquiry - Janki Centre Website*%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Department:* ${formData.department}%0A*Message:* ${formData.message || 'I would like to inquire about consultation.'}`;
+    const text = `*New Contact Inquiry - JANKI Skin Aesthetic & Laparoscopic Centre Website*%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Department:* ${formData.department}%0A*Message:* ${formData.message || 'I would like to inquire about consultation.'}`;
     window.open(`https://wa.me/917909067784?text=${text}`, '_blank');
     setSent(true);
   };
@@ -37,8 +37,8 @@ export default function ContactPage() {
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
-        title="Contact Janki Centre Forbesganj | Referral Hospital Road | Helplines"
-        description="Visit Janki Skin Aesthetic & Laparoscopic Centre opposite Sub-Divisional Referral Hospital, Forbesganj, Araria, Bihar 854318. Call: +91 79090 67784 / +91 70915 06123."
+        title="Contact JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj | Helplines"
+        description="Visit JANKI Skin Aesthetic & Laparoscopic Centre opposite Sub-Divisional Referral Hospital, Forbesganj, Araria, Bihar 854318. Call: +91 79090 67784 / +91 70915 06123."
         keywords="Contact Janki Clinic Forbesganj, Referral hospital road Forbesganj, Dr S Sagar phone number, Dr Rashmi Ray contact, Laparoscopy appointment Forbesganj"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function ContactPage() {
             <span>Clinic Location &amp; Accessibility</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-primary font-heading tracking-tight mt-3">
-            Contact Janki Centre <span className="text-teal-accent">Forbesganj</span>
+            Contact JANKI Skin Aesthetic &amp; Laparoscopic Centre
           </h1>
           <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
             Conveniently situated opposite the Sub-Divisional Referral Hospital on Referral Hospital Road, Forbesganj (District Araria, Bihar). 

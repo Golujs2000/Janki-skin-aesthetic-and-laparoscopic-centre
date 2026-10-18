@@ -93,12 +93,15 @@ export default function Header({ onBookClick }) {
             </a>
           </div>
 
-          {/* Right: Hours & Phone */}
+          {/* Center/Right: Memorial Tribute Link & Phone */}
           <div className="flex items-center gap-5">
-            <div className="hidden sm:inline-flex items-center gap-1.5 text-white/80">
-              <Clock className="w-3.5 h-3.5 text-teal-accent" />
-              <span>Daily Consultation &amp; Surgeries Available</span>
-            </div>
+            <Link
+              to="/tribute"
+              className="hidden md:inline-flex items-center gap-1.5 text-amber-300 hover:text-amber-200 transition text-xs font-semibold"
+            >
+              <Sparkles className="w-3.5 h-3.5 text-amber-400" />
+              <span>In Memory of Late Dr. Vijay Kumar (1955–2019)</span>
+            </Link>
             <div className="inline-flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-teal-accent" />
               <a href="tel:+917909067784" className="font-semibold text-white hover:underline">
@@ -129,6 +132,9 @@ export default function Header({ onBookClick }) {
               <span className="font-heading font-extrabold text-[1.25rem] sm:text-[1.35rem] text-primary leading-[1.05] tracking-wide block">
                 JANKI Skin Aesthetic <br />
                 <span className="text-[1.1rem] sm:text-[1.2rem] font-bold text-slate-800">&amp; Laparoscopic Centre</span>
+              </span>
+              <span className="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200 mt-1 inline-block">
+                Estb. 1990 • 28+ Years Legacy
               </span>
             </div>
           </Link>
@@ -338,12 +344,12 @@ export default function Header({ onBookClick }) {
             </Link>
 
             <Link
-              to="/gallery"
-              className={`hover:text-rose-600 transition-colors py-1 ${
-                isActive('/gallery') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              to="/tribute"
+              className={`hover:text-amber-600 transition-colors py-1 flex items-center gap-1 ${
+                isActive('/tribute') ? 'text-amber-600 font-extrabold border-b-2 border-amber-600' : ''
               }`}
             >
-              Gallery
+              <span>Memorial</span>
             </Link>
 
             <Link
@@ -526,13 +532,14 @@ export default function Header({ onBookClick }) {
                 </Link>
 
                 <Link
-                  to="/gallery"
+                  to="/tribute"
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
-                    isActive('/gallery') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition flex items-center justify-between ${
+                    isActive('/tribute') ? 'bg-amber-50 text-amber-700' : 'text-slate-700 hover:bg-slate-50'
                   }`}
                 >
-                  Clinic Gallery
+                  <span>In Memory of Dr. Vijay Kumar</span>
+                  <span className="text-[10px] bg-amber-100 text-amber-800 px-2 py-0.5 rounded-full font-bold">1955–2019</span>
                 </Link>
 
                 <Link

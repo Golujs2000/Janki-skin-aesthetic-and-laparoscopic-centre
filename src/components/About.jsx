@@ -33,9 +33,9 @@ export default function About() {
 
               {/* Experience Badge */}
               <div className="absolute top-4 left-4 bg-primary/95 text-white p-3.5 rounded-2xl shadow-lg backdrop-blur-md border border-white/20">
-                <div className="font-heading font-extrabold text-2xl text-teal-300">12+</div>
+                <div className="font-heading font-extrabold text-2xl text-amber-300">28+</div>
                 <div className="text-[11px] font-semibold text-slate-300 uppercase tracking-wider leading-tight">
-                  Years Clinical<br />Excellence
+                  Years Legacy<br />Estb. 1990
                 </div>
               </div>
             </div>

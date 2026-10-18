@@ -29,7 +29,7 @@ export const reviewsData = [
     treatment: "Laparoscopic Hernia 3D Mesh Repair",
     doctor: "Dr. S. Sagar",
     theme: "teal",
-    comment: "Other hospitals in Purnea suggested big open surgery. Dr. Sagar did keyhole 3D mesh repair at Janki Centre. Negligible pain, no stitches to remove, and no scars. The hospital facilities and hygiene are spotless.",
+    comment: "Other hospitals in Purnea suggested big open surgery. Dr. Sagar did keyhole 3D mesh repair at JANKI Skin Aesthetic & Laparoscopic Centre. Negligible pain, no stitches to remove, and no scars. The hospital facilities and hygiene are spotless.",
     date: "March 2026"
   },
   {

@@ -102,7 +102,7 @@ Unlike traditional open cholecystectomy which demanded a painful 15–20 cm inci
     hospitalStay: "24 – 36 Hours Rapid Discharge",
     recoveryTime: "3 – 5 Days Return to Routine",
     desc: "Swift, emergency and elective keyhole appendectomy relieving acute lower right abdominal pain and preventing appendix perforation or peritonitis.",
-    overview: `Acute Appendicitis is one of the most common surgical abdominal emergencies. Delaying intervention can result in appendix rupture (perforation), abscess formation, and life-threatening widespread peritonitis. At Janki Centre Forbesganj, Dr. S. Sagar performs prompt 3-port laparoscopic appendectomy around the clock.
+    overview: `Acute Appendicitis is one of the most common surgical abdominal emergencies. Delaying intervention can result in appendix rupture (perforation), abscess formation, and life-threatening widespread peritonitis. At JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj, Dr. S. Sagar performs prompt 3-port laparoscopic appendectomy around the clock.
 
 Using micro-laparoscopic optics, the entire peritoneal cavity is inspected to rule out other pelvic or intestinal pathologies before securely ligating the inflamed appendix base and removing it atraumatically. Patients benefit from instantaneous relief of excruciating pain, clean cosmetic incisions, and minimal surgical stress.`,
     indications: [
@@ -390,7 +390,7 @@ The Fallopian tubes are gently visualized and permanently occluded using medical
     hospitalStay: "Day-Care Outpatient (Zero Overnight Stay)",
     recoveryTime: "1 – 3 Days Swift Healing",
     desc: "Complete spectrum of general surgical conditions: hydrocele, lipoma excision, sebaceous cyst removal, circumcision, abscess drainage, and diabetic wound care.",
-    overview: `Our dedicated surgical wing at Janki Centre provides comprehensive day-care and minor surgical procedures performed under strict autoclave-monitored sterile conditions. Dr. S. Sagar brings specialized academic surgical expertise to outpatient cases, ensuring fine plastic closures, minimal scar marks, and painless local anesthesia.
+    overview: `Our dedicated surgical wing at JANKI Skin Aesthetic & Laparoscopic Centre provides comprehensive day-care and minor surgical procedures performed under strict autoclave-monitored sterile conditions. Dr. S. Sagar brings specialized academic surgical expertise to outpatient cases, ensuring fine plastic closures, minimal scar marks, and painless local anesthesia.
 
 Conditions treated include subcutaneous lipomas, infected and non-infected sebaceous cysts, hydrocele eversion, phimosis circumcision, acute abscess drainage, ingrown toenail matricectomy, and diabetic ulcer debridement.`,
     indications: [
@@ -432,7 +432,7 @@ Conditions treated include subcutaneous lipomas, infected and non-infected sebac
     faqs: [
       {
         q: "Can a lipoma or sebaceous cyst grow back after removal?",
-        a: "When the entire outer capsule is completely removed by a qualified surgeon as performed at Janki Centre, recurrence at that exact site is exceptionally rare."
+        a: "When the entire outer capsule is completely removed by a qualified surgeon as performed at JANKI Skin Aesthetic & Laparoscopic Centre, recurrence at that exact site is exceptionally rare."
       }
     ]
   },
@@ -756,7 +756,7 @@ Dr. Rashmi Ray utilizes combination scar revision protocols tailored to each sca
     desc: "Evidence-based age reversal treatments combining skin boosters, hyaluronic hydration therapy, and collagen peptides to restore youthful volume.",
     overview: `Chronological aging, cumulative UV exposure, and environmental pollution deplete natural dermal hyaluronic acid, collagen, and elastin fibers, causing skin thinning, volume loss, wrinkles, and sagging contours.
 
-At Janki Centre, Dr. Rashmi Ray offers comprehensive non-surgical anti-aging regimens. Treatments incorporate Profhilo bio-remodeling, pure Hyaluronic Acid skin boosters, micro-botulinum wrinkle relaxation, peptide mesotherapy, and dermal tightening to achieve natural, refreshed, age-defying elegance without artificial frozen expressions.`,
+At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Ray offers comprehensive non-surgical anti-aging regimens. Treatments incorporate Profhilo bio-remodeling, pure Hyaluronic Acid skin boosters, micro-botulinum wrinkle relaxation, peptide mesotherapy, and dermal tightening to achieve natural, refreshed, age-defying elegance without artificial frozen expressions.`,
     indications: [
       "Fine lines around eyes (crow's feet), forehead wrinkles, and smile lines (nasolabial folds)",
       "Skin laxity and sagging contours along the jawline and neck",
