@@ -48,7 +48,7 @@ export default function GalleryPage({ onOpenLightbox }) {
             Experience Our Sanitized &amp; Advanced Healthcare Facility
           </h3>
           <p className="text-slate-100 text-xs sm:text-sm max-w-xl">
-            Book your consultation with Dr. S. Sagar or Dr. Rashmi Ray today.
+            Book your consultation with Dr. S. Sagar or Dr. Rashmi Roy today.
           </p>
           <div className="flex flex-wrap gap-3 justify-center pt-2">
             <Link

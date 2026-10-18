@@ -7,20 +7,6 @@ export const galleryData = [
     src: "/assets/clinic-reception-wide-hall.jpg"
   },
   {
-    id: 2,
-    category: "reception",
-    title: "Executive Reception Counter",
-    subtitle: "Illuminated Brand Counter & Patient Registration",
-    src: "/assets/clinic-reception-counter-emblem.jpg"
-  },
-  {
-    id: 3,
-    category: "reception",
-    title: "Patient Admission & Desk",
-    subtitle: "Helpdesk & Surgical Inquiry Point",
-    src: "/assets/clinic-reception-counter-side.jpg"
-  },
-  {
     id: 4,
     category: "reception",
     title: "Geometric Illuminated Corridor",
@@ -62,27 +48,7 @@ export const galleryData = [
     subtitle: "Executive Wooden Paneling & Board Certifications",
     src: "/assets/clinic-doctor-chamber-wide.jpg"
   },
-  {
-    id: 10,
-    category: "chambers",
-    title: "Doctor Examination Suite",
-    subtitle: "Private Diagnostic & Consultation Space",
-    src: "/assets/clinic-doctor-chamber.jpg"
-  },
-  {
-    id: 11,
-    category: "chambers",
-    title: "Dr. Rashmi Ray Consultation Chamber",
-    subtitle: "Dermatologist & Cosmetologist Executive Desk",
-    src: "/assets/dr-rashmi-executive-desk.jpg"
-  },
-  {
-    id: 12,
-    category: "chambers",
-    title: "Clinical Discussion Desk",
-    subtitle: "Dr. S. Sagar & Dr. Rashmi Ray at Centre",
-    src: "/assets/doctors-consultation-desk.jpg"
-  },
+
   {
     id: 13,
     category: "clinical",
@@ -117,12 +83,5 @@ export const galleryData = [
     title: "Illuminated Night Façade",
     subtitle: "Janki Centre 24x7 Visible Signage",
     src: "/assets/clinic-night-signboard.jpg"
-  },
-  {
-    id: 18,
-    category: "chambers",
-    title: "Senior Medical Leadership",
-    subtitle: "Faculty Doctors Committed to Compassionate Care",
-    src: "/assets/doctors-together.jpg"
   }
 ];

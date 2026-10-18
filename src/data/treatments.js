@@ -438,7 +438,7 @@ Conditions treated include subcutaneous lipomas, infected and non-infected sebac
   },
 
   // ==========================================
-  // AESTHETICS & TRICHOLOGY (DR. RASHMI RAY)
+  // AESTHETICS & TRICHOLOGY (DR. RASHMI ROY)
   // ==========================================
   {
     id: "gfc-therapy",
@@ -451,9 +451,9 @@ Conditions treated include subcutaneous lipomas, infected and non-infected sebac
     thumb: "/assets/thumb-gfc-therapy.jpg",
     poster: "/assets/poster-gfc-treatment.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Sparkles",
@@ -462,7 +462,7 @@ Conditions treated include subcutaneous lipomas, infected and non-infected sebac
     hospitalStay: "Outpatient Day-Care (Lunchtime Procedure)",
     recoveryTime: "Zero Downtime (Wash Hair After 24 Hrs)",
     desc: "Next-generation autologous Growth Factor Concentrate engineered from your own blood platelets, delivering high concentrations of PDGF, VEGF, and EGF for hair follicle restoration.",
-    overview: `Growth Factor Concentrate (GFC) therapy represents the premier dermatological breakthrough in biological hair follicle regeneration and skin anti-aging, superseding conventional PRP (Platelet-Rich Plasma). Administered by Dr. Rashmi Ray (MD, DNB, MNAMS), GFC is a sterile, cell-free biological therapy prepared from the patient's own peripheral blood.
+    overview: `Growth Factor Concentrate (GFC) therapy represents the premier dermatological breakthrough in biological hair follicle regeneration and skin anti-aging, superseding conventional PRP (Platelet-Rich Plasma). Administered by Dr. Rashmi Roy (MD - Skin, VD & Leprosy, Skin, Hair & Nail Specialist), GFC is a sterile, cell-free biological therapy prepared from the patient's own peripheral blood.
 
 Unlike standard PRP which contains inflammatory red and white blood cells that trigger pain and swelling, GFC isolates purely the beneficial growth factors (Platelet-Derived Growth Factor PDGF, Vascular Endothelial Growth Factor VEGF, Epidermal Growth Factor EGF, and Insulin-like Growth Factor IGF-1) into a crystal-clear golden serum. These bioactive molecules directly nourish miniaturized hair follicles, arrest hair shedding, stimulate active anagen hair regrowth, and boost dermal collagen.`,
     indications: [
@@ -528,9 +528,9 @@ Unlike standard PRP which contains inflammatory red and white blood cells that t
     thumb: "/assets/thumb-chemical-peel.jpg",
     poster: "/assets/poster-chemical-peel-benefits.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Sun",
@@ -539,7 +539,7 @@ Unlike standard PRP which contains inflammatory red and white blood cells that t
     hospitalStay: "Outpatient (Zero Hospital Stay)",
     recoveryTime: "1 – 3 Days Gentle Micro-Exfoliation",
     desc: "Clinical application of dermatological alpha & beta hydroxy acids (Glycolic, Salicylic, Lactic, Mandelic) tailored to target stubborn melasma, sun damage, and uneven tone.",
-    overview: `Medical Chemical Peeling is a controlled dermatological resurfacing procedure utilizing pharmaceutical-grade organic hydroxy acids to dissolve dead cellular debris, exfoliate hyperpigmented epidermal layers, and stimulate fresh basal cell renewal. Dr. Rashmi Ray custom-selects the peel formulation based on the patient's individual Fitzpatrick skin type and melanin depth.
+    overview: `Medical Chemical Peeling is a controlled dermatological resurfacing procedure utilizing pharmaceutical-grade organic hydroxy acids to dissolve dead cellular debris, exfoliate hyperpigmented epidermal layers, and stimulate fresh basal cell renewal. Dr. Rashmi Roy custom-selects the peel formulation based on the patient's individual Fitzpatrick skin type and melanin depth.
 
 Peel formulations include Glycolic Acid (for deep sun tan & radiance), Salicylic Acid (for active acne, blackheads & sebum control), Lactic Acid (for dry sensitive skin brightening), Mandelic Acid (for melasma and hyperpigmentation), and Yellow Retinol Peels (for stubborn dark patches and fine lines).`,
     indications: [
@@ -593,16 +593,16 @@ Peel formulations include Glycolic Acid (for deep sun tan & radiance), Salicylic
     id: "glutathione-therapy",
     department: "aesthetic",
     departmentName: "Aesthetics & Trichology",
-    title: "Glutathione Glow Therapy",
+    title: "IV Infusion",
     subtitle: "मास्टर एंटीऑक्सीडेंट - फुल बॉडी ब्राइटनिंग व डिटॉक्सिफिकेशन",
-    badge: "IV Brightening Infusion",
+    badge: "IV Infusion",
     badgeTheme: "rose",
     thumb: "/assets/thumb-glutathione-therapy.jpg",
     poster: "/assets/poster-glutathione-therapy.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Zap",
@@ -611,9 +611,9 @@ Peel formulations include Glycolic Acid (for deep sun tan & radiance), Salicylic
     hospitalStay: "Outpatient IV Lounge",
     recoveryTime: "Immediate Return to Routine",
     desc: "Scientifically administered Master Antioxidant intravenous & oral regimens combating oxidative damage, suppressing melanin overproduction, and revitalizing cellular radiance.",
-    overview: `Glutathione is the body's most potent endogenous 'Master Antioxidant', synthesized in the liver to neutralize harmful reactive oxygen species and free radicals. In clinical dermatology, medical-grade Glutathione is celebrated for its scientifically proven ability to shift melanin synthesis from dark eumelanin to luminous, fair pheomelanin by inhibiting the tyrosinase enzyme.
+    overview: `Our specialized IV Infusion delivers the body's most potent endogenous 'Master Antioxidants' and revitalizing nutrients directly into the systemic circulation to neutralize harmful reactive oxygen species and free radicals. In clinical dermatology, medical-grade antioxidant drips are celebrated for their scientifically proven ability to shift melanin synthesis toward luminous, fair pheomelanin by optimizing cellular pathways and inhibiting tyrosinase enzyme activity.
 
-Under Dr. Rashmi Ray's medical supervision, pure pharmaceutical-grade Glutathione is administered in combination with high-potency Vitamin C boosters, Alpha Lipoic Acid, and cellular minerals. This ensures 100% systemic bioavailability, full-body radiant complexion enhancement, and liver detox benefits without the risks of unmonitored commercial supplements.`,
+Under Dr. Rashmi Roy's medical supervision, pure pharmaceutical-grade intravenous formulations are administered in combination with high-potency Vitamin C boosters, Alpha Lipoic Acid, and cellular minerals. This ensures 100% systemic bioavailability, full-body radiant complexion enhancement, and cellular detox benefits without the risks of unmonitored commercial supplements.`,
     indications: [
       "Full-body skin dullness, uneven dark patches, and chronic tanning",
       "High oxidative stress, premature aging signs, and environmental toxin burden",
@@ -634,7 +634,7 @@ Under Dr. Rashmi Ray's medical supervision, pure pharmaceutical-grade Glutathion
       },
       {
         step: "Sterile IV Infusion Preparation",
-        detail: "Compounding of authentic medical-grade Glutathione with buffered Ascorbic Acid in sterile saline."
+        detail: "Compounding of authentic medical-grade antioxidant boosters with buffered Ascorbic Acid in sterile saline."
       },
       {
         step: "Comfortable Drip Administration",
@@ -651,8 +651,8 @@ Under Dr. Rashmi Ray's medical supervision, pure pharmaceutical-grade Glutathion
     },
     faqs: [
       {
-        q: "Is intravenous Glutathione safe?",
-        a: "Yes, when pharmaceutical-grade Glutathione is administered in controlled clinical doses under a board-certified MD Dermatologist. We do not use substandard uncertified vials."
+        q: "Is intravenous IV Infusion safe?",
+        a: "Yes, when pharmaceutical-grade clinical formulations are administered in controlled doses under a board-certified MD Dermatologist. We do not use substandard uncertified vials."
       },
       {
         q: "How many sessions are recommended?",
@@ -671,9 +671,9 @@ Under Dr. Rashmi Ray's medical supervision, pure pharmaceutical-grade Glutathion
     thumb: "/assets/thumb-laser-revision.jpg",
     poster: "/assets/poster-aesthetic-treatments.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Crosshair",
@@ -684,7 +684,7 @@ Under Dr. Rashmi Ray's medical supervision, pure pharmaceutical-grade Glutathion
     desc: "Cutting-edge laser, MNRF & microneedling protocols targeting post-acne icepick scars, surgical scars, stretch marks, and enlarged pores.",
     overview: `Post-acne scars (icepick, boxcar, and rolling scars) represent deep dermal architectural damage where normal collagen was destroyed during inflammatory breakouts. Creams and superficial treatments cannot remodel deep fibrous scar bands.
 
-Dr. Rashmi Ray utilizes combination scar revision protocols tailored to each scar type: Fractional CO2 Laser Resurfacing, Microneedling Radiofrequency (MNRF), Subcision (to release deep tethered bands), and Platelet Growth Factor infusions. This multi-modality approach breaks down rigid fibrous scar tissue and forces the skin to generate robust new type-I collagen fibers.`,
+Dr. Rashmi Roy utilizes combination scar revision protocols tailored to each scar type: Fractional CO2 Laser Resurfacing, Microneedling Radiofrequency (MNRF), Subcision (to release deep tethered bands), and Platelet Growth Factor infusions. This multi-modality approach breaks down rigid fibrous scar tissue and forces the skin to generate robust new type-I collagen fibers.`,
     indications: [
       "Depressed acne scars (Rolling, Boxcar, and Icepick pits on cheeks and temples)",
       "Traumatic, burn, or post-surgical hypertrophic and atrophic scars",
@@ -743,9 +743,9 @@ Dr. Rashmi Ray utilizes combination scar revision protocols tailored to each sca
     thumb: "/assets/thumb-anti-aging.jpg",
     poster: "/assets/poster-aesthetic-treatments.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Clock",
@@ -756,7 +756,7 @@ Dr. Rashmi Ray utilizes combination scar revision protocols tailored to each sca
     desc: "Evidence-based age reversal treatments combining skin boosters, hyaluronic hydration therapy, and collagen peptides to restore youthful volume.",
     overview: `Chronological aging, cumulative UV exposure, and environmental pollution deplete natural dermal hyaluronic acid, collagen, and elastin fibers, causing skin thinning, volume loss, wrinkles, and sagging contours.
 
-At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Ray offers comprehensive non-surgical anti-aging regimens. Treatments incorporate Profhilo bio-remodeling, pure Hyaluronic Acid skin boosters, micro-botulinum wrinkle relaxation, peptide mesotherapy, and dermal tightening to achieve natural, refreshed, age-defying elegance without artificial frozen expressions.`,
+At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Roy offers comprehensive non-surgical anti-aging regimens. Treatments incorporate Profhilo bio-remodeling, pure Hyaluronic Acid skin boosters, micro-botulinum wrinkle relaxation, peptide mesotherapy, and dermal tightening to achieve natural, refreshed, age-defying elegance without artificial frozen expressions.`,
     indications: [
       "Fine lines around eyes (crow's feet), forehead wrinkles, and smile lines (nasolabial folds)",
       "Skin laxity and sagging contours along the jawline and neck",
@@ -791,7 +791,7 @@ At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Ray offers comprehensi
     faqs: [
       {
         q: "Will anti-aging treatments make my face look unnatural or frozen?",
-        a: "Not under Dr. Rashmi Ray's expert care. Our clinical philosophy focuses on subtle, natural restoration—enhancing your authentic facial features rather than overfilling or altering expressions."
+        a: "Not under Dr. Rashmi Roy's expert care. Our clinical philosophy focuses on subtle, natural restoration—enhancing your authentic facial features rather than overfilling or altering expressions."
       }
     ]
   },
@@ -806,9 +806,9 @@ At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Ray offers comprehensi
     thumb: "/assets/thumb-hair-scalp-care.jpg",
     poster: "/assets/poster-skin-hair-nail.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "Feather",
@@ -819,7 +819,7 @@ At JANKI Skin Aesthetic & Laparoscopic Centre, Dr. Rashmi Ray offers comprehensi
     desc: "Specialized trichological management of androgenetic alopecia, telogen effluvium, patchy alopecia areata, chronic dandruff, and scalp psoriasis.",
     overview: `Hair loss and chronic scalp disorders can be deeply distressing. Many patients waste months on ineffective commercial shampoos and over-the-counter oils before seeking clinical medical diagnosis.
 
-Dr. Rashmi Ray conducts thorough digital dermoscopy to visualize follicular openings, hair caliber diversity, and micro-vascular patterns. Treatments address internal metabolic deficiencies (iron, vitamin D, thyroid), hormonal DHT miniaturization, autoimmune patchy hair loss (Alopecia Areata), and chronic fungal seborrheic dermatitis.`,
+Dr. Rashmi Roy conducts thorough digital dermoscopy to visualize follicular openings, hair caliber diversity, and micro-vascular patterns. Treatments address internal metabolic deficiencies (iron, vitamin D, thyroid), hormonal DHT miniaturization, autoimmune patchy hair loss (Alopecia Areata), and chronic fungal seborrheic dermatitis.`,
     indications: [
       "Excessive daily hair shedding (more than 100 strands/day) during brushing or showering",
       "Progressive thinning on crown, widening central scalp partition, or receding temples",
@@ -859,13 +859,13 @@ Dr. Rashmi Ray conducts thorough digital dermoscopy to visualize follicular open
     faqs: [
       {
         q: "Can patchy hair loss (Alopecia Areata) be cured?",
-        a: "Yes! Alopecia Areata is an autoimmune condition where immune cells attack hair follicles. With specialized intralesional micro-injections and immune-modulating lotions administered by Dr. Rashmi Ray, over 90% of patches achieve complete hair regrowth."
+        a: "Yes! Alopecia Areata is an autoimmune condition where immune cells attack hair follicles. With specialized intralesional micro-injections and immune-modulating lotions administered by Dr. Rashmi Roy, over 90% of patches achieve complete hair regrowth."
       }
     ]
   },
 
   // ==========================================
-  // CLINICAL DERMATOLOGY (DR. RASHMI RAY)
+  // CLINICAL DERMATOLOGY (DR. RASHMI ROY)
   // ==========================================
   {
     id: "acne-treatment",
@@ -878,9 +878,9 @@ Dr. Rashmi Ray conducts thorough digital dermoscopy to visualize follicular open
     thumb: "/assets/thumb-acne-treatment.jpg",
     poster: "/assets/poster-skin-hair-nail.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "ShieldAlert",
@@ -891,7 +891,7 @@ Dr. Rashmi Ray conducts thorough digital dermoscopy to visualize follicular open
     desc: "Holistic dermatological protocols treating acute adolescent acne, hormonal cystic breakouts, comedones, and resistant pustules while preventing permanent scars.",
     overview: `Acne vulgaris is not merely a superficial cosmetic nuisance; it is a chronic inflammatory disorder of the pilosebaceous units driven by follicular hyperkeratinization, excess sebum, Cutibacterium acnes bacterial colonization, and hormonal fluctuations. Unmonitored use of steroid creams (such as Betnovate, Panderm) often leads to severe steroid-induced rosacea and skin thinning.
 
-As a university Assistant Professor in Dermatology, Dr. Rashmi Ray provides evidence-based medical acne protocols. From comedone extraction and medical salicylic peels to oral retinoid therapies and hormonal balancing for PCOS acne, treatments clear active lesions rapidly while halting permanent scar formation.`,
+As a university Assistant Professor in Dermatology, Dr. Rashmi Roy provides evidence-based medical acne protocols. From comedone extraction and medical salicylic peels to oral retinoid therapies and hormonal balancing for PCOS acne, treatments clear active lesions rapidly while halting permanent scar formation.`,
     indications: [
       "Persistent inflammatory pimples, red pustules, and deep painful cystic acne nodules",
       "Recurrent blackheads, whiteheads, and congested facial pores",
@@ -931,7 +931,7 @@ As a university Assistant Professor in Dermatology, Dr. Rashmi Ray provides evid
     faqs: [
       {
         q: "Why shouldn't I use medical store creams like Betnovate or Panderm for pimples?",
-        a: "These creams contain strong topical corticosteroids. While they may reduce redness for 2 days, they destroy your skin barrier, cause severe rebound breakout flare-ups, trigger facial hair growth, and thin the skin. Dr. Rashmi Ray provides safe, non-steroid medical treatments."
+        a: "These creams contain strong topical corticosteroids. While they may reduce redness for 2 days, they destroy your skin barrier, cause severe rebound breakout flare-ups, trigger facial hair growth, and thin the skin. Dr. Rashmi Roy provides safe, non-steroid medical treatments."
       },
       {
         q: "Can cystic acne be permanently cured?",
@@ -950,9 +950,9 @@ As a university Assistant Professor in Dermatology, Dr. Rashmi Ray provides evid
     thumb: "/assets/thumb-vitiligo-care.jpg",
     poster: "/assets/poster-dr-rashmi-opd.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "SunMedium",
@@ -963,7 +963,7 @@ As a university Assistant Professor in Dermatology, Dr. Rashmi Ray provides evid
     desc: "Scientifically proven repigmentation therapy for vitiligo, leukoderma, and hypopigmentation using topical immunomodulators, oral stability protocols, and phototherapy guidance.",
     overview: `Vitiligo (Leukoderma / सफेद दाग) is an autoimmune disorder where the body's immune system mistakenly targets and destroys melanocytes—the pigment-producing cells in the epidermis. In our region, patients often suffer immense emotional distress and social stigma due to misconceptions that vitiligo is contagious or incurable.
 
-Dr. Rashmi Ray provides compassionate, scientifically grounded vitiligo treatment. The primary clinical objective is twofold: (1) Rapidly arrest active disease progression (immune stabilization), and (2) Stimulate dormant melanocyte stem cells in hair follicle reserves to migrate into white patches and restore natural skin pigmentation.`,
+Dr. Rashmi Roy provides compassionate, scientifically grounded vitiligo treatment. The primary clinical objective is twofold: (1) Rapidly arrest active disease progression (immune stabilization), and (2) Stimulate dormant melanocyte stem cells in hair follicle reserves to migrate into white patches and restore natural skin pigmentation.`,
     indications: [
       "Depigmented chalky-white macules or patches on hands, feet, face, lips, or body",
       "Rapidly spreading new white patches (active unstable vitiligo)",
@@ -1022,9 +1022,9 @@ Dr. Rashmi Ray provides compassionate, scientifically grounded vitiligo treatmen
     thumb: "/assets/thumb-eczema-psoriasis.jpg",
     poster: "/assets/poster-dr-rashmi-consultation.jpg",
     posterLabel: "View Clinic Poster",
-    doctor: "Dr. Rashmi Ray",
-    docDegree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    docRole: "Assistant Professor, Dermatologist & Aesthetician",
+    doctor: "Dr. Rashmi Roy",
+    docDegree: "MBBS, MD (Skin, VD & Leprosy)",
+    docRole: "Assistant Professor, Skin, Hair & Nail Specialist",
     docPhoto: "/assets/dr-rashmi-ray.jpg",
     docPhone: "+917091506123",
     icon: "AlertCircle",
@@ -1035,7 +1035,7 @@ Dr. Rashmi Ray provides compassionate, scientifically grounded vitiligo treatmen
     desc: "Comprehensive diagnostic testing and therapeutic management of chronic atopic dermatitis, plaque psoriasis, fungal infections (दाद/रिंगवर्म), urticaria, and contact dermatitis.",
     overview: `Chronic itching (pruritus), scaling rashes, and recurrent skin allergies severely compromise patient sleep, occupational focus, and quality of life. Common conditions include fungal ringworm (Tinea / दाद), Atopic Eczema, Plaque Psoriasis, and Urticaria (पित्ती). In our region, widespread misuse of over-the-counter mixed steroid creams (containing clobetasol, clotrimazole, neomycin) has spawned an epidemic of resistant, steroid-modified fungal infections (Tinea Incognito).
 
-Dr. Rashmi Ray conducts precise diagnostic evaluation, including bedside KOH skin scrapings under microscope, to differentiate fungal infections from allergic eczema or autoimmune psoriasis. Patients receive targeted, non-steroid barrier repair regimens that extinguish itching rapidly and achieve lasting clinical remission.`,
+Dr. Rashmi Roy conducts precise diagnostic evaluation, including bedside KOH skin scrapings under microscope, to differentiate fungal infections from allergic eczema or autoimmune psoriasis. Patients receive targeted, non-steroid barrier repair regimens that extinguish itching rapidly and achieve lasting clinical remission.`,
     indications: [
       "Persistent circular, spreading itchy fungal rash on groin, thighs, or body (Tinea / दाद)",
       "Red, inflamed, weeping, or thickened leathery patches on hands, feet, or joints (Eczema)",
@@ -1075,7 +1075,7 @@ Dr. Rashmi Ray conducts precise diagnostic evaluation, including bedside KOH ski
     faqs: [
       {
         q: "Why does my fungal infection (दाद) come back every time I stop applying cream?",
-        a: "If you were using combination creams from the chemist (like Fourderm, Panderm, Dermikem), they contain strong steroids that suppress itching temporarily while feeding the fungal infection deeper. Dr. Rashmi Ray uses pure, targeted medical antifungal regimens that eradicate the fungus completely from its roots."
+        a: "If you were using combination creams from the chemist (like Fourderm, Panderm, Dermikem), they contain strong steroids that suppress itching temporarily while feeding the fungal infection deeper. Dr. Rashmi Roy uses pure, targeted medical antifungal regimens that eradicate the fungus completely from its roots."
       },
       {
         q: "Can psoriasis be effectively controlled?",

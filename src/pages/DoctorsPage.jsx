@@ -19,9 +19,9 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
-        title="Our Specialist Doctors in Forbesganj | Dr. S. Sagar & Dr. Rashmi Ray"
-        description="Meet Dr. S. Sagar (MBBS, MS, FIAGES - Specialist Laparoscopic Surgeon) and Dr. Rashmi Ray (MBBS, MD, DNB, MNAMS - Consultant Dermatologist & Aesthetician). Consultations available daily in Forbesganj."
-        keywords="Dr S Sagar Forbesganj, Dr Rashmi Ray Dermatologist, Best surgeon Forbesganj, Laparoscopic doctor Araria, Skin doctor Forbesganj, Assistant Professor doctor Forbesganj"
+        title="Our Specialist Doctors in Forbesganj | Dr. S. Sagar & Dr. Rashmi Roy"
+        description="Meet Dr. S. Sagar (MBBS, MS, FIAGES - Specialist Laparoscopic Surgeon) and Dr. Rashmi Roy (MBBS, MD - Dermatology, Skin & VD - Skin, Hair & Nail Specialist). Consultations available daily in Forbesganj."
+        keywords="Dr S Sagar Forbesganj, Dr Rashmi Roy Dermatologist, Skin hair and nail specialist Forbesganj, Best surgeon Forbesganj, Laparoscopic doctor Araria, Skin doctor Forbesganj, Assistant Professor doctor Forbesganj"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -122,7 +122,7 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
             </div>
           </div>
 
-          {/* Dr. Rashmi Ray Qualifications */}
+          {/* Dr. Rashmi Roy Qualifications */}
           <div className="bg-white rounded-3xl p-8 border border-slate-200 shadow-sm flex flex-col justify-between border-t-4 border-t-rose-accent">
             <div className="space-y-4">
               <div className="flex items-center gap-3">
@@ -131,16 +131,16 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
                 </div>
                 <div>
                   <h3 className="font-heading font-bold text-lg text-primary">
-                    Dr. Rashmi Ray
+                    Dr. Rashmi Roy
                   </h3>
                   <span className="text-xs font-semibold text-rose-600">
-                    MBBS, MD (Skin &amp; VD), DNB, MNAMS
+                    MBBS, MD (Dermatology, Skin &amp; VD)
                   </span>
                 </div>
               </div>
 
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Assistant Professor, Board-Certified Dermatologist, and Aesthetician recognized by the National Academy of Medical Sciences (MNAMS) and the National Board of Examinations (DNB).
+                Assistant Professor (Saharsa), Consultant Dermatologist, Skin, Hair &amp; Nail Specialist (त्वचा, बाल और नाखून विशेषज्ञ) with Fellowship in Aesthetic Dermatology and Dermatosurgery.
               </p>
 
               <div className="space-y-2 pt-2">
@@ -158,7 +158,7 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-rose-accent flex-shrink-0" />
-                    <span>Glutathione Infusions</span>
+                    <span>IV Infusions</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 text-rose-accent flex-shrink-0" />
@@ -240,7 +240,7 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
             Need Expert Medical Guidance?
           </h3>
           <p className="text-slate-600 text-xs sm:text-sm max-w-lg mx-auto mb-6">
-            Book a clinical consultation with Dr. S. Sagar or Dr. Rashmi Ray to receive an accurate diagnosis and customized therapy plan.
+            Book a clinical consultation with Dr. S. Sagar or Dr. Rashmi Roy to receive an accurate diagnosis and customized therapy plan.
           </p>
           <Link
             to="/book-appointment"

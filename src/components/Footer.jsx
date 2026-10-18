@@ -106,11 +106,17 @@ export default function Footer() {
 
         {/* Disclaimer & Copyright */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
-          <p>
-            &copy; {new Date().getFullYear()} Janki Skin Aesthetic &amp; Laparoscopic Centre. All Rights Reserved.
-          </p>
+          <div className="flex flex-wrap items-center gap-2">
+            <p>
+              &copy; {new Date().getFullYear()} Janki Skin Aesthetic &amp; Laparoscopic Centre. All Rights Reserved.
+            </p>
+            <span className="text-slate-600 hidden sm:inline">•</span>
+            <Link to="/admin" className="text-slate-500 hover:text-teal-400 text-[11px] font-semibold transition inline-flex items-center gap-1">
+              <span>Staff Admin Portal</span>
+            </Link>
+          </div>
           <p className="text-[11px] max-w-xl text-slate-500">
-            <strong>Medical Disclaimer:</strong> Information on this website is for educational and general informational purposes and does not replace formal medical evaluation. Always consult Dr. S. Sagar or Dr. Rashmi Ray for direct clinical diagnosis.
+            <strong>Medical Disclaimer:</strong> Information on this website is for educational and general informational purposes and does not replace formal medical evaluation. Always consult Dr. S. Sagar or Dr. Rashmi Roy for direct clinical diagnosis.
           </p>
         </div>
 

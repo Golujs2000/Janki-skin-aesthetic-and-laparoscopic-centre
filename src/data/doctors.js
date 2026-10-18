@@ -1,11 +1,11 @@
 export const doctorsData = [
   {
     id: "dr-rashmi",
-    name: "Dr. Rashmi Ray",
-    nameHindi: "डॉ. रश्मि राय",
-    degree: "MBBS, MD (Skin, VD & Leprosy), DNB, MNAMS",
-    role: "Assistant Professor, Consultant Dermatologist & Cosmetologist",
-    specialityBadge: "Dermatologist & Cosmetologist",
+    name: "Dr. Rashmi Roy",
+    nameHindi: "डॉ. रश्मि रॉय",
+    degree: "MBBS, MD (Dermatology, Skin VD and leprosy)",
+    role: "Assistant Professor (Saharsa), Consultant Dermatologist, Skin, Hair & Nail Specialist",
+    specialityBadge: "Aesthetic physician and dermatosurgeon",
     department: "Clinical Dermatology, Aesthetic Medicine & Trichology",
     theme: "rose",
     photo: "/assets/dr-rashmi-ray.jpg",
@@ -15,14 +15,14 @@ export const doctorsData = [
     phone: "+917091506123",
     phoneDisplay: "+91 70915 06123",
     highlights: [
-      "Triple Medical Board Certification: MD + DNB + MNAMS",
-      "Assistant Professor of Dermatology, Venereology & Leprosy (Saharsa)",
-      "Fellowship in Aesthetic Dermatology & Dermatosurgery",
-      "Specialist in Autologous GFC Hair Therapy, Chemical Peeling & Vitiligo"
+      "MBBS, MD (Dermatology) • Consultant Dermatologist",
+      "Fellowship in Aesthetic Dermatology and Dermatosurgery",
+      "Assistant Professor of Dermatology, Saharsa",
+      "Skin, Hair & Nail Specialist (त्वचा, बाल और नाखून विशेषज्ञ)"
     ],
     specialties: [
-      "Aesthetic Treatments: Chemical Peeling, GFC Hair Regrowth, Glutathione Glow, Laser Scars & Scars Revision",
-      "Clinical Dermatology: Severe Acne, Melasma, Vitiligo (Leukoderma), Eczema, Psoriasis & Scalp Care",
+      "Skin, Hair & Nail Care: Severe Acne, Melasma, Vitiligo (Leukoderma), Eczema, Psoriasis, Hair Fall & Nail Disorders",
+      "Aesthetic Treatments: Chemical Peeling, GFC Hair Regrowth, IV Infusion, Laser Scars & Scars Revision",
       "Venereology & Hansen's Disease: Specialized diagnostic evaluation & confidential clinical management"
     ]
   },

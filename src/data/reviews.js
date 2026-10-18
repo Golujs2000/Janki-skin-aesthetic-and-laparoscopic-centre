@@ -16,9 +16,9 @@ export const reviewsData = [
     location: "Jogbani / Biratnagar Border",
     rating: 5,
     treatment: "GFC Hair Restoration Therapy",
-    doctor: "Dr. Rashmi Ray",
+    doctor: "Dr. Rashmi Roy",
     theme: "rose",
-    comment: "I was losing hair rapidly after post-viral illness. Dr. Rashmi Ray recommended 3 sessions of GFC therapy. Within 2 months, my hair shedding reduced by 90% and healthy new baby hairs started sprouting. She is extremely knowledgeable and reassuring.",
+    comment: "I was losing hair rapidly after post-viral illness. Dr. Rashmi Roy recommended 3 sessions of GFC therapy. Within 2 months, my hair shedding reduced by 90% and healthy new baby hairs started sprouting. She is extremely knowledgeable and reassuring.",
     date: "January 2026"
   },
   {
@@ -38,7 +38,7 @@ export const reviewsData = [
     location: "Forbesganj Bazar",
     rating: 5,
     treatment: "Chemical Peel & Acne Treatment",
-    doctor: "Dr. Rashmi Ray",
+    doctor: "Dr. Rashmi Roy",
     theme: "rose",
     comment: "Had stubborn adult cystic acne and dark blemishes for years. Dr. Rashmi's customized peeling sessions and medical skincare transformed my skin completely. My skin has never looked clearer or more radiant!",
     date: "March 2026"
@@ -60,7 +60,7 @@ export const reviewsData = [
     location: "Farbisganj Sadar",
     rating: 5,
     treatment: "Vitiligo & Chronic Eczema",
-    doctor: "Dr. Rashmi Ray",
+    doctor: "Dr. Rashmi Roy",
     theme: "rose",
     comment: "Suffered from white patches on my hands and severe eczema on legs. Dr. Rashmi's treatment restored natural color on 85% of patches within 4 months. She listens with so much empathy and care.",
     date: "February 2026"

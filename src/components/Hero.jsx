@@ -63,21 +63,21 @@ export default function Hero({ onBookClick }) {
 
               {/* Doctors Mini Highlight Chips */}
               <div className="flex flex-wrap items-center gap-3 pt-1">
-                {/* Dr. Rashmi Ray Chip */}
+                {/* Dr. Rashmi Roy Chip */}
                 <div className="flex items-center gap-3 p-2 pr-4 rounded-full bg-white border border-slate-200 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all">
                   <img
                     src="/assets/dr-rashmi-ray.jpg"
-                    alt="Dr. Rashmi Ray"
+                    alt="Dr. Rashmi Roy"
                     className="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm flex-shrink-0"
                     width="40"
                     height="40"
                   />
                   <div>
                     <span className="font-heading font-bold text-xs sm:text-sm text-primary block leading-none">
-                      Dr. Rashmi Ray
+                      Dr. Rashmi Roy
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium">
-                      MBBS, MD • Skin &amp; Aesthetics
+                      MBBS, MD • Skin, Hair &amp; Nail Specialist
                     </span>
                   </div>
                 </div>
@@ -96,7 +96,8 @@ export default function Hero({ onBookClick }) {
                       Dr. S. Sagar
                     </span>
                     <span className="text-[11px] text-slate-500 font-medium">
-                      MBBS, MS • Laparoscopic Surgeon
+                      MBBS, MS • General & Laparoscopic Surgeon
+
                     </span>
                   </div>
                 </div>
@@ -162,8 +163,8 @@ export default function Hero({ onBookClick }) {
                 {/* Doctor Portrait */}
                 <div className="relative w-full flex justify-center items-center overflow-hidden rounded-3xl bg-slate-50 border border-slate-100 shadow-xl">
                   <img
-                    src="/assets/south-asian-doctors-hero.png"
-                    alt="Dr. Rashmi Ray and Dr. S. Sagar - JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj"
+                    src="/assets/dr-rashmi-and-dr-sagar-hero.png"
+                    alt="Dr. Rashmi Roy and Dr. S. Sagar - JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj"
                     className="w-full h-auto max-h-[520px] object-cover object-top hover:scale-[1.02] transition-transform duration-500"
                     width="600"
                     height="850"
@@ -172,16 +173,16 @@ export default function Hero({ onBookClick }) {
 
                 {/* Split Doctors Caption Box */}
                 <div className="w-full -mt-6 relative z-20 bg-white/95 backdrop-blur-md border border-slate-200/90 rounded-2xl p-3.5 shadow-xl flex items-center justify-around gap-3">
-                  {/* Dr. Rashmi Ray */}
+                  {/* Dr. Rashmi Roy */}
                   <div className="flex flex-col items-center text-center flex-1">
                     <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-rose-50 text-rose-accent border border-rose-200/60 mb-1">
-                      Skin &amp; Aesthetic
+                      Skin, Hair &amp; Nail
                     </span>
                     <div className="font-heading font-extrabold text-sm sm:text-base text-primary leading-tight">
-                      Dr. Rashmi Ray
+                      Dr. Rashmi Roy
                     </div>
                     <div className="text-[11px] font-medium text-slate-500 mt-0.5">
-                      MBBS, MD • Dermatologist
+                      MBBS, MD • Skin, Hair &amp; Nail Specialist
                     </div>
                   </div>
 
@@ -191,13 +192,15 @@ export default function Hero({ onBookClick }) {
                   {/* Dr. S. Sagar */}
                   <div className="flex flex-col items-center text-center flex-1">
                     <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-accent border border-teal-200/60 mb-1">
-                      Laparoscopy Specialist
+                      General & Laparoscopic
+
                     </span>
                     <div className="font-heading font-extrabold text-sm sm:text-base text-primary leading-tight">
                       Dr. S. Sagar
                     </div>
                     <div className="text-[11px] font-medium text-slate-500 mt-0.5">
-                      MBBS, MS • Laparoscopic Surgeon
+                      MBBS, MS • General & Laparoscopic Surgeon
+
                     </div>
                   </div>
                 </div>

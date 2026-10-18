@@ -5,7 +5,7 @@ export default function SEOHead({
   title,
   description,
   keywords,
-  image = '/assets/dr-rashmi-sagar-hero-feathered.png',
+  image = '/assets/dr-rashmi-and-dr-sagar-hero.png',
   type = 'website',
   schema
 }) {

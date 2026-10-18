@@ -61,7 +61,7 @@ export default function Header({ onBookClick }) {
   const aestheticTreatments = [
     { title: 'GFC Hair & Skin Therapy', id: 'gfc-therapy', desc: 'Growth Factor Concentrate' },
     { title: 'Chemical Peeling Glow', id: 'chemical-peeling', desc: 'Melasma, Tanning & Glow' },
-    { title: 'Glutathione Glow Therapy', id: 'glutathione-therapy', desc: 'Master Antioxidant IV Infusion' },
+    { title: 'IV Infusion', id: 'glutathione-therapy', desc: 'Master Antioxidant & Rejuvenation Drip' },
     { title: 'Laser Skin & Scar Revision', id: 'laser-revision', desc: 'Acne Pits & Texture Repair' },
     { title: 'Anti-Aging & Rejuvenation', id: 'anti-aging', desc: 'Collagen Boost & Wrinkle Relief' },
     { title: 'Hair Fall & Scalp Care', id: 'hair-scalp-care', desc: 'Trichoscopy & Follicle Rejuvenation' },
@@ -157,17 +157,17 @@ export default function Header({ onBookClick }) {
               onMouseEnter={() => setTreatmentsDropdownOpen(true)}
               onMouseLeave={() => setTreatmentsDropdownOpen(false)}
             >
-              <button
-                type="button"
-                onClick={() => setTreatmentsDropdownOpen(!treatmentsDropdownOpen)}
+              <Link
+                to="/treatments"
+                onClick={() => setTreatmentsDropdownOpen(false)}
                 className={`flex items-center gap-1.5 py-1 transition-colors hover:text-rose-600 cursor-pointer ${
-                  location.pathname.startsWith('/treatment') ? 'text-rose-600 font-extrabold' : ''
+                  location.pathname.startsWith('/treatment') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
                 }`}
                 aria-expanded={treatmentsDropdownOpen}
               >
                 <span>Treatments</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${treatmentsDropdownOpen ? 'rotate-180 text-rose-600' : 'text-slate-400'}`} />
-              </button>
+              </Link>
 
               {/* Mega Dropdown Panel */}
               {treatmentsDropdownOpen && (
@@ -239,7 +239,7 @@ export default function Header({ onBookClick }) {
                             <h4 className="font-heading font-bold text-xs text-primary leading-tight">
                               Aesthetics &amp; Hair
                             </h4>
-                            <span className="text-[10px] text-slate-500 font-medium">Dr. Rashmi Ray (MD, DNB)</span>
+                            <span className="text-[10px] text-slate-500 font-medium">Dr. Rashmi Roy (MD Dermatology)</span>
                           </div>
                         </div>
 
@@ -272,7 +272,7 @@ export default function Header({ onBookClick }) {
                             <h4 className="font-heading font-bold text-xs text-primary leading-tight">
                               Clinical Dermatology
                             </h4>
-                            <span className="text-[10px] text-slate-500 font-medium">Dr. Rashmi Ray (MD, MNAMS)</span>
+                            <span className="text-[10px] text-slate-500 font-medium">Dr. Rashmi Roy (Skin, Hair &amp; Nail)</span>
                           </div>
                         </div>
 

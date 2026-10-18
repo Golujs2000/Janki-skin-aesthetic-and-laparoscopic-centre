@@ -58,7 +58,7 @@ export default function About() {
                 is Forbesganj’s premier clinical facility dedicated to solving complex dermatological conditions and delivering modern minimally invasive laparoscopic surgical care.
               </p>
               <p>
-                Conveniently located on <strong>Referral Hospital Road, Forbesganj</strong>, our centre bridges the gap between metropolitan surgical excellence and regional accessibility. Patients no longer need to travel to Patna, Siliguri, or Delhi for advanced laparoscopic surgeries or specialized aesthetic dermatology procedures like GFC hair regrowth, glutathione therapy, and chemical peeling.
+                Conveniently located on <strong>Referral Hospital Road, Forbesganj</strong>, our centre bridges the gap between metropolitan surgical excellence and regional accessibility. Patients no longer need to travel to Patna, Siliguri, or Delhi for advanced laparoscopic surgeries or specialized aesthetic dermatology procedures like GFC hair regrowth, IV infusion therapy, and chemical peeling.
               </p>
             </div>
 

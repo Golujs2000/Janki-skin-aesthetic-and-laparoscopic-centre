@@ -24,8 +24,8 @@ export default function AboutPage({ onBookClick }) {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
         title="About Janki Skin Aesthetic & Laparoscopic Centre Forbesganj | Our Mission & Faculty"
-        description="Learn about Forbesganj's premier multi-speciality centre led by Assistant Professors Dr. S. Sagar (MS Gen Surgery) & Dr. Rashmi Ray (MD Dermatology). 28+ years of medical legacy (Estb. 1990) and surgical excellence in Seemanchal, Bihar."
-        keywords="About Janki Clinic Forbesganj, Laparoscopic hospital Araria, Dr S Sagar Forbesganj, Dr Rashmi Ray clinic, Best hospital Forbesganj Bihar"
+        description="Learn about Forbesganj's premier multi-speciality centre led by Assistant Professors Dr. S. Sagar (MS Gen Surgery) & Dr. Rashmi Roy (MD Dermatology). 28+ years of medical legacy (Estb. 1990) and surgical excellence in Seemanchal, Bihar."
+        keywords="About Janki Clinic Forbesganj, Laparoscopic hospital Araria, Dr S Sagar Forbesganj, Dr Rashmi Roy clinic, Skin hair and nail specialist Forbesganj, Best hospital Forbesganj Bihar"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
@@ -117,7 +117,7 @@ export default function AboutPage({ onBookClick }) {
               Led by Assistant Professors &amp; Fellowship Surgeons
             </h2>
             <p className="text-slate-200 text-xs sm:text-sm leading-relaxed">
-              Dr. S. Sagar (MS General Surgery, FIAGES) and Dr. Rashmi Ray (MD Skin &amp; VD, DNB, MNAMS) provide comprehensive diagnostic examinations, transparent treatment counsel, and direct post-operative follow-up.
+              Dr. S. Sagar (MS General Surgery, FIAGES) and Dr. Rashmi Roy (MBBS, MD - Dermatology, Skin, Hair &amp; Nail Specialist) provide comprehensive diagnostic examinations, transparent treatment counsel, and direct post-operative follow-up.
             </p>
           </div>
 

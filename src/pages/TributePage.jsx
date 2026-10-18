@@ -263,7 +263,7 @@ export default function TributePage() {
                   When Dr. Vijay Kumar passed away on <strong>15 May 2019</strong>, Forbesganj lost one of its most cherished guardians. But his spirit did not fade—it became the guiding light for his family.
                 </p>
                 <p>
-                  Inspired by his lifelong devotion, <strong>Dr. S. Sagar (MS, FIAGES - Laparoscopic Surgeon)</strong> and <strong>Dr. Rashmi Ray (MD, DNB, MNAMS - Consultant Dermatologist)</strong> founded <strong>JANKI Skin Aesthetic &amp; Laparoscopic Centre</strong> directly on <strong>Referral Hospital Road, Forbesganj</strong>.
+                  Inspired by his lifelong devotion, <strong>Dr. S. Sagar (MS, FIAGES - Laparoscopic Surgeon)</strong> and <strong>Dr. Rashmi Roy (MBBS, MD - Skin, Hair &amp; Nail Specialist)</strong> founded <strong>JANKI Skin Aesthetic &amp; Laparoscopic Centre</strong> directly on <strong>Referral Hospital Road, Forbesganj</strong>.
                 </p>
                 <p>
                   Every surgical procedure performed with gentle keyhole precision, every dermatological condition treated with evidence-based care, and every patient greeted with kindness is an offering to his eternal memory.

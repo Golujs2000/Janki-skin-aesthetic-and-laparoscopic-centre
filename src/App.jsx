@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route, useNavigate, Navigate, useLocation } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -12,6 +12,8 @@ import GalleryPage from './pages/GalleryPage';
 import ContactPage from './pages/ContactPage';
 import AppointmentPage from './pages/AppointmentPage';
 import TributePage from './pages/TributePage';
+import AdminPage from './pages/AdminPage';
+import { recordPageView } from './utils/analytics';
 import LightboxModal from './components/LightboxModal';
 import MobileBottomBar from './components/MobileBottomBar';
 import FloatingWidgets from './components/FloatingWidgets';
@@ -28,6 +30,12 @@ function AppContent() {
   const [selectedTreatment, setSelectedTreatment] = useState(null);
 
   const navigate = useNavigate();
+  const location = useLocation();
+
+  // Automatic Traffic & Inbound Acquisition Tracker
+  useEffect(() => {
+    recordPageView(location.pathname + location.search);
+  }, [location.pathname, location.search]);
 
   const handleOpenLightbox = (src, alt, caption) => {
     setLightbox({
@@ -144,6 +152,14 @@ function AppContent() {
           <Route 
             path="/in-memory-of-dr-vijay-kumar" 
             element={<TributePage />} 
+          />
+          <Route 
+            path="/admin" 
+            element={<AdminPage />} 
+          />
+          <Route 
+            path="/dashboard" 
+            element={<Navigate to="/admin" replace />} 
           />
           {/* Aliases & Fallbacks */}
           <Route path="/appointment" element={<Navigate to="/book-appointment" replace />} />

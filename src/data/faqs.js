@@ -20,7 +20,7 @@ export const faqsData = [
   {
     id: 4,
     question: "Are chemical peels painful and is there downtime involved?",
-    answer: "Medical chemical peels administered by Dr. Rashmi Ray are gentle, controlled, and well-tolerated. Patients usually experience only a mild tingling sensation for a few minutes. Modern lunchtime peels have virtually zero downtime, allowing you to return to office or daily routines immediately while following sun protection guidelines.",
+    answer: "Medical chemical peels administered by Dr. Rashmi Roy are gentle, controlled, and well-tolerated. Patients usually experience only a mild tingling sensation for a few minutes. Modern lunchtime peels have virtually zero downtime, allowing you to return to office or daily routines immediately while following sun protection guidelines.",
     category: "aesthetic"
   },
   {
