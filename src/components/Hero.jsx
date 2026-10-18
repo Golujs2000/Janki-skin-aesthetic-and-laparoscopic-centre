@@ -12,13 +12,43 @@ export default function Hero({ onBookClick }) {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-            
+
             {/* Left Column: Content */}
             <div className="lg:col-span-7 space-y-6">
               {/* Badge Tag */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-rose-50 to-teal-50 border border-rose-200/80 text-primary text-xs sm:text-sm font-bold shadow-sm">
                 <span className="text-amber-500">✨</span>
                 <span>Forbesganj's Premier Super-Speciality Healthcare Centre</span>
+              </div>
+
+              {/* In Memory of Late Dr. Vijay Kumar - Right After First Tagline */}
+              <div>
+                <Link
+                  to="/tribute"
+                  className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-50 via-amber-100/70 to-amber-50 border border-amber-300 shadow-sm hover:shadow-md hover:border-amber-400 text-amber-950 transition-all group"
+                  title="In Memory of Late Dr. Vijay Kumar (General Physician & Surgeon)"
+                >
+                  <img
+                    src="/assets/dr-vijay-kumar.jpeg"
+                    alt="Late Dr. Vijay Kumar"
+                    className="w-7 h-7 rounded-full object-cover border border-amber-400 shadow-sm flex-shrink-0"
+                    width="28"
+                    height="28"
+                  />
+                  <div className="text-xs sm:text-sm font-medium flex flex-wrap items-center gap-x-1.5 gap-y-0.5">
+                    <span className="text-slate-600 font-normal">In Memory of</span>
+                    <strong className="text-amber-950 font-bold group-hover:underline">
+                      Late Dr. Vijay Kumar
+                    </strong>
+                    <span className="text-amber-700/60 hidden sm:inline">•</span>
+                    <span className="text-amber-800 text-[11px] sm:text-xs font-semibold">
+                      General Physician &amp; Surgeon • MBBS (ANMMCH Gaya)
+                    </span>
+                  </div>
+                  <span className="text-amber-600 font-bold text-xs group-hover:translate-x-1 transition-transform ml-1">
+                    →
+                  </span>
+                </Link>
               </div>
 
               {/* Main Heading */}
@@ -71,28 +101,7 @@ export default function Hero({ onBookClick }) {
                   </div>
                 </div>
 
-                {/* Late Dr. Vijay Kumar Memorial Chip */}
-                <Link
-                  to="/tribute"
-                  className="flex items-center gap-3 p-2 pr-4 rounded-full bg-gradient-to-r from-amber-50 to-amber-100/80 border border-amber-300/90 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all group"
-                  title="In Memory of Late Dr. Vijay Kumar (1955-2019)"
-                >
-                  <img
-                    src="/assets/dr-vijay-kumar.jpeg"
-                    alt="Late Dr. Vijay Kumar"
-                    className="w-10 h-10 rounded-full object-cover border-2 border-amber-400 shadow-sm flex-shrink-0"
-                    width="40"
-                    height="40"
-                  />
-                  <div>
-                    <span className="font-heading font-bold text-xs sm:text-sm text-amber-950 block leading-none group-hover:text-amber-800">
-                      Late Dr. Vijay Kumar
-                    </span>
-                    <span className="text-[11px] text-amber-800 font-medium">
-                      General Physician &amp; Surgeon • MBBS (ANMMCH Gaya)
-                    </span>
-                  </div>
-                </Link>
+
               </div>
 
               {/* CTAs */}
@@ -150,16 +159,15 @@ export default function Hero({ onBookClick }) {
             {/* Right Column: Doctor Showcase Portrait with Blurred Feathered Edges & Split Badge */}
             <div className="lg:col-span-5 relative flex flex-col items-center justify-center">
               <div className="relative w-full max-w-[500px] flex flex-col items-center">
-                {/* Doctor Portrait with Feathered Mask */}
-                <div className="hero-doctor-feather-wrap">
+                {/* Doctor Portrait */}
+                <div className="relative w-full flex justify-center items-center overflow-hidden rounded-3xl bg-slate-50 border border-slate-100 shadow-xl">
                   <img
-                    src="/assets/dr-rashmi-sagar-hero-feathered.png"
-                    alt="Dr. Rashmi Ray and Dr. S. Sagar - Janki Skin Aesthetic & Laparoscopic Centre Forbesganj"
-                    className="w-full h-auto max-h-[500px] object-contain drop-shadow-xl hover:scale-[1.02] transition-transform duration-500"
+                    src="/assets/south-asian-doctors-hero.png"
+                    alt="Dr. Rashmi Ray and Dr. S. Sagar - JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj"
+                    className="w-full h-auto max-h-[520px] object-cover object-top hover:scale-[1.02] transition-transform duration-500"
                     width="600"
                     height="850"
                   />
-                  <div className="hero-edge-blur-overlay" />
                 </div>
 
                 {/* Split Doctors Caption Box */}
@@ -204,7 +212,7 @@ export default function Hero({ onBookClick }) {
       <section className="bg-slate-50 border-b border-slate-200 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
-            
+
             <div className="flex items-center gap-3.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
               <div className="w-10 h-10 rounded-xl bg-teal-50 text-teal-accent flex items-center justify-center flex-shrink-0">
                 <Users className="w-5 h-5" />

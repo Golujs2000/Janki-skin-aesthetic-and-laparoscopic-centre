@@ -1,67 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Camera, 
-  Sparkles, 
-  ZoomIn, 
-  Image as ImageIcon, 
-  Layers, 
-  Phone, 
-  Calendar,
-  ArrowRight
-} from 'lucide-react';
+import { Camera, Calendar, Phone } from 'lucide-react';
 import Gallery from '../components/Gallery';
 import SEOHead from '../components/SEOHead';
 
 export default function GalleryPage({ onOpenLightbox }) {
-  const clinicPosters = [
-    {
-      title: 'Laparoscopic Cholecystectomy Poster',
-      desc: 'Official clinic poster for gallbladder stone removal & benefits',
-      src: '/assets/poster-laparoscopy-cholecystectomy.jpg'
-    },
-    {
-      title: 'Laparoscopic Appendectomy Poster',
-      desc: 'Emergency & elective keyhole appendicitis procedure visual',
-      src: '/assets/poster-laparoscopic-appendectomy.jpg'
-    },
-    {
-      title: 'Laparoscopic Ovarian Cystectomy Poster',
-      desc: 'Fertility-preserving ovarian cyst surgery guide',
-      src: '/assets/poster-laparoscopy-cystectomy.jpg'
-    },
-    {
-      title: 'Tubal Ligation Family Planning Poster',
-      desc: 'Day-care keyhole female contraceptive procedure poster',
-      src: '/assets/poster-tubal-ligation.jpg'
-    },
-    {
-      title: 'GFC Hair & Skin Treatment Poster',
-      desc: 'Growth Factor Concentrate clinical biological therapy',
-      src: '/assets/poster-gfc-treatment.jpg'
-    },
-    {
-      title: 'Chemical Peeling Glow Poster',
-      desc: 'Clinical benefits of medical peeling for melasma & pigmentation',
-      src: '/assets/poster-chemical-peel-benefits.jpg'
-    },
-    {
-      title: 'Glutathione IV Glow Therapy Poster',
-      desc: 'Master antioxidant full-body skin brightening protocol',
-      src: '/assets/poster-glutathione-therapy.jpg'
-    },
-    {
-      title: 'Skin, Hair & Nail Disorders Poster',
-      desc: 'Comprehensive clinical dermatology OPD diagnostic visual',
-      src: '/assets/poster-skin-hair-nail.jpg'
-    },
-    {
-      title: 'Aesthetic Dermatology Spectrum Poster',
-      desc: 'Full range of facial aesthetics, lasers, and scar treatments',
-      src: '/assets/poster-aesthetic-treatments.jpg'
-    },
-  ];
-
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
@@ -94,45 +37,9 @@ export default function GalleryPage({ onOpenLightbox }) {
           </p>
         </div>
 
-        {/* Core Gallery Component */}
+        {/* Core Facility Gallery Component */}
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-14">
           <Gallery onOpenLightbox={onOpenLightbox} />
-        </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clinicPosters.map((poster, idx) => (
-              <div
-                key={idx}
-                onClick={() => onOpenLightbox(poster.src, poster.title, `${poster.title} • High Definition Guide`)}
-                className="group bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between"
-              >
-                <div className="relative aspect-[3/4] w-full bg-slate-900 overflow-hidden">
-                  <img
-                    src={poster.src}
-                    alt={poster.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                  
-                  <div className="absolute top-3 right-3">
-                    <span className="p-2 rounded-full bg-white/90 text-primary shadow-md inline-flex items-center justify-center">
-                      <ZoomIn className="w-4 h-4" />
-                    </span>
-                  </div>
-
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-heading font-bold text-base leading-snug drop-shadow-sm">
-                      {poster.title}
-                    </h3>
-                    <p className="text-xs text-slate-200/90 mt-1 line-clamp-2">
-                      {poster.desc}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Bottom Booking Banner */}
