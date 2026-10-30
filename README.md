@@ -1,6 +1,6 @@
 # Janki Skin Aesthetic & Laparoscopic Centre Website
 
-Official responsive medical website for **Janki Skin Aesthetic & Laparoscopic Centre** (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर) located at Referral Hospital Road, Forbesganj, Araria, Bihar 854318.
+Official responsive medical website for **Janki Skin Aesthetic & Laparoscopic Centre** (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर) located at Referral Hospital Road, Forbesganj, Bihar 854318.
 
 ## Doctors & Specialities
 * **Dr. Rashmi Ray** — MBBS, MD (Skin, VD & Leprosy), Fellowship in Aesthetic Dermatology & Dermatosurgery, Assistant Professor

@@ -1,6 +1,6 @@
 # Google Business Profile (GBP) & Local SEO Optimization Plan
 ## Janki Skin Aesthetic & Laparoscopic Centre (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर)
-**Address:** Referral Hospital Road, Forbesganj, Araria District, Bihar 854318  
+**Address:** Referral Hospital Road, Forbesganj, Bihar 854318  
 **Phone Numbers:** +91 79090 67784 | +91 70915 06123 | +91 70915 06124  
 **Primary Doctors:** Dr. Rashmi Ray (MD Dermatology) & Dr. S. Sagar (MS Laparoscopic Surgeon)  
 **Website:** Designed & Developed by [nirviai.com](https://nirviai.com)

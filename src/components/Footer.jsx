@@ -220,7 +220,7 @@ export default function Footer() {
             <div className="pt-3 border-t border-slate-800 space-y-1 text-[11px] text-slate-400">
               <div className="font-bold text-slate-300">Hospital Address:</div>
               <div className="leading-snug text-slate-400">
-                Opp. Sub-Divisional Referral Hospital Road, Forbesganj, Araria, Bihar 854318
+                Referral Hospital Road, Forbesganj, Bihar 854318
               </div>
             </div>
           </div>

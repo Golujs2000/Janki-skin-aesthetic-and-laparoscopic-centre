@@ -38,7 +38,7 @@ export default function ContactPage() {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
         title="Contact JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj | Helplines"
-        description="Visit JANKI Skin Aesthetic & Laparoscopic Centre opposite Sub-Divisional Referral Hospital, Forbesganj, Araria, Bihar 854318. Call: +91 79090 67784 / +91 70915 06123."
+        description="Visit JANKI Skin Aesthetic & Laparoscopic Centre on Referral Hospital Road, Forbesganj, Bihar 854318. Call: +91 79090 67784 / +91 70915 06123."
         keywords="Contact Janki Clinic Forbesganj, Referral hospital road Forbesganj, Dr S Sagar phone number, Dr Rashmi Roy contact, Skin hair and nail specialist Forbesganj, Laparoscopy appointment Forbesganj"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,7 +62,7 @@ export default function ContactPage() {
             Contact JANKI Skin Aesthetic &amp; Laparoscopic Centre
           </h1>
           <p className="text-slate-600 text-sm sm:text-base mt-4 leading-relaxed">
-            Conveniently situated opposite the Sub-Divisional Referral Hospital on Referral Hospital Road, Forbesganj (District Araria, Bihar). 
+            Conveniently situated on Referral Hospital Road, Forbesganj, Bihar 854318.
           </p>
         </div>
 

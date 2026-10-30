@@ -578,7 +578,7 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                 <span>Clinic Location</span>
               </div>
               <p className="font-medium text-slate-800">
-                Opposite Sub-Divisional Referral Hospital, Referral Hospital Rd, Forbesganj, Araria, Bihar 854318.
+                Referral Hospital Road, Forbesganj, Bihar 854318.
               </p>
               <div className="text-[11px] text-slate-500 pt-0.5">
                 • 5 Mins from Forbesganj Junction • 20 Mins from Jogbani/Nepal Border

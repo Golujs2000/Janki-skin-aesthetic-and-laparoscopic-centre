@@ -38,9 +38,8 @@ export default function Contact() {
                 <div>
                   <h4 className="font-bold text-sm text-slate-800">Clinic Address</h4>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                    Opposite Sub-Divisional Referral Hospital,<br />
-                    Referral Hospital Road, Forbesganj,<br />
-                    District Araria, Bihar – 854318
+                    Referral Hospital Road,<br />
+                    Forbesganj, Bihar 854318
                   </p>
                 </div>
               </div>
