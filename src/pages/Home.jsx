@@ -24,8 +24,8 @@ export default function Home({
     <main className="flex-1">
       <SEOHead
         title="Janki Skin Aesthetic & Laparoscopic Centre Forbesganj | Dr. S. Sagar & Dr. Rashmi Roy"
-        description="Forbesganj’s premier healthcare centre for minimally invasive laparoscopic gallbladder, appendix & hernia surgery by Dr. S. Sagar (MS, FIAGES) & advanced aesthetic dermatology, skin, hair and nail treatments by Dr. Rashmi Roy (MBBS, MD). Call +91 79090 67784."
-        keywords="Laparoscopic surgery Forbesganj, Skin hair and nail specialist Forbesganj, Best dermatologist Forbesganj, Gallbladder stone surgery Bihar, Appendix operation Forbesganj, GFC hair regrowth Araria, Chemical peeling Forbesganj, Dr S Sagar, Dr Rashmi Roy"
+        description="Premier centre for laparoscopic surgery & aesthetic dermatology by Dr. S. Sagar (MS) & Dr. Rashmi Roy (MD). Serving Forbesganj, Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Simrahi, Birpur & Seemanchal. Call +91 79090 67784."
+        keywords="Laparoscopic surgery Forbesganj, Skin hair specialist Forbesganj, Dermatologist Forbesganj, Gallbladder surgery Narpatganj, Appendix operation Jogbani, Hernia surgery Biratnagar Nepal, GFC hair therapy Itahari, Laparoscopy Raniganj, Skin doctor Bhargama, Surgeon Kursakata, Birpur border hospital, Balua clinic, Lalitgram medical, Simrahi laparoscopic surgery, Dr S Sagar, Dr Rashmi Roy"
       />
       <Hero onBookClick={onBookClick} />
       <Tribute />

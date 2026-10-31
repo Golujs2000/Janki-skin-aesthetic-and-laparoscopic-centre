@@ -19,9 +19,9 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
   return (
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
-        title="Our Specialist Doctors in Forbesganj | Dr. S. Sagar & Dr. Rashmi Roy"
-        description="Meet Dr. S. Sagar (MBBS, MS, FIAGES - Specialist Laparoscopic Surgeon) and Dr. Rashmi Roy (MBBS, MD - Dermatology, Skin & VD - Skin, Hair & Nail Specialist). Consultations available daily in Forbesganj."
-        keywords="Dr S Sagar Forbesganj, Dr Rashmi Roy Dermatologist, Skin hair and nail specialist Forbesganj, Best surgeon Forbesganj, Laparoscopic doctor Araria, Skin doctor Forbesganj, Assistant Professor doctor Forbesganj"
+        title="Specialist Doctors Forbesganj | Dr. S. Sagar & Dr. Rashmi Roy"
+        description="Consult Dr. S. Sagar (MS, FIAGES - Laparoscopic Surgeon) & Dr. Rashmi Roy (MD Skin - Dermatologist). Serving Forbesganj, Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Simrahi & Birpur."
+        keywords="Dr S Sagar Forbesganj, Dr Rashmi Roy Dermatologist, Surgeon Narpatganj Raniganj, Skin doctor Jogbani Biratnagar Itahari, Laparoscopy doctor Simrahi Birpur, Doctor Bhargama Kursakata Balua Lalitgram"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

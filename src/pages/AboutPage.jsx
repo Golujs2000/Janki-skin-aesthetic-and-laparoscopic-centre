@@ -24,8 +24,8 @@ export default function AboutPage({ onBookClick }) {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
         title="About Janki Skin Aesthetic & Laparoscopic Centre Forbesganj | Our Mission & Faculty"
-        description="Learn about Forbesganj's premier multi-speciality centre led by Assistant Professors Dr. S. Sagar (MS Gen Surgery) & Dr. Rashmi Roy (MD Dermatology). 28+ years of medical legacy (Estb. 1990) and surgical excellence in Seemanchal, Bihar."
-        keywords="About Janki Clinic Forbesganj, Laparoscopic hospital Araria, Dr S Sagar Forbesganj, Dr Rashmi Roy clinic, Skin hair and nail specialist Forbesganj, Best hospital Forbesganj Bihar"
+        description="Premier multi-speciality surgical & skin centre led by Dr. S. Sagar (MS) & Dr. Rashmi Roy (MD). Serving patients across Forbesganj, Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Bhargama, Kursakata, Birpur & Simrahi."
+        keywords="About Janki Clinic Forbesganj, Laparoscopic hospital Narpatganj, Dr S Sagar Forbesganj, Dr Rashmi Roy clinic, Skin doctor Jogbani Biratnagar, Surgeon Simrahi Birpur, Clinic Raniganj Bhargama, Kursakata Balua Lalitgram"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         

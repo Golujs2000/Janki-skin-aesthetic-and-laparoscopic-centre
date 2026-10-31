@@ -54,11 +54,11 @@ export default function About() {
 
             <div className="space-y-4 text-slate-600 text-base leading-relaxed">
               <p>
-                <strong>Janki Skin Aesthetic & Laparoscopic Centre</strong> (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर) 
+                <strong>Janki Skin Aesthetic &amp; Laparoscopic Centre</strong> (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर) 
                 is Forbesganj’s premier clinical facility dedicated to solving complex dermatological conditions and delivering modern minimally invasive laparoscopic surgical care.
               </p>
               <p>
-                Conveniently located on <strong>Referral Hospital Road, Forbesganj</strong>, our centre bridges the gap between metropolitan surgical excellence and regional accessibility. Patients no longer need to travel to Patna, Siliguri, or Delhi for advanced laparoscopic surgeries or specialized aesthetic dermatology procedures like GFC hair regrowth, IV infusion therapy, and chemical peeling.
+                Conveniently located on <strong>Referral Hospital Road, Forbesganj</strong>, our centre bridges the gap between metropolitan surgical excellence and regional accessibility. Patients from across <strong>Forbesganj, Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Bhargama, Kursakata, Birpur, Balua, Lalitgram, and Simrahi</strong> no longer need to travel to Patna, Siliguri, or Delhi for advanced 4K laparoscopic keyhole surgeries or specialized aesthetic dermatology procedures like GFC hair regrowth, IV infusion therapy, and chemical peeling.
               </p>
             </div>
 

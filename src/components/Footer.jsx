@@ -227,6 +227,67 @@ export default function Footer() {
 
         </div>
 
+        {/* Regional Catchment & Local SEO Service Areas */}
+        <div className="pt-2 pb-6 border-b border-slate-800 text-xs">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+            <div className="flex items-center gap-2 text-teal-400 font-heading font-bold uppercase tracking-wider text-[11px]">
+              <MapPin className="w-3.5 h-3.5" />
+              <span>Regional Healthcare Catchment &amp; Areas Served (क्षेत्रीय सेवा क्षेत्र)</span>
+            </div>
+            <span className="text-[11px] text-slate-400">
+              Direct highway connectivity via NH-27 / NH-57 to Forbesganj
+            </span>
+          </div>
+
+          <p className="text-[11px] text-slate-400 leading-relaxed mb-4">
+            Patients across Araria, Supaul, and Eastern Nepal routinely choose Janki Centre for advanced 4K laparoscopic keyhole surgeries and aesthetic dermatology consultations with same-day return or rapid 24-hr discharge.
+          </p>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {/* Araria District */}
+            <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+              <span className="text-[10px] font-bold text-teal-300 uppercase block mb-1.5">
+                Araria District Hubs
+              </span>
+              <div className="flex flex-wrap gap-1.5 text-[11px]">
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Forbesganj (HQ)</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Narpatganj</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Raniganj</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Bhargama</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Kursakata</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Jogbani</span>
+              </div>
+            </div>
+
+            {/* Supaul / Kosi Border */}
+            <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+              <span className="text-[10px] font-bold text-rose-300 uppercase block mb-1.5">
+                Supaul &amp; Border Belt
+              </span>
+              <div className="flex flex-wrap gap-1.5 text-[11px]">
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Birpur (Border Area)</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Balua Bazar</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Lalitgram</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Simrahi Bazar</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Raghopur</span>
+              </div>
+            </div>
+
+            {/* Nepal Cross-Border */}
+            <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800">
+              <span className="text-[10px] font-bold text-amber-300 uppercase block mb-1.5">
+                Nepal Cross-Border (15–30 Mins)
+              </span>
+              <div className="flex flex-wrap gap-1.5 text-[11px]">
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Biratnagar (Nepal)</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Itahari (Ithari)</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Jogbani Border Gate</span>
+                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Morang / Sunsari</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Disclaimer & Copyright Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 text-center md:text-left">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-2">

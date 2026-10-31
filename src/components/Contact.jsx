@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Clock, Mail, Navigation, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, Clock, Mail, Navigation, MessageCircle, Compass } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -116,6 +116,63 @@ export default function Contact() {
             />
           </div>
 
+        </div>
+
+        {/* Regional Routes & Catchment Travel Guide */}
+        <div className="mt-12 bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/80 shadow-sm space-y-5">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-accent flex items-center justify-center">
+                <Compass className="w-4 h-4" />
+              </div>
+              <div>
+                <h3 className="font-heading font-bold text-slate-800 text-base sm:text-lg">
+                  Regional Catchment &amp; Travel Directions (आसपास के क्षेत्रों से मार्ग)
+                </h3>
+                <p className="text-xs text-slate-500">
+                  Direct highway access with same-day return for routine OPD and 24-48 hr discharge for surgeries.
+                </p>
+              </div>
+            </div>
+            <span className="text-[11px] font-semibold text-teal-700 bg-teal-50 px-3 py-1 rounded-full border border-teal-200 self-start sm:self-auto">
+              Opposite Referral Hospital
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs">
+            {/* Route 1 */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-2">
+              <div className="font-bold text-primary flex items-center justify-between">
+                <span>From Jogbani &amp; Nepal Border</span>
+                <span className="text-[10px] text-teal-600 bg-white px-2 py-0.5 rounded border border-teal-100 font-semibold">15–25 Mins</span>
+              </div>
+              <p className="text-slate-600 leading-relaxed text-[11px]">
+                Direct transit from <strong>Jogbani Border, Biratnagar, and Itahari (Ithari)</strong> via NH-27 4-lane highway. Enter Forbesganj town and take Referral Hospital Road directly to our clinic gate.
+              </p>
+            </div>
+
+            {/* Route 2 */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-2">
+              <div className="font-bold text-primary flex items-center justify-between">
+                <span>From Narpatganj, Simrahi &amp; Birpur</span>
+                <span className="text-[10px] text-teal-600 bg-white px-2 py-0.5 rounded border border-teal-100 font-semibold">20–45 Mins</span>
+              </div>
+              <p className="text-slate-600 leading-relaxed text-[11px]">
+                Travel east via East-West Corridor (NH-27) connecting <strong>Simrahi, Lalitgram, Balua Bazar, Birpur Border &amp; Narpatganj</strong> straight into Forbesganj without navigating city traffic.
+              </p>
+            </div>
+
+            {/* Route 3 */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-2">
+              <div className="font-bold text-primary flex items-center justify-between">
+                <span>From Raniganj, Bhargama &amp; Kursakata</span>
+                <span className="text-[10px] text-teal-600 bg-white px-2 py-0.5 rounded border border-teal-100 font-semibold">25–40 Mins</span>
+              </div>
+              <p className="text-slate-600 leading-relaxed text-[11px]">
+                Accessible via Araria district arterial roads from <strong>Raniganj, Bhargama &amp; Kursakata</strong>. Ample vehicle parking and ambulance bay available on premises.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
