@@ -10,7 +10,7 @@ export default function SEOHead({
   schema
 }) {
   const location = useLocation();
-  const siteUrl = 'https://janki-skin-and-laparo-centre.firebaseapp.com';
+  const siteUrl = 'https://jankiskinandlaparoscopiccentre.com';
   const canonicalUrl = `${siteUrl}${location.pathname}`;
 
   useEffect(() => {

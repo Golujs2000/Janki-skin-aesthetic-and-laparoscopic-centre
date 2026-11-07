@@ -99,19 +99,19 @@ export default function TreatmentDetail({ onOpenLightbox }) {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://janki-skin-and-laparo-centre.firebaseapp.com/"
+            "item": "https://jankiskinandlaparoscopiccentre.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Treatments",
-            "item": "https://janki-skin-and-laparo-centre.firebaseapp.com/treatments"
+            "item": "https://jankiskinandlaparoscopiccentre.com/treatments"
           },
           {
             "@type": "ListItem",
             "position": 3,
             "name": treatment.title,
-            "item": `https://janki-skin-and-laparo-centre.firebaseapp.com/treatment/${treatment.id}`
+            "item": `https://jankiskinandlaparoscopiccentre.com/treatment/${treatment.id}`
           }
         ]
       }

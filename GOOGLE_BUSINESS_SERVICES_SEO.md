@@ -3,7 +3,7 @@
 * **Location:** Referral Hospital Road, Forbesganj, Araria, Bihar – 854318  
 * **Emergency Laparoscopy Helpline:** [+91 79090 67784](tel:+917909067784)  
 * **Skin & Hair OPD Bookings:** [+91 70915 06123](tel:+917091506123) | [+91 70915 06124](tel:+917091506124)  
-* **Official Website:** [https://janki-skin-and-laparo-centre.firebaseapp.com](https://janki-skin-and-laparo-centre.firebaseapp.com)  
+* **Official Website:** [https://jankiskinandlaparoscopiccentre.com](https://jankiskinandlaparoscopiccentre.com)  
 * **Geo-Coordinates:** Latitude `26.303892`, Longitude `87.253310`
 
 ---

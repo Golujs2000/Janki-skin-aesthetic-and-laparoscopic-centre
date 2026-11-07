@@ -887,7 +887,7 @@ export default function AdminPage() {
                   <div className="mt-4 p-3 rounded-2xl bg-slate-50 border border-slate-200 text-center text-xs text-slate-500 flex items-center justify-center gap-2">
                     <AlertCircle className="w-4 h-4 text-slate-400 flex-shrink-0" />
                     <span>
-                      0 visits recorded in this timeframe. Every time a patient visits <strong>jankiclinic.com</strong> from Google, WhatsApp, or QR scans, daily visits log here in real time.
+                      0 visits recorded in this timeframe. Every time a patient visits <strong>jankiskinandlaparoscopiccentre.com</strong> from Google, WhatsApp, or QR scans, daily visits log here in real time.
                     </span>
                   </div>
                 )}
@@ -1068,7 +1068,7 @@ export default function AdminPage() {
                   Download &amp; Save Patient Records Locally
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 mt-1 leading-relaxed">
-                  Every time a patient submits an appointment form on <strong>jankiclinic.com</strong>, the booking details are instantly forwarded to WhatsApp and simultaneously cached into your browser’s local storage. Download your data files anytime to keep permanent offline hospital backups.
+                  Every time a patient submits an appointment form on <strong>jankiskinandlaparoscopiccentre.com</strong>, the booking details are instantly forwarded to WhatsApp and simultaneously cached into your browser’s local storage. Download your data files anytime to keep permanent offline hospital backups.
                 </p>
               </div>
 

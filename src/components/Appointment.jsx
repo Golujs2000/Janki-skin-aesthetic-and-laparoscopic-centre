@@ -104,7 +104,7 @@ export default function Appointment({ initialDoctor = '', initialTreatment = nul
       `📅 *Date:* ${formData.date || 'Earliest Available'}\n` +
       `⏰ *Time Slot:* ${formData.time}\n` +
       (formData.message ? `📝 *Notes/Symptoms:* ${formData.message}\n` : '') +
-      `\n_Sent via jankiclinic.com online appointment engine_`
+      `\n_Sent via https://jankiskinandlaparoscopiccentre.com/ online appointment engine_`
     );
 
     // Save booking locally into browser database / file export engine

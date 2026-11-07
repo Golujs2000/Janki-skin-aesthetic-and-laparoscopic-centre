@@ -137,7 +137,8 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
 
     // Build structured, clean WhatsApp message
     const message = encodeURIComponent(
-      `🏥 *JANKI CLINIC FORBESGANJ - APPOINTMENT REQUEST*\n` +
+      `🏥 *JANKI Skin Aesthetic
+& Laparoscopic Centre - APPOINTMENT REQUEST*\n` +
       `━━━━━━━━━━━━━━━━━━━━\n` +
       `👤 *Patient:* ${formData.patientName}${optionalDetails ? ` (${optionalDetails})` : ''}\n` +
       `📞 *Phone:* ${formData.phone}\n` +
@@ -147,7 +148,7 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
       `⏰ *Time Slot:* ${formData.slot}\n` +
       (formData.symptoms ? `📝 *Notes/Symptoms:* ${formData.symptoms}\n` : '') +
       `━━━━━━━━━━━━━━━━━━━━\n` +
-      `_Sent via jankiclinic.com online appointment engine_`
+      `_Sent via jankiskinandlaparoscopiccentre.com online appointment engine_`
     );
 
     // Save booking locally into browser database / local files backup
@@ -239,8 +240,8 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                   type="button"
                   onClick={() => handleSelectDoctor('dr-sagar')}
                   className={`p-2.5 rounded-xl text-left transition flex items-center gap-2.5 cursor-pointer ${selectedDoctorId === 'dr-sagar'
-                      ? 'bg-teal-600 text-white shadow-md shadow-teal-600/25'
-                      : 'text-slate-700 hover:bg-white/60'
+                    ? 'bg-teal-600 text-white shadow-md shadow-teal-600/25'
+                    : 'text-slate-700 hover:bg-white/60'
                     }`}
                 >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${selectedDoctorId === 'dr-sagar' ? 'bg-white/20 text-white' : 'bg-teal-100 text-teal-700'
@@ -260,8 +261,8 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                   type="button"
                   onClick={() => handleSelectDoctor('dr-rashmi')}
                   className={`p-2.5 rounded-xl text-left transition flex items-center gap-2.5 cursor-pointer ${selectedDoctorId === 'dr-rashmi'
-                      ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
-                      : 'text-slate-700 hover:bg-white/60'
+                    ? 'bg-rose-500 text-white shadow-md shadow-rose-500/25'
+                    : 'text-slate-700 hover:bg-white/60'
                     }`}
                 >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 ${selectedDoctorId === 'dr-rashmi' ? 'bg-white/20 text-white' : 'bg-rose-100 text-rose-700'
@@ -372,8 +373,8 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                         key={i}
                         onClick={() => setFormData(prev => ({ ...prev, date: qd.value }))}
                         className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-lg transition ${formData.date === qd.value
-                            ? isRose ? 'bg-rose-500 text-white' : 'bg-teal-600 text-white'
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                          ? isRose ? 'bg-rose-500 text-white' : 'bg-teal-600 text-white'
+                          : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                           }`}
                       >
                         {qd.label}
@@ -475,8 +476,8 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                 <button
                   type="submit"
                   className={`w-full py-3.5 px-4 rounded-xl font-bold text-sm sm:text-base text-white shadow-lg transition transform hover:-translate-y-0.5 flex items-center justify-center gap-2 cursor-pointer ${isRose
-                      ? 'bg-rose-500 hover:bg-rose-600 shadow-rose-500/25'
-                      : 'bg-teal-600 hover:bg-teal-700 shadow-teal-600/25'
+                    ? 'bg-rose-500 hover:bg-rose-600 shadow-rose-500/25'
+                    : 'bg-teal-600 hover:bg-teal-700 shadow-teal-600/25'
                     }`}
                 >
                   <Send className="w-4 h-4" />
