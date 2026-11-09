@@ -58,10 +58,10 @@ export default function GalleryPage({ onOpenLightbox }) {
               Book an Appointment
             </Link>
             <a
-              href="tel:+917909067784"
+              href="tel:+917091506123"
               className="px-6 py-3 rounded-full bg-teal-800/80 hover:bg-teal-900 text-white font-bold text-xs sm:text-sm border border-white/20 transition"
             >
-              Call +91 79090 67784
+              Call +91 70915 06123
             </a>
           </div>
         </div>

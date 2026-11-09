@@ -104,8 +104,8 @@ export default function Header({ onBookClick }) {
             </Link>
             <div className="inline-flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-teal-accent" />
-              <a href="tel:+917909067784" className="font-semibold text-white hover:underline">
-                +91 79090 67784
+              <a href="tel:+917091506123" className="font-semibold text-white hover:underline">
+                +91 70915 06123
               </a>
             </div>
           </div>
@@ -315,9 +315,9 @@ export default function Header({ onBookClick }) {
                     {/* Dropdown Footer */}
                     <div className="bg-slate-900 text-slate-300 px-6 py-2.5 flex items-center justify-between text-xs font-medium">
                       <span>Need quick surgical admission or emergency assistance?</span>
-                      <a href="tel:+917909067784" className="text-white font-bold hover:underline inline-flex items-center gap-1.5">
+                      <a href="tel:+917091506123" className="text-white font-bold hover:underline inline-flex items-center gap-1.5">
                         <Phone className="w-3.5 h-3.5 text-teal-accent" />
-                        <span>Call +91 79090 67784</span>
+                        <span>Call +91 70915 06123</span>
                       </a>
                     </div>
                   </div>
@@ -365,11 +365,11 @@ export default function Header({ onBookClick }) {
           {/* Right Action Button & Phone */}
           <div className="flex items-center gap-3">
             <a
-              href="tel:+917909067784"
+              href="tel:+917091506123"
               className="hidden md:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-slate-100 text-primary border border-slate-200 text-xs font-bold hover:bg-rose-50 hover:text-rose-600 hover:border-rose-200 transition"
             >
               <Phone className="w-3.5 h-3.5 text-rose-500" />
-              <span>+91 79090 67784</span>
+              <span>+91 70915 06123</span>
             </a>
 
             <Link
@@ -564,11 +564,11 @@ export default function Header({ onBookClick }) {
               </Link>
 
               <a
-                href="tel:+917909067784"
+                href="tel:+917091506123"
                 className="w-full flex items-center justify-center gap-2 bg-slate-100 text-primary py-2.5 rounded-xl font-bold text-xs"
               >
                 <Phone className="w-4 h-4 text-rose-500" />
-                <span>Call +91 79090 67784</span>
+                <span>Call +91 70915 06123</span>
               </a>
             </div>
           </div>

@@ -6,7 +6,7 @@ export default function FloatingWidgets() {
     <div className="hidden lg:flex fixed bottom-6 right-6 z-40 flex-col gap-3">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/917909067784?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20book%20a%20consultation."
+        href="https://wa.me/917091506123?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20book%20a%20consultation."
         target="_blank"
         rel="noopener noreferrer"
         className="group flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white pl-3.5 pr-4 py-3 rounded-full shadow-lg hover:shadow-xl hover:shadow-emerald-500/25 transition-all transform hover:-translate-y-0.5"
@@ -18,7 +18,7 @@ export default function FloatingWidgets() {
 
       {/* Emergency Call Button */}
       <a
-        href="tel:+917909067784"
+        href="tel:+917091506123"
         className="group flex items-center gap-2.5 bg-rose-600 hover:bg-rose-700 text-white pl-3.5 pr-4 py-3 rounded-full shadow-lg hover:shadow-xl hover:shadow-rose-600/25 transition-all transform hover:-translate-y-0.5"
         aria-label="Call Emergency Helpline"
       >

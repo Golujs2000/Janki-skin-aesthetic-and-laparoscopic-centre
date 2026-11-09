@@ -10,7 +10,7 @@ export default function MobileBottomBar({ onBookClick }) {
       <div className="flex items-center justify-around max-w-md mx-auto">
         {/* Call Action */}
         <a 
-          href="tel:+917909067784" 
+          href="tel:+917091506123" 
           className="flex flex-col items-center justify-center gap-1 text-slate-600 hover:text-rose-600 transition flex-1 text-center"
           aria-label="Call Hospital"
         >
@@ -22,7 +22,7 @@ export default function MobileBottomBar({ onBookClick }) {
 
         {/* WhatsApp Action */}
         <a 
-          href="https://wa.me/917909067784?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20book%20a%20consultation." 
+          href="https://wa.me/917091506123?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20book%20a%20consultation." 
           target="_blank" 
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center gap-1 text-slate-600 hover:text-emerald-600 transition flex-1 text-center"

@@ -39,8 +39,8 @@ export const doctorsData = [
     experience: "12+ Years Surgical Excellence",
     timing: "Daily Consultation & Surgical Admissions (प्रतिदिन)",
     emergency: "Emergency Surgical Care & Laparoscopy Helpline 24x7 Active",
-    phone: "+917909067784",
-    phoneDisplay: "+91 79090 67784",
+    phone: "+917091506123",
+    phoneDisplay: "+91 70915 06123",
     highlights: [
       "Fellow of Indian Association of Gastrointestinal Endo-Surgeons (FIAGES)",
       "FALS Fellowship (IGIMS Patna) • Assistant Professor of Surgery (Saharsa)",

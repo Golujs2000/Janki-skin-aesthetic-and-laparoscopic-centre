@@ -1,8 +1,7 @@
 # Google Business Profile (GBP) & Local SEO Master Blueprint
 ## Janki Skin Aesthetic & Laparoscopic Centre (जानकी स्किन एस्थेटिक एवं लैप्रोस्कोपिक सेंटर)
 * **Location:** Referral Hospital Road, Forbesganj, Araria, Bihar – 854318  
-* **Emergency Laparoscopy Helpline:** [+91 79090 67784](tel:+917909067784)  
-* **Skin & Hair OPD Bookings:** [+91 70915 06123](tel:+917091506123) | [+91 70915 06124](tel:+917091506124)  
+* **24x7 Helpline & Bookings:** [+91 70915 06123](tel:+917091506123)  
 * **Official Website:** [https://jankiskinandlaparoscopiccentre.com](https://jankiskinandlaparoscopiccentre.com)  
 * **Geo-Coordinates:** Latitude `26.303892`, Longitude `87.253310`
 
@@ -70,7 +69,7 @@ Surgeries include 4K Laparoscopic Gallbladder Stone removal, Appendix, 3D Mesh H
 
 Our dermatology clinic provides GFC Hair Regrowth, Chemical Peels for Melasma, Acne Scars Laser, Glutathione IV, Vitiligo, Eczema & Psoriasis care.
 
-Located at Referral Hospital Road, Forbesganj (Bihar 854318). Emergency: +91 79090 67784. Skin OPD: +91 70915 06123.
+Located at Referral Hospital Road, Forbesganj (Bihar 854318). 24x7 Helpline & Bookings: +91 70915 06123.
 ```
 
 ---
@@ -87,7 +86,7 @@ Located at Referral Hospital Road, Forbesganj (Bihar 854318). Emergency: +91 790
 
 स्किन क्लिनिक में बाल झड़ने हेतु GFC थेरेपी, मेलास्मा/झाइयां के लिए केमिकल पील, कील-मुंहासे, सफेद दाग व लेजर ट्रीटमेंट उपलब्ध है।
 
-पता: रेफरल अस्पताल रोड, फारबिसगंज। 24x7 सर्जरी: 7909067784 | स्किन: 7091506123।
+पता: रेफरल अस्पताल रोड, फारबिसगंज। 24x7 हेल्पलाइन एवं बुकिंग: 7091506123।
 ```
 
 ---
@@ -107,7 +106,7 @@ Located at Referral Hospital Road, Forbesganj (Bihar 854318). Emergency: +91 790
 * **Service Name:** `Laparoscopic Gallbladder Stone Surgery (पित्ताशय की पथरी)`
 * **Character Count:** **243 / 300 Characters**
 ```text
-4K keyhole gallbladder stone removal (पित्त पथरी) by Dr. S. Sagar (MS, FIAGES). Minimal pain, tiny 0.5cm scar & 24h discharge. Trusted by patients across Forbesganj, Narpatganj, Raniganj, Simrahi, Birpur, Jogbani & Biratnagar. Call 7909067784.
+4K keyhole gallbladder stone removal (पित्त पथरी) by Dr. S. Sagar (MS, FIAGES). Minimal pain, tiny 0.5cm scar & 24h discharge. Trusted by patients across Forbesganj, Narpatganj, Raniganj, Simrahi, Birpur, Jogbani & Biratnagar. Call 7091506123.
 ```
 
 ---
@@ -116,7 +115,7 @@ Located at Referral Hospital Road, Forbesganj (Bihar 854318). Emergency: +91 790
 * **Service Name:** `Laparoscopic Appendix Surgery (अपेंडिक्स ऑपरेशन)`
 * **Character Count:** **248 / 300 Characters**
 ```text
-Emergency & planned keyhole appendix surgery (अपेंडिक्स ऑपरेशन) by Dr. S. Sagar. Immediate relief, tiny scars & 24-hr discharge. Serving Forbesganj, Jogbani, Narpatganj, Bhargama, Kursakata, Balua, Lalitgram & Biratnagar. 24x7 Helpline: 7909067784.
+Emergency & planned keyhole appendix surgery (अपेंडिक्स ऑपरेशन) by Dr. S. Sagar. Immediate relief, tiny scars & 24-hr discharge. Serving Forbesganj, Jogbani, Narpatganj, Bhargama, Kursakata, Balua, Lalitgram & Biratnagar. 24x7 Helpline: 7091506123.
 ```
 
 ---
@@ -125,7 +124,7 @@ Emergency & planned keyhole appendix surgery (अपेंडिक्स ऑप
 * **Service Name:** `Laparoscopic Hernia Repair (हर्निया 3D मेश रिपेयर)`
 * **Character Count:** **243 / 300 Characters**
 ```text
-Advanced keyhole 3D mesh hernia repair (हर्निया ऑपरेशन) by Dr. S. Sagar (FIAGES). Tension-free mesh, zero muscle strain & rapid recovery for patients in Forbesganj, Narpatganj, Simrahi, Birpur, Balua, Raniganj & Itahari Nepal. Call 7909067784.
+Advanced keyhole 3D mesh hernia repair (हर्निया ऑपरेशन) by Dr. S. Sagar (FIAGES). Tension-free mesh, zero muscle strain & rapid recovery for patients in Forbesganj, Narpatganj, Simrahi, Birpur, Balua, Raniganj & Itahari Nepal. Call 7091506123.
 ```
 
 ---
@@ -134,7 +133,7 @@ Advanced keyhole 3D mesh hernia repair (हर्निया ऑपरेशन
 * **Service Name:** `Laparoscopic Ovarian Cyst Removal (अंडाशय की सिस्ट)`
 * **Character Count:** **238 / 300 Characters**
 ```text
-Minimally invasive ovarian cyst surgery (अंडाशय की सिस्ट) by Dr. S. Sagar. Preserves fertility & ovary health with tiny scars. Serving Forbesganj, Jogbani, Biratnagar, Narpatganj, Bhargama, Kursakata, Lalitgram & Simrahi. Call 7909067784.
+Minimally invasive ovarian cyst surgery (अंडाशय की सिस्ट) by Dr. S. Sagar. Preserves fertility & ovary health with tiny scars. Serving Forbesganj, Jogbani, Biratnagar, Narpatganj, Bhargama, Kursakata, Lalitgram & Simrahi. Call 7091506123.
 ```
 
 ---
@@ -143,7 +142,7 @@ Minimally invasive ovarian cyst surgery (अंडाशय की सिस्�
 * **Service Name:** `Laparoscopic Tubal Ligation (दूरबीन द्वारा महिला नसबंदी)`
 * **Character Count:** **245 / 300 Characters**
 ```text
-Safe, permanent keyhole female sterilization (दूरबीन द्वारा महिला नसबंदी) by Dr. S. Sagar. Pinhole incision, same-day discharge & painless recovery in Forbesganj for patients from Narpatganj, Raniganj, Simrahi, Birpur & Jogbani. Call 7909067784.
+Safe, permanent keyhole female sterilization (दूरबीन द्वारा महिला नसबंदी) by Dr. S. Sagar. Pinhole incision, same-day discharge & painless recovery in Forbesganj for patients from Narpatganj, Raniganj, Simrahi, Birpur & Jogbani. Call 7091506123.
 ```
 
 ---
@@ -152,7 +151,7 @@ Safe, permanent keyhole female sterilization (दूरबीन द्वार
 * **Service Name:** `General Surgery & Minor Procedures (लाइपोमा, सिस्ट एवं गांठ)`
 * **Character Count:** **231 / 300 Characters**
 ```text
-Painless minor & general surgery by Dr. S. Sagar: Lipoma, sebaceous cysts, abscess drainage & hydrocele. Sterile OT safety for Forbesganj, Jogbani, Biratnagar, Narpatganj, Bhargama, Balua, Kursakata & Simrahi. Helpline: 7909067784.
+Painless minor & general surgery by Dr. S. Sagar: Lipoma, sebaceous cysts, abscess drainage & hydrocele. Sterile OT safety for Forbesganj, Jogbani, Biratnagar, Narpatganj, Bhargama, Balua, Kursakata & Simrahi. Helpline: 7091506123.
 ```
 
 ---
@@ -161,7 +160,7 @@ Painless minor & general surgery by Dr. S. Sagar: Lipoma, sebaceous cysts, absce
 * **Service Name:** `Piles, Fissure & Fistula Treatment (बवासीर एवं भगंदर)`
 * **Character Count:** **230 / 300 Characters**
 ```text
-Advanced clinical care for Piles (बवासीर), Fissure (फिशर) & Fistula (भगंदर) by Dr. S. Sagar. Painless techniques & quick healing for Forbesganj, Narpatganj, Raniganj, Birpur, Lalitgram, Simrahi, Jogbani & Itahari. Call 7909067784.
+Advanced clinical care for Piles (बवासीर), Fissure (फिशर) & Fistula (भगंदर) by Dr. S. Sagar. Painless techniques & quick healing for Forbesganj, Narpatganj, Raniganj, Birpur, Lalitgram, Simrahi, Jogbani & Itahari. Call 7091506123.
 ```
 
 ---
@@ -170,7 +169,7 @@ Advanced clinical care for Piles (बवासीर), Fissure (फिशर) & 
 * **Service Name:** `24x7 Emergency Surgical Care (आपातकालीन शल्य चिकित्सा)`
 * **Character Count:** **229 / 300 Characters**
 ```text
-24x7 Emergency surgery, acute stomach pain, trauma & post-op care by Dr. S. Sagar. Dedicated surgical beds & rapid admissions for Forbesganj, Jogbani, Narpatganj, Birpur border, Simrahi, Balua & Biratnagar. 24x7: +91 79090 67784.
+24x7 Emergency surgery, acute stomach pain, trauma & post-op care by Dr. S. Sagar. Dedicated surgical beds & rapid admissions for Forbesganj, Jogbani, Narpatganj, Birpur border, Simrahi, Balua & Biratnagar. 24x7: +91 70915 06123.
 ```
 
 ---
@@ -178,7 +177,7 @@ Advanced clinical care for Piles (बवासीर), Fissure (फिशर) & 
 ### Department 2: Aesthetic Dermatology, Cosmetology & Trichology
 **Lead Dermatologist:** Dr. Rashmi Roy (MBBS, MD Dermatology, Skin, VD & Leprosy, Dermatosurgeon)  
 **OPD Timings:** Wednesday: 1:00 PM – 7:00 PM | Saturday & Sunday: 10:00 AM – 7:00 PM  
-**Helpline:** +91 70915 06123 | +91 70915 06124
+**Helpline:** +91 70915 06123
 
 ---
 
@@ -286,7 +285,7 @@ Do not endure painful open surgery! Dr. S. Sagar (MS Gen Surgery, FIAGES) perfor
 ✅ Easy direct highway access from NH-27
 
 📍 Referral Hospital Road, Forbesganj
-📞 Emergency Helpline: +91 79090 67784
+📞 Emergency Helpline: +91 70915 06123
 ```
 * **CTA Button:** `Call Now` or `Learn More`
 
@@ -315,7 +314,7 @@ Consult Dr. Rashmi Roy (MBBS, MD Dermatology, Dermatosurgeon) for advanced Growt
 
 #### Q1: Can patients from Narpatganj, Simrahi, Birpur, and Balua get same-day surgery or consultation?
 * **Answer (272 Chars):**  
-  Yes! Patients traveling along NH-27 from Narpatganj, Simrahi, Lalitgram, Balua, and Birpur border can pre-book priority consultations via phone (+91 79090 67784). For laparoscopic gallbladder, appendix, or hernia surgery, our 24-hr discharge protocol ensures quick, safe return home.
+  Yes! Patients traveling along NH-27 from Narpatganj, Simrahi, Lalitgram, Balua, and Birpur border can pre-book priority consultations via phone (+91 70915 06123). For laparoscopic gallbladder, appendix, or hernia surgery, our 24-hr discharge protocol ensures quick, safe return home.
 
 #### Q2: How easily can patients from Jogbani, Biratnagar, and Itahari (Nepal) reach Janki Centre?
 * **Answer (268 Chars):**  
@@ -323,7 +322,7 @@ Consult Dr. Rashmi Roy (MBBS, MD Dermatology, Dermatosurgeon) for advanced Growt
 
 #### Q3: Are appointments available for patients coming from Raniganj, Bhargama, and Kursakata?
 * **Answer (265 Chars):**  
-  Yes, Janki Centre provides daily general & laparoscopic surgery consultations with Dr. S. Sagar and skin/hair clinics with Dr. Rashmi Roy (Wed, Sat, Sun). Call +91 70915 06123 or WhatsApp 7909067784 to book same-day slots and avoid long waiting times.
+  Yes, Janki Centre provides daily general & laparoscopic surgery consultations with Dr. S. Sagar and skin/hair clinics with Dr. Rashmi Roy (Wed, Sat, Sun). Call or WhatsApp +91 70915 06123 to book same-day slots and avoid long waiting times.
 
 ---
 

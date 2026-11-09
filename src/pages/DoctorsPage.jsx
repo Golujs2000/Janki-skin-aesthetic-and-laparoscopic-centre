@@ -113,11 +113,11 @@ export default function DoctorsPage({ onSelectDoctor, onBookClick }) {
             <div className="pt-6 mt-6 border-t border-slate-100 flex items-center justify-between">
               <span className="text-xs text-slate-500 font-medium">Daily Surgical Consultations</span>
               <a
-                href="tel:+917909067784"
+                href="tel:+917091506123"
                 className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-teal-50 text-teal-700 hover:bg-teal-100 font-bold text-xs transition"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>+91 79090 67784</span>
+                <span>+91 70915 06123</span>
               </a>
             </div>
           </div>

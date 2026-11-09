@@ -53,10 +53,10 @@ export default function Contact() {
                   <h4 className="font-bold text-sm text-slate-800">Phone & Helpline</h4>
                   <p className="text-xs sm:text-sm text-slate-600 mt-1 space-y-1">
                     <span className="block font-semibold text-primary">
-                      Main / Laparoscopy: <a href="tel:+917909067784" className="text-teal-accent hover:underline">+91 79090 67784</a>
+                      Helpline &amp; Appointments: <a href="tel:+917091506123" className="text-teal-accent hover:underline">+91 70915 06123</a>
                     </span>
                     <span className="block text-slate-500">
-                      Dermatology OPD: <a href="tel:+917091506123" className="text-rose-accent hover:underline">+91 70915 06123</a>
+                      Laparoscopy &amp; Dermatology OPD (24x7 Support)
                     </span>
                   </p>
                 </div>
@@ -93,7 +93,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="https://wa.me/917909067784?text=Hello%20Janki%20Centre%2C%20please%20share%20your%20exact%20location."
+                href="https://wa.me/917091506123?text=Hello%20Janki%20Centre%2C%20please%20share%20your%20exact%20location."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-xs sm:text-sm bg-emerald-500 text-white hover:bg-emerald-600 transition shadow-sm"

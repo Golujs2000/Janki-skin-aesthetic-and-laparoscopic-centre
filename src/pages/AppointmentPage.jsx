@@ -119,7 +119,7 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
 
   const currentDoctorObj = doctorsData.find(d => d.id === selectedDoctorId) || doctorsData[0];
   const isRose = currentDoctorObj.theme === 'rose';
-  const destinationPhone = selectedDoctorId === 'dr-rashmi' ? '917091506123' : '917909067784';
+  const destinationPhone = '917091506123';
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -185,7 +185,7 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
     },
     {
       q: 'Is emergency laparoscopic surgery available 24x7?',
-      a: 'Yes! For acute emergencies like appendicitis, ruptured ovarian cyst, or strangulated hernia, our emergency surgical line (+91 79090 67784) operates 24 hours a day.'
+      a: 'Yes! For acute emergencies like appendicitis, ruptured ovarian cyst, or strangulated hernia, our emergency surgical line (+91 70915 06123) operates 24 hours a day.'
     }
   ];
 
@@ -564,11 +564,11 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
                 Emergency laparoscopic surgery available without prior appointment.
               </p>
               <a
-                href="tel:+917909067784"
+                href="tel:+917091506123"
                 className="inline-flex items-center justify-center gap-2 w-full py-2 rounded-xl bg-white text-rose-700 font-bold text-xs hover:bg-slate-100 transition shadow-sm mt-1"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>Call Emergency Helpline: +91 79090 67784</span>
+                <span>Call Emergency Helpline: +91 70915 06123</span>
               </a>
             </div>
 
@@ -643,7 +643,7 @@ export default function AppointmentPage({ initialDoctor = '', initialTreatment =
               </div>
 
               <div className="pt-3 mt-3 border-t border-teal-100 flex items-center justify-between">
-                <span className="text-[11px] text-slate-500">+91 79090 67784</span>
+                <span className="text-[11px] text-slate-500">+91 70915 06123</span>
                 <button
                   type="button"
                   onClick={() => {

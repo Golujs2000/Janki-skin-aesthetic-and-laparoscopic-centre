@@ -64,18 +64,11 @@ export default function Footer() {
             {/* Helpline quick buttons */}
             <div className="pt-2 flex flex-wrap gap-2 text-xs">
               <a
-                href="tel:+917909067784"
-                className="px-3 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-300 hover:bg-teal-500/20 font-bold transition flex items-center gap-1.5"
-              >
-                <Phone className="w-3.5 h-3.5" />
-                <span>Surgery: 79090 67784</span>
-              </a>
-              <a
                 href="tel:+917091506123"
-                className="px-3 py-1.5 rounded-xl bg-rose-500/10 border border-rose-500/30 text-rose-300 hover:bg-rose-500/20 font-bold transition flex items-center gap-1.5"
+                className="px-3.5 py-1.5 rounded-xl bg-teal-500/10 border border-teal-500/30 text-teal-300 hover:bg-teal-500/20 font-bold transition flex items-center gap-1.5"
               >
                 <Phone className="w-3.5 h-3.5" />
-                <span>Skin/Hair: 70915 06123</span>
+                <span>Helpline: +91 70915 06123</span>
               </a>
             </div>
           </div>

@@ -95,8 +95,8 @@ export default function AdminPage() {
 
   const handleUnlock = (e) => {
     e?.preventDefault();
-    // Default PIN: 1990 (Clinic Estb. Year) or 79090 (Phone Prefix)
-    if (pinInput.trim() === '1990' || pinInput.trim() === '79090' || pinInput.trim() === '1234') {
+    // Default PIN: 1990 (Clinic Estb. Year) or 70915 (Phone Prefix)
+    if (pinInput.trim() === '1990' || pinInput.trim() === '70915' || pinInput.trim() === '1234') {
       setIsAuthenticated(true);
       sessionStorage.setItem('janki_admin_auth', 'true');
       setPinError(false);

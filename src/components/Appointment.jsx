@@ -88,8 +88,7 @@ export default function Appointment({ initialDoctor = '', initialTreatment = nul
       return;
     }
 
-    const isRashmi = selectedDoctor.includes('Rashmi');
-    const destPhone = isRashmi ? '917091506123' : '917909067784';
+    const destPhone = '917091506123';
     const docFull = isRashmi
       ? 'Dr. Rashmi Roy (MBBS, MD - Skin, Hair & Nail Specialist)'
       : 'Dr. S. Sagar (Laparoscopic Surgeon)';
@@ -148,7 +147,7 @@ export default function Appointment({ initialDoctor = '', initialTreatment = nul
             {/* Quick Contact Buttons */}
             <div className="pt-2 space-y-2">
               <a
-                href="tel:+917909067784"
+                href="tel:+917091506123"
                 className="flex items-center gap-3 p-3 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 transition"
               >
                 <div className="w-9 h-9 rounded-xl bg-teal-500/20 text-teal-400 flex items-center justify-center flex-shrink-0">
@@ -156,7 +155,7 @@ export default function Appointment({ initialDoctor = '', initialTreatment = nul
                 </div>
                 <div>
                   <div className="text-[11px] text-slate-400">Dr. S. Sagar (Surgery Helpline)</div>
-                  <div className="text-sm font-bold text-white">+91 79090 67784</div>
+                  <div className="text-sm font-bold text-white">+91 70915 06123</div>
                 </div>
               </a>
 

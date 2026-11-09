@@ -30,7 +30,7 @@ export default function ContactPage() {
     if (!formData.name || !formData.phone) return;
 
     const text = `*New Contact Inquiry - JANKI Skin Aesthetic & Laparoscopic Centre Website*%0A*Name:* ${formData.name}%0A*Phone:* ${formData.phone}%0A*Department:* ${formData.department}%0A*Message:* ${formData.message || 'I would like to inquire about consultation.'}`;
-    window.open(`https://wa.me/917909067784?text=${text}`, '_blank');
+    window.open(`https://wa.me/917091506123?text=${text}`, '_blank');
     setSent(true);
   };
 
@@ -38,7 +38,7 @@ export default function ContactPage() {
     <div className="bg-slate-50 min-h-screen py-8 sm:py-12">
       <SEOHead
         title="Contact JANKI Skin Aesthetic & Laparoscopic Centre Forbesganj | Helplines & Location"
-        description="Visit JANKI Skin Aesthetic & Laparoscopic Centre on Referral Hospital Road, Forbesganj. Accessible from Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Bhargama, Kursakata, Birpur & Simrahi. Call: +91 79090 67784."
+        description="Visit JANKI Skin Aesthetic & Laparoscopic Centre on Referral Hospital Road, Forbesganj. Accessible from Jogbani, Biratnagar, Itahari, Narpatganj, Raniganj, Bhargama, Kursakata, Birpur & Simrahi. Call: +91 70915 06123."
         keywords="Contact Janki Clinic Forbesganj, Referral hospital road Forbesganj, Dr S Sagar phone number, Dr Rashmi Roy contact, Hospital near Jogbani Biratnagar, Clinic Narpatganj Raniganj, Laparoscopy Simrahi Birpur Balua Bhargama Kursakata"
       />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

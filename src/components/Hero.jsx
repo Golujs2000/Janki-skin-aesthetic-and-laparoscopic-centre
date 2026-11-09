@@ -116,7 +116,7 @@ export default function Hero({ onBookClick }) {
                 </button>
 
                 <a
-                  href="https://wa.me/917909067784?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
+                  href="https://wa.me/917091506123?text=Hello%20Janki%20Skin%20%26%20Laparoscopic%20Centre%2C%20I%20would%20like%20to%20inquire%20about%20a%20consultation."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-whatsapp px-5 py-3 rounded-full text-xs sm:text-sm font-bold inline-flex items-center gap-2"
@@ -128,11 +128,11 @@ export default function Hero({ onBookClick }) {
                 </a>
 
                 <a
-                  href="tel:+917909067784"
+                  href="tel:+917091506123"
                   className="btn-outline-primary px-5 py-3 rounded-full text-xs sm:text-sm font-bold inline-flex items-center gap-2"
                 >
                   <Phone className="w-4 h-4 text-primary" />
-                  <span>+91 79090 67784</span>
+                  <span>+91 70915 06123</span>
                 </a>
               </div>
 

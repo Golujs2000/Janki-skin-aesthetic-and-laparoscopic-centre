@@ -32,13 +32,13 @@ export const faqsData = [
   {
     id: 6,
     question: "What should I do in case of an acute surgical emergency (e.g., severe abdominal pain)?",
-    answer: "JANKI Skin Aesthetic & Laparoscopic Centre provides emergency surgical admissions and laparoscopy assistance. In case of acute abdominal pain, suspected appendicitis, or strangulated hernia, call our direct 24x7 helpline immediately at +91 79090 67784 or arrive directly at our Referral Hospital Road facility.",
+    answer: "JANKI Skin Aesthetic & Laparoscopic Centre provides emergency surgical admissions and laparoscopy assistance. In case of acute abdominal pain, suspected appendicitis, or strangulated hernia, call our direct 24x7 helpline immediately at +91 70915 06123 or arrive directly at our Referral Hospital Road facility.",
     category: "general"
   },
   {
     id: 7,
     question: "Can patients from Narpatganj, Bhargama, Raniganj, Kursakata, Birpur, Balua, Lalitgram, Simrahi, Jogbani, Biratnagar, and Itahari visit for same-day consultation?",
-    answer: "Yes, JANKI Centre serves as the primary tertiary referral clinic for these towns across Araria, Supaul, and eastern Nepal. Patients from Narpatganj, Simrahi, Lalitgram, Balua, Birpur border area, Raniganj, Bhargama, Kursakata, Jogbani, Biratnagar, and Itahari (Ithari) can pre-book via phone or WhatsApp (+91 79090 67784 / +91 70915 06123) for same-day OPD evaluation, diagnostic ultrasound review, and planned minimally invasive surgeries with 24-hour discharge.",
+    answer: "Yes, JANKI Centre serves as the primary tertiary referral clinic for these towns across Araria, Supaul, and eastern Nepal. Patients from Narpatganj, Simrahi, Lalitgram, Balua, Birpur border area, Raniganj, Bhargama, Kursakata, Jogbani, Biratnagar, and Itahari (Ithari) can pre-book via phone or WhatsApp (+91 70915 06123) for same-day OPD evaluation, diagnostic ultrasound review, and planned minimally invasive surgeries with 24-hour discharge.",
     category: "general"
   }
 ];

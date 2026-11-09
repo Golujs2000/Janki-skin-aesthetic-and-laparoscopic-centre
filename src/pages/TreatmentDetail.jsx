@@ -144,7 +144,7 @@ export default function TreatmentDetail({ onOpenLightbox }) {
       `_Sent from Janki Clinic treatment page_`
     );
 
-    window.open(`https://wa.me/917909067784?text=${waText}`, '_blank');
+    window.open(`https://wa.me/917091506123?text=${waText}`, '_blank');
     setSubmitted(true);
   };
 
@@ -508,7 +508,7 @@ export default function TreatmentDetail({ onOpenLightbox }) {
                   <span>Call Doctor</span>
                 </a>
                 <a
-                  href={`https://wa.me/917909067784?text=Hello%20${treatment.doctor}%2C%20I%20have%20an%20inquiry%20regarding%20${treatment.title}.`}
+                  href={`https://wa.me/917091506123?text=Hello%20${treatment.doctor}%2C%20I%20have%20an%20inquiry%20regarding%20${treatment.title}.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full font-bold text-xs bg-emerald-500 text-white hover:bg-emerald-600 transition"
@@ -618,11 +618,11 @@ export default function TreatmentDetail({ onOpenLightbox }) {
                 For acute abdominal emergency admissions or urgent consultations, contact our hospital desk immediately.
               </p>
               <a
-                href="tel:+917909067784"
+                href="tel:+917091506123"
                 className="w-full py-2.5 px-4 rounded-xl bg-white text-primary font-bold text-xs flex items-center justify-center gap-2 hover:bg-slate-100 transition"
               >
                 <Phone className="w-4 h-4 text-rose-500" />
-                <span>Call +91 79090 67784</span>
+                <span>Call +91 70915 06123</span>
               </a>
             </div>
 
