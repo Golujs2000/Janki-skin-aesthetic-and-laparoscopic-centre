@@ -13,6 +13,14 @@ import ContactPage from './pages/ContactPage';
 import AppointmentPage from './pages/AppointmentPage';
 import TributePage from './pages/TributePage';
 import AdminPage from './pages/AdminPage';
+import LocationsPage from './pages/LocationsPage';
+import CityLandingPage from './pages/CityLandingPage';
+import ReviewsPage from './pages/ReviewsPage';
+import FAQPage from './pages/FAQPage';
+import PrivacyPolicyPage from './pages/PrivacyPolicyPage';
+import TermsPage from './pages/TermsPage';
+import SitemapPage from './pages/SitemapPage';
+import NotFoundPage from './pages/NotFoundPage';
 import { recordPageView } from './utils/analytics';
 import LightboxModal from './components/LightboxModal';
 import MobileBottomBar from './components/MobileBottomBar';
@@ -161,9 +169,41 @@ function AppContent() {
             path="/dashboard" 
             element={<Navigate to="/admin" replace />} 
           />
+          <Route 
+            path="/locations-served" 
+            element={<LocationsPage />} 
+          />
+          <Route 
+            path="/location/:slug" 
+            element={<CityLandingPage />} 
+          />
+          <Route 
+            path="/reviews" 
+            element={<ReviewsPage />} 
+          />
+          <Route 
+            path="/faqs" 
+            element={<FAQPage />} 
+          />
+          <Route 
+            path="/privacy-policy" 
+            element={<PrivacyPolicyPage />} 
+          />
+          <Route 
+            path="/terms-conditions" 
+            element={<TermsPage />} 
+          />
+          <Route 
+            path="/terms" 
+            element={<Navigate to="/terms-conditions" replace />} 
+          />
+          <Route 
+            path="/sitemap" 
+            element={<SitemapPage />} 
+          />
           {/* Aliases & Fallbacks */}
           <Route path="/appointment" element={<Navigate to="/book-appointment" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
 

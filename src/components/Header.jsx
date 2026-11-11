@@ -344,6 +344,15 @@ export default function Header({ onBookClick }) {
             </Link>
 
             <Link
+              to="/locations-served"
+              className={`hover:text-rose-600 transition-colors py-1 ${
+                isActive('/locations-served') || location.pathname.startsWith('/location/') ? 'text-rose-600 font-extrabold border-b-2 border-rose-600' : ''
+              }`}
+            >
+              Locations
+            </Link>
+
+            <Link
               to="/tribute"
               className={`hover:text-amber-600 transition-colors py-1 flex items-center gap-1 ${
                 isActive('/tribute') ? 'text-amber-600 font-extrabold border-b-2 border-amber-600' : ''
@@ -529,6 +538,16 @@ export default function Header({ onBookClick }) {
                   }`}
                 >
                   Specialist Doctors
+                </Link>
+
+                <Link
+                  to="/locations-served"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`py-2.5 px-3 rounded-lg font-bold text-sm transition ${
+                    isActive('/locations-served') || location.pathname.startsWith('/location/') ? 'bg-rose-50 text-rose-600' : 'text-slate-700 hover:bg-slate-50'
+                  }`}
+                >
+                  Locations Served (12 Towns)
                 </Link>
 
                 <Link

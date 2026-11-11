@@ -84,13 +84,17 @@ export default function Footer() {
               <li><Link to="/about" className="hover:text-teal-300 transition">About the Centre</Link></li>
               <li><Link to="/doctors" className="hover:text-teal-300 transition">Specialist Doctors</Link></li>
               <li><Link to="/treatments" className="hover:text-teal-300 font-bold text-slate-200 transition">All 15 Treatments</Link></li>
+              <li><Link to="/locations-served" className="hover:text-teal-300 text-teal-300/90 font-medium transition">Locations (12 Towns)</Link></li>
+              <li><Link to="/reviews" className="hover:text-teal-300 transition">Patient Reviews (4.9★)</Link></li>
+              <li><Link to="/faqs" className="hover:text-teal-300 transition">Patient FAQs</Link></li>
               <li><Link to="/gallery" className="hover:text-teal-300 transition">Hospital Gallery</Link></li>
-              <li><Link to="/tribute" className="hover:text-amber-300 text-amber-400/90 font-medium transition">Late Dr. Vijay Kumar Tribute</Link></li>
-              <li><Link to="/contact" className="hover:text-teal-300 transition">Contact &amp; Map Location</Link></li>
+              <li><Link to="/tribute" className="hover:text-amber-300 text-amber-400/90 font-medium transition">Dr. Vijay Kumar Tribute</Link></li>
+              <li><Link to="/contact" className="hover:text-teal-300 transition">Contact &amp; Route Map</Link></li>
               <li><Link to="/book-appointment" className="text-rose-400 hover:text-rose-300 font-bold transition flex items-center gap-1">
                 <span>Book Appointment</span>
                 <ArrowRight className="w-3 h-3" />
               </Link></li>
+              <li><Link to="/sitemap" className="text-slate-500 hover:text-teal-400 transition text-[11px]">HTML Sitemap</Link></li>
               <li><Link to="/admin" className="text-slate-500 hover:text-teal-400 transition text-[11px]">Staff Admin Portal</Link></li>
             </ul>
           </div>
@@ -227,9 +231,12 @@ export default function Footer() {
               <MapPin className="w-3.5 h-3.5" />
               <span>Regional Healthcare Catchment &amp; Areas Served (क्षेत्रीय सेवा क्षेत्र)</span>
             </div>
-            <span className="text-[11px] text-slate-400">
-              Direct highway connectivity via NH-27 / NH-57 to Forbesganj
-            </span>
+            <Link 
+              to="/locations-served"
+              className="text-[11px] text-teal-300 hover:text-white hover:underline font-semibold flex items-center gap-1"
+            >
+              <span>Explore All 12 Transit Guides &rarr;</span>
+            </Link>
           </div>
 
           <p className="text-[11px] text-slate-400 leading-relaxed mb-4">
@@ -243,12 +250,12 @@ export default function Footer() {
                 Araria District Hubs
               </span>
               <div className="flex flex-wrap gap-1.5 text-[11px]">
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Forbesganj (HQ)</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Narpatganj</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Raniganj</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Bhargama</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Kursakata</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Jogbani</span>
+                <Link to="/location/forbesganj" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Forbesganj (HQ)</Link>
+                <Link to="/location/narpatganj" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Narpatganj</Link>
+                <Link to="/location/raniganj" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Raniganj</Link>
+                <Link to="/location/bhargama" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Bhargama</Link>
+                <Link to="/location/kursakata" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Kursakata</Link>
+                <Link to="/location/jogbani" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-teal-700/60 font-medium transition">Jogbani</Link>
               </div>
             </div>
 
@@ -258,11 +265,10 @@ export default function Footer() {
                 Supaul &amp; Border Belt
               </span>
               <div className="flex flex-wrap gap-1.5 text-[11px]">
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Birpur (Border Area)</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Balua Bazar</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Lalitgram</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Simrahi Bazar</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Raghopur</span>
+                <Link to="/location/birpur" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-rose-700/60 font-medium transition">Birpur (Border)</Link>
+                <Link to="/location/balua" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-rose-700/60 font-medium transition">Balua Bazar</Link>
+                <Link to="/location/lalitgram" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-rose-700/60 font-medium transition">Lalitgram</Link>
+                <Link to="/location/simrahi" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-rose-700/60 font-medium transition">Simrahi Bazar</Link>
               </div>
             </div>
 
@@ -272,10 +278,9 @@ export default function Footer() {
                 Nepal Cross-Border (15–30 Mins)
               </span>
               <div className="flex flex-wrap gap-1.5 text-[11px]">
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Biratnagar (Nepal)</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Itahari (Ithari)</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Jogbani Border Gate</span>
-                <span className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 font-medium">Morang / Sunsari</span>
+                <Link to="/location/biratnagar" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-amber-700/60 font-medium transition">Biratnagar (Nepal)</Link>
+                <Link to="/location/itahari" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-amber-700/60 font-medium transition">Itahari (Ithari)</Link>
+                <Link to="/location/jogbani" className="px-2 py-0.5 rounded bg-slate-800 text-slate-300 hover:text-white hover:bg-amber-700/60 font-medium transition">Jogbani Border Gate</Link>
               </div>
             </div>
           </div>
@@ -288,16 +293,20 @@ export default function Footer() {
               &copy; {new Date().getFullYear()} Janki Skin Aesthetic &amp; Laparoscopic Centre. All Rights Reserved.
             </p>
             <span className="text-slate-600 hidden sm:inline">•</span>
+            <Link to="/privacy-policy" className="text-slate-400 hover:text-teal-300 transition">
+              Privacy Policy
+            </Link>
+            <span className="text-slate-600 hidden sm:inline">•</span>
+            <Link to="/terms-conditions" className="text-slate-400 hover:text-teal-300 transition">
+              Terms &amp; Conditions
+            </Link>
+            <span className="text-slate-600 hidden sm:inline">•</span>
+            <Link to="/sitemap" className="text-slate-400 hover:text-teal-300 transition">
+              Sitemap
+            </Link>
+            <span className="text-slate-600 hidden sm:inline">•</span>
             <Link to="/admin" className="text-slate-400 hover:text-teal-300 font-semibold transition inline-flex items-center gap-1">
               <span>Admin Portal</span>
-            </Link>
-            <span className="text-slate-600 hidden sm:inline">•</span>
-            <Link to="/tribute" className="text-amber-400/90 hover:text-amber-300 transition">
-              Dr. Vijay Kumar Memorial
-            </Link>
-            <span className="text-slate-600 hidden sm:inline">•</span>
-            <Link to="/book-appointment" className="text-rose-400 hover:text-rose-300 font-semibold transition">
-              Online Booking
             </Link>
           </div>
           
