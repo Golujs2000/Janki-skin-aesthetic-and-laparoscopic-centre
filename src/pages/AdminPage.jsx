@@ -161,23 +161,50 @@ export default function AdminPage() {
     });
   };
 
-  // Filter Bookings
-  const filteredBookings = bookings.filter((b) => {
-    const matchesSearch = 
-      b.patientName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      b.phone?.includes(searchQuery) ||
-      b.id?.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      b.treatment?.toLowerCase().includes(searchQuery.toLowerCase());
+  // Helpers for formatting
+  const getWhatsAppUrl = (phone, patientName, bookingId) => {
+    const digits = (phone || '').replace(/\D/g, '');
+    const cleanPhone = digits.startsWith('91') && digits.length >= 12
+      ? digits
+      : digits.length === 10
+        ? `91${digits}`
+        : digits;
+    const text = encodeURIComponent(`Hello ${patientName || 'Patient'}, this is from Janki Skin Aesthetic & Laparoscopic Centre regarding your appointment ${bookingId}.`);
+    return `https://wa.me/${cleanPhone}?text=${text}`;
+  };
 
-    const matchesDoctor = 
-      doctorFilter === 'ALL' || 
-      (doctorFilter === 'SAGAR' && b.doctor?.toLowerCase().includes('sagar')) ||
-      (doctorFilter === 'RASHMI' && (b.doctor?.toLowerCase().includes('rashmi') || b.doctor?.toLowerCase().includes('roy')));
+  const formatBookingTime = (isoString) => {
+    if (!isoString) return 'Today';
+    const d = new Date(isoString);
+    return isNaN(d.getTime())
+      ? 'Today'
+      : d.toLocaleDateString('en-IN', {
+          day: 'numeric',
+          month: 'short',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+  };
 
-    const matchesStatus = statusFilter === 'ALL' || b.status === statusFilter;
+  // Filter & Sort Bookings (Newest First)
+  const filteredBookings = bookings
+    .filter((b) => {
+      const matchesSearch = 
+        b.patientName?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        b.phone?.includes(searchQuery) ||
+        b.id?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        b.treatment?.toLowerCase().includes(searchQuery.toLowerCase());
 
-    return matchesSearch && matchesDoctor && matchesStatus;
-  });
+      const matchesDoctor = 
+        doctorFilter === 'ALL' || 
+        (doctorFilter === 'SAGAR' && b.doctor?.toLowerCase().includes('sagar')) ||
+        (doctorFilter === 'RASHMI' && (b.doctor?.toLowerCase().includes('rashmi') || b.doctor?.toLowerCase().includes('roy')));
+
+      const matchesStatus = statusFilter === 'ALL' || b.status === statusFilter;
+
+      return matchesSearch && matchesDoctor && matchesStatus;
+    })
+    .sort((a, b) => new Date(b.createdAt || 0) - new Date(a.createdAt || 0));
 
   // Calculate quick metrics (dynamic, 100% zero dummy data)
   const totalBookingsCount = bookings.length;
@@ -526,16 +553,25 @@ export default function AdminPage() {
                 <p className="text-xs text-slate-500 max-w-sm mx-auto">
                   {searchQuery ? 'Try adjusting your search query or filters.' : 'Online booking requests from the website will automatically appear here and save locally.'}
                 </p>
-                <button
-                  onClick={() => {
-                    setSearchQuery('');
-                    setDoctorFilter('ALL');
-                    setStatusFilter('ALL');
-                  }}
-                  className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
-                >
-                  Reset Filters
-                </button>
+                <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      setDoctorFilter('ALL');
+                      setStatusFilter('ALL');
+                    }}
+                    className="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 cursor-pointer"
+                  >
+                    Reset Filters
+                  </button>
+                  <button
+                    onClick={() => setShowAddModal(true)}
+                    className="btn-rose px-4 py-2 rounded-xl text-xs font-bold inline-flex items-center gap-1.5 cursor-pointer shadow-sm"
+                  >
+                    <Plus className="w-3.5 h-3.5" />
+                    <span>Add Walk-in Booking</span>
+                  </button>
+                </div>
               </div>
             ) : (
               <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden">
@@ -565,12 +601,7 @@ export default function AdminPage() {
                                 {b.id}
                               </span>
                               <div className="text-[10px] text-slate-400 mt-1">
-                                {new Date(b.createdAt).toLocaleDateString('en-IN', {
-                                  day: 'numeric',
-                                  month: 'short',
-                                  hour: '2-digit',
-                                  minute: '2-digit'
-                                })}
+                                {formatBookingTime(b.createdAt)}
                               </div>
                             </td>
 
@@ -647,10 +678,10 @@ export default function AdminPage() {
                             {/* Actions */}
                             <td className="py-3.5 px-4 text-right space-x-1.5 whitespace-nowrap">
                               <a
-                                href={`https://wa.me/91${b.phone.replace(/[^0-9]/g, '')}?text=Hello%20${encodeURIComponent(b.patientName)}%2C%20this%20is%20from%20Janki%20Skin%20Aesthetic%20%26%20Laparoscopic%20Centre%20regarding%20your%20appointment%20${b.id}.`}
+                                href={getWhatsAppUrl(b.phone, b.patientName, b.id)}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition inline-flex items-center justify-center"
+                                className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700 hover:bg-emerald-100 transition inline-flex items-center justify-center cursor-pointer"
                                 title="Chat with Patient on WhatsApp"
                               >
                                 <MessageSquare className="w-3.5 h-3.5" />
