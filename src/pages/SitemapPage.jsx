@@ -1,18 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Network, 
-  Home as HomeIcon, 
-  UserCheck, 
-  Stethoscope, 
-  Sparkles, 
-  MapPin, 
-  MessageSquare, 
-  HelpCircle, 
-  FileText, 
-  ShieldCheck, 
-  Image, 
-  HeartHandshake, 
+import {
+  Network,
+  Home as HomeIcon,
+  UserCheck,
+  Stethoscope,
+  Sparkles,
+  MapPin,
+  MessageSquare,
+  HelpCircle,
+  FileText,
+  ShieldCheck,
+  Image,
+  HeartHandshake,
   CalendarCheck,
   ChevronRight
 } from 'lucide-react';
@@ -33,7 +33,7 @@ export default function SitemapPage() {
       />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -80,7 +80,7 @@ export default function SitemapPage() {
               { title: "Contact & Route Map", path: "/contact", desc: "Forbesganj Subhash Chowk address & phone helpline" },
               { title: "Dr. Vijay Kumar Tribute", path: "/tribute", desc: "Honoring our visionary founder and his medical legacy" }
             ].map((item, idx) => (
-              <Link 
+              <Link
                 key={idx}
                 to={item.path}
                 className="group p-4 rounded-2xl border border-slate-100 hover:border-teal-300 hover:bg-teal-50/30 transition-all flex flex-col justify-between"
@@ -124,7 +124,7 @@ export default function SitemapPage() {
             ].map((item, idx) => {
               const Icon = item.icon;
               return (
-                <Link 
+                <Link
                   key={idx}
                   to={item.path}
                   className="group p-4 rounded-2xl border border-slate-100 hover:border-blue-300 hover:bg-blue-50/30 transition-all flex flex-col justify-between"
@@ -147,7 +147,7 @@ export default function SitemapPage() {
 
         {/* 3. Laparoscopic Surgeries & Dermatology Treatments */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          
+
           {/* Laparoscopic */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-6">
             <div className="flex items-center gap-3 border-b border-slate-100 pb-4">
@@ -262,3 +262,4 @@ export default function SitemapPage() {
     </div>
   );
 }
+

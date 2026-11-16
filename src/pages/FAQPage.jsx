@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  HelpCircle, 
-  ChevronDown, 
-  Search, 
-  Phone, 
-  MessageCircle, 
-  Activity, 
-  Sparkles, 
+import {
+  HelpCircle,
+  ChevronDown,
+  Search,
+  Phone,
+  MessageCircle,
+  Activity,
+  Sparkles,
   Calendar,
   Compass
 } from 'lucide-react';
@@ -28,7 +28,7 @@ export default function FAQPage() {
 
   const filtered = faqsData.filter((faq) => {
     const matchesTab = activeTab === 'all' || faq.category === activeTab;
-    const matchesSearch = 
+    const matchesSearch =
       faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
       faq.answer.toLowerCase().includes(searchQuery.toLowerCase());
     return matchesTab && matchesSearch;
@@ -57,7 +57,7 @@ export default function FAQPage() {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -99,11 +99,10 @@ export default function FAQPage() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${
-                activeTab === tab.id
+              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${activeTab === tab.id
                   ? 'bg-primary text-white shadow-primary/20'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -184,3 +183,4 @@ export default function FAQPage() {
     </div>
   );
 }
+

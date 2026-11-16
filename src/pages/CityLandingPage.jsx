@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { useParams, Link, Navigate } from 'react-router-dom';
-import { 
-  MapPin, 
-  Navigation, 
-  Clock, 
-  Phone, 
-  MessageCircle, 
-  ArrowRight, 
-  ShieldCheck, 
-  Sparkles, 
-  Activity, 
-  CheckCircle2, 
-  ChevronDown, 
+import {
+  MapPin,
+  Navigation,
+  Clock,
+  Phone,
+  MessageCircle,
+  ArrowRight,
+  ShieldCheck,
+  Sparkles,
+  Activity,
+  CheckCircle2,
+  ChevronDown,
   Compass,
   Calendar,
   Building2,
@@ -126,7 +126,7 @@ export default function CityLandingPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -141,9 +141,8 @@ export default function CityLandingPage() {
         {/* Hero Section */}
         <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/90 shadow-sm mb-10">
           <div className="flex flex-wrap items-center gap-2 mb-4">
-            <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${
-              isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
-            }`}>
+            <span className={`text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider ${isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
+              }`}>
               {location.catchmentType}
             </span>
             <span className="text-xs font-bold px-3 py-1 rounded-full bg-slate-100 text-slate-700 border border-slate-200 flex items-center gap-1">
@@ -199,10 +198,10 @@ export default function CityLandingPage() {
 
         {/* Content Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
-          
+
           {/* Main Column */}
           <div className="lg:col-span-8 space-y-8">
-            
+
             {/* Common Healthcare Concerns in this Region */}
             <div className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200/90 shadow-sm space-y-4">
               <div className="flex items-center gap-2 text-teal-700 font-heading font-bold text-base sm:text-lg">
@@ -282,7 +281,7 @@ export default function CityLandingPage() {
               </h2>
               <div className="space-y-3 pt-2">
                 {location.faqs.map((faq, idx) => (
-                  <div 
+                  <div
                     key={idx}
                     className="border border-slate-200 rounded-2xl overflow-hidden transition"
                   >
@@ -308,13 +307,13 @@ export default function CityLandingPage() {
 
           {/* Sidebar */}
           <div className="lg:col-span-4 space-y-6">
-            
+
             {/* Lead Faculty Card */}
             <div className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm space-y-4">
               <h3 className="font-heading font-bold text-sm text-primary uppercase tracking-wider">
                 Consulting Faculty
               </h3>
-              
+
               <div className="space-y-3 text-xs">
                 <div className="p-3 rounded-2xl bg-slate-50 border border-slate-100">
                   <div className="font-bold text-slate-800 text-sm">Dr. S. Sagar</div>
@@ -400,3 +399,4 @@ export default function CityLandingPage() {
     </div>
   );
 }
+

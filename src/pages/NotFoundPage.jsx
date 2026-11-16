@@ -12,7 +12,7 @@ export default function NotFoundPage() {
       />
 
       <div className="max-w-xl w-full text-center bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-sm space-y-6">
-        
+
         {/* Visual Badge */}
         <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-teal-50 border border-teal-200 text-teal-accent text-3xl font-black font-heading mb-2">
           404
@@ -79,3 +79,4 @@ export default function NotFoundPage() {
     </div>
   );
 }
+

@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       />
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -24,7 +24,7 @@ export default function PrivacyPolicyPage() {
         </nav>
 
         <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/90 shadow-sm space-y-6 text-slate-700 text-xs sm:text-sm leading-relaxed">
-          
+
           <div className="border-b border-slate-100 pb-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-teal-accent text-xs font-bold uppercase tracking-wider mb-3">
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -113,3 +113,4 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
+

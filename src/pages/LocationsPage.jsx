@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  MapPin, 
-  Navigation, 
-  Clock, 
-  Phone, 
-  ArrowRight, 
+import {
+  MapPin,
+  Navigation,
+  Clock,
+  Phone,
+  ArrowRight,
   Compass,
   CheckCircle2,
   Car
@@ -54,7 +54,7 @@ export default function LocationsPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -89,11 +89,10 @@ export default function LocationsPage() {
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${
-                filter === tab.id
+              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${filter === tab.id
                   ? 'bg-primary text-white shadow-primary/20'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -105,15 +104,14 @@ export default function LocationsPage() {
           {filteredLocations.map((loc) => {
             const isRose = loc.badgeTheme === 'rose';
             return (
-              <div 
+              <div
                 key={loc.id}
                 className="bg-white rounded-3xl p-6 border border-slate-200/90 shadow-sm hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
-                      isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
-                    }`}>
+                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
+                      }`}>
                       {loc.catchmentType}
                     </span>
                     <span className="text-xs font-semibold text-slate-500 flex items-center gap-1">
@@ -212,3 +210,4 @@ export default function LocationsPage() {
     </div>
   );
 }
+

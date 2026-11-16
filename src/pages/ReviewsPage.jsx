@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Star, 
-  MessageSquare, 
-  CheckCircle2, 
-  MapPin, 
-  Phone, 
-  Calendar, 
-  ArrowRight, 
-  Award, 
-  Sparkles, 
+import {
+  Star,
+  MessageSquare,
+  CheckCircle2,
+  MapPin,
+  Phone,
+  Calendar,
+  ArrowRight,
+  Award,
+  Sparkles,
   Activity,
   Heart
 } from 'lucide-react';
@@ -65,7 +65,7 @@ export default function ReviewsPage() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 font-semibold">
@@ -113,11 +113,10 @@ export default function ReviewsPage() {
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id)}
-              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${
-                filter === tab.id
+              className={`px-4 py-2 rounded-full text-xs font-bold transition shadow-sm ${filter === tab.id
                   ? 'bg-primary text-white shadow-primary/20'
                   : 'bg-white text-slate-600 hover:bg-slate-100 border border-slate-200'
-              }`}
+                }`}
             >
               {tab.label}
             </button>
@@ -135,9 +134,8 @@ export default function ReviewsPage() {
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${
-                      isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
-                    }`}>
+                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider ${isRose ? 'bg-rose-50 text-rose-700 border border-rose-200' : 'bg-teal-50 text-teal-700 border border-teal-200'
+                      }`}>
                       {r.treatment}
                     </span>
                     <span className="text-[11px] text-slate-400 font-medium">{r.date}</span>
@@ -203,3 +201,4 @@ export default function ReviewsPage() {
     </div>
   );
 }
+
